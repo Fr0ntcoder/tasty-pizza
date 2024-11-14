@@ -7,7 +7,7 @@
 	--popover: #ffffff;
 	--popover-foreground: #0c0a09;
 
-	--primary: #ff5e00;
+	--primary: #45199e;
 	--primary-foreground: #fafaf9;
 
 	--secondary: #fffaf5;
@@ -19,17 +19,27 @@
 	--accent: #f5f5f4;
 	--accent-foreground: #1c1917;
 
-	--destructive: #ef4444;
+	--destructive: #45199e;
 	--destructive-foreground: #fafaf9;
 
 	--border: #e7e5e4;
 	--input: #e6e6e6;
-	--ring: #f97316;
+	--ring: #45199e;
 	--radius: 18px;
 }
 
 html {
 	scroll-behavior: smooth;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: none;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
