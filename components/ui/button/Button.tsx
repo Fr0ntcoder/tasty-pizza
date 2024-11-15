@@ -3,7 +3,7 @@
 import { Slot } from '@radix-ui/react-slot'
 import cn from 'clsx'
 import { Loader2 } from 'lucide-react'
-import React, { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes, forwardRef } from 'react'
 
 import styles from './Button.module.scss'
 
@@ -25,7 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	loading?: boolean
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	(
 		{
 			className,

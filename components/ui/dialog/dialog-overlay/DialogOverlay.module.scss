@@ -8,14 +8,18 @@
 	background-color: rgba(0, 0, 0, 0.8);
 
 	&[data-state='open'] {
-		/**/
+		animation: var(--fade-in);
 	}
 
 	&[data-state='closed'] {
-		/**/
+		animation: var(--fade-out);
+	}
+
+	&[data-state='closed'] {
+		opacity: 0;
 	}
 
 	&[data-state='open'] {
-		/**/
+		opacity: 1;
 	}
 }

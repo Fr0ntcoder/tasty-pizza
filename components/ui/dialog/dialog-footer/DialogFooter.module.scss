@@ -1,7 +1,10 @@
 .root {
-	font-size: 1.125rem;
-	line-height: 1.75rem;
-	font-weight: 600;
-	letter-spacing: -0.025em;
-	line-height: 1;
+	display: flex;
+	flex-direction: column-reverse;
+
+	@media (min-width: 640px) {
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 8px;
+	}
 }

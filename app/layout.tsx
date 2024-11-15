@@ -3,7 +3,7 @@ import { Nunito } from 'next/font/google'
 import 'normalize.css'
 
 import styles from './Layout.module.scss'
-import './globals.scss'
+import './styles/globals.scss'
 
 const nunito = Nunito({
 	subsets: ['cyrillic'],

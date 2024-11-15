@@ -1,17 +1,16 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import cn from 'clsx'
-import { forwardRef } from 'react'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+
+import styles from './DialogTitle.module.scss'
 
 const DialogTitle = forwardRef<
-	React.ElementRef<typeof DialogPrimitive.Title>,
-	React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+	ElementRef<typeof DialogPrimitive.Title>,
+	ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
 	<DialogPrimitive.Title
 		ref={ref}
-		className={cn(
-			'text-lg font-semibold leading-none tracking-tight',
-			className
-		)}
+		className={cn(styles.root, className)}
 		{...props}
 	/>
 ))

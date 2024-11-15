@@ -1,11 +1,12 @@
 import cn from 'clsx'
+import { HTMLAttributes } from 'react'
 
 import styles from './DialogHeader.module.css'
 
 const DialogHeader = ({
 	className,
 	...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
+}: HTMLAttributes<HTMLDivElement>) => (
 	<div className={cn(styles.root, className)} {...props} />
 )
 

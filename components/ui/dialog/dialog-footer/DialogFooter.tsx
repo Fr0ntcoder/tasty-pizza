@@ -1,11 +1,12 @@
 import cn from 'clsx'
+import { HTMLAttributes } from 'react'
 
 import styles from './DialogFooter.module.scss'
 
 const DialogFooter = ({
 	className,
 	...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
+}: HTMLAttributes<HTMLDivElement>) => (
 	<div className={cn(styles.root, className)} {...props} />
 )
 DialogFooter.displayName = 'DialogFooter'

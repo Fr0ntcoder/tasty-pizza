@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	gap: 16px;
+}
+
+.root {
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
