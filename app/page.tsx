@@ -1,9 +1,5 @@
-import { SheetOverlay, SheetPortal } from '@/components/ui/sheet'
+import Textarea from '@/components/ui/fields/textarea'
 
 export default function Home() {
-	return (
-		<>
-			<SheetOverlay /> <SheetPortal />
-		</>
-	)
+	return <Textarea />
 }

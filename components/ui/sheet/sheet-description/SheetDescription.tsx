@@ -2,7 +2,7 @@ import * as SheetPrimitive from '@radix-ui/react-dialog'
 import cn from 'clsx'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
-import styles from './SheetTitle.module.scss'
+import styles from './SheetDescription.module.scss'
 
 const SheetDescription = forwardRef<
 	ElementRef<typeof SheetPrimitive.Description>,
