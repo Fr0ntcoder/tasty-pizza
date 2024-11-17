@@ -14,6 +14,5 @@ const DialogTitle = forwardRef<
 		{...props}
 	/>
 ))
-DialogTitle.displayName = 'DialogTitle'
 
 export default DialogTitle

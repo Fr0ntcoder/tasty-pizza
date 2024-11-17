@@ -1,0 +1,37 @@
+.root {
+	position: relative;
+	display: flex;
+	width: 100%;
+	font-size: 14px;
+	padding: 6px 8px 6px 32px;
+	user-select: none;
+	align-items: center;
+	border-radius: 2px;
+	outline: none;
+	cursor: default;
+
+	&:focus {
+		background-color: var(--accent);
+		color: var(--accent-foreground);
+	}
+
+	&[data-disabled] {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+}
+
+.text {
+	position: absolute;
+	display: flex;
+	height: 14px;
+	width: 14px;
+	left: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	width: 16px;
+	height: 16px;
+}

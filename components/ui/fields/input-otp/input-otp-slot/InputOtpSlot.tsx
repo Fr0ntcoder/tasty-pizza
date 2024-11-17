@@ -33,6 +33,5 @@ const InputOtpSlot = forwardRef<
 		</div>
 	)
 })
-InputOtpSlot.displayName = 'InputOtpSlot'
 
 export default InputOtpSlot

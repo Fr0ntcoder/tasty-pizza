@@ -1,13 +1,28 @@
 :root {
-	--fade-in: fadeIn 0.5s ease-in;
-	--fade-out: fadeOut 0.5s ease-out;
+	--fade-in: fadeIn 0.3s ease-in;
+	--fade-out: fadeOut 0.3s ease-out;
 	--zoom-in: zoomIn 0.3s ease-in;
+	--zoom-in-fade: zoomInFade 0.3s ease-in;
 	--zoom-out: zoomOut 0.3s ease-out;
-	--slide-in-left: slideInLeft 0.5s ease-in;
-	--slide-out-left: slideOutLeft 0.5s ease-out;
-	--slide-in-top: slideInTop 0.5s ease-in;
-	--slide-out-top: slideOutTop 0.5s ease-out;
+	--zoom-out-fade: zoomOutFade 0.3s ease-out;
+	--slide-in-left: slideInLeft 0.3s ease-in;
+	--slide-out-left: slideOutLeft 0.3s ease-out;
+	--slide-in-top: slideInTop 0.3s ease-in;
+	--slide-out-top: slideOutTop 0.3s ease-out;
 	--caret-blink: caret-blink 1s steps(1) infinite;
+	--slide-in-from-top: slideInFromTop 0.3s ease;
+	--slide-in-from-top-2: slideInFromTop2 0.3s ease;
+	--slide-in-from-right: slideInFromRight 0.3s ease;
+	--slide-in-from-right-2: slideInFromRight2 0.3s ease;
+	--slide-in-from-left: slideInFromLeft 0.3s ease;
+	--slide-in-from-left-2: slideInFromLeft2 0.3s ease;
+	--slide-in-from-bottom: slideInFromBottom 0.3s ease;
+	--slide-in-from-bottom-2: slideInFromBottom2 0.3s ease;
+	--slide-out-to-top: slideOutToTop 0.3s ease-out;
+	--slide-in-to-top: slideInToTop 0.3s ease-out;
+	--slide-out-to-bottom: slideOutToBottom 0.3s ease-out;
+	--slide-out-to-left: slideOutToLeft 0.3s ease-out;
+	--slide-out-to-right: slideOutToRight 0.3s ease-out;
 }
 
 @keyframes fadeIn {
@@ -37,12 +52,34 @@
 	}
 }
 
+@keyframes zoomInFade {
+	from {
+		transform: scale(0.95);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 @keyframes zoomOut {
 	0% {
 		transform: scale(1);
 	}
 	100% {
 		transform: scale(0.95);
+	}
+}
+
+@keyframes zoomOutFade {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(0.95);
+		opacity: 0;
 	}
 }
 
@@ -79,5 +116,148 @@
 	}
 	100% {
 		transform: translateX(-50%) translateY(-48%);
+	}
+}
+
+@keyframes slideInFromTop {
+	0% {
+		transform: translateY(-0.5rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideInFromTop2 {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(0.5rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInFromBottom2 {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromBottom2 {
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-0.5rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slideInFromLeft2 {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(0.5rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromRight2 {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOutToTop {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes slideInToTop {
+	from {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOutToBottom {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+}
+
+@keyframes slideOutToLeft {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes slideOutToRight {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(100%);
+		opacity: 0;
 	}
 }

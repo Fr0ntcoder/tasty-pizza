@@ -9,6 +9,5 @@ const InputOtpGroup = forwardRef<
 >(({ className, ...props }, ref) => (
 	<div ref={ref} className={cn(styles.root, className)} {...props} />
 ))
-InputOtpGroup.displayName = 'InputOtpGroup'
 
 export default InputOtpGroup

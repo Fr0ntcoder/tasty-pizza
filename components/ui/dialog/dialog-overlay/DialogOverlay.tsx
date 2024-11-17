@@ -15,6 +15,4 @@ const DialogOverlay = forwardRef<
 	/>
 ))
 
-DialogOverlay.displayName = 'DialogOverlay'
-
 export default DialogOverlay

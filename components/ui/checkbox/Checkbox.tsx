@@ -7,20 +7,19 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './Checkbox.module.scss'
 
-const CheckboxRoot = CheckboxPrimitive.Root
-const CheckboxInidicator = CheckboxPrimitive.Indicator
-
 const Checkbox = forwardRef<
-	ElementRef<typeof CheckboxRoot>,
-	ComponentPropsWithoutRef<typeof CheckboxRoot>
+	ElementRef<typeof CheckboxPrimitive.Root>,
+	ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
-	<CheckboxRoot ref={ref} className={cn(styles.root, className)} {...props}>
-		<CheckboxInidicator className={styles.indicator}>
+	<CheckboxPrimitive.Root
+		ref={ref}
+		className={cn(styles.root, className)}
+		{...props}
+	>
+		<CheckboxPrimitive.Indicator className={styles.indicator}>
 			<Check className={styles.icon} strokeWidth={3} />
-		</CheckboxInidicator>
-	</CheckboxRoot>
+		</CheckboxPrimitive.Indicator>
+	</CheckboxPrimitive.Root>
 ))
-
-Checkbox.displayName = CheckboxRoot.displayName
 
 export default Checkbox

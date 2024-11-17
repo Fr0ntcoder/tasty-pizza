@@ -17,6 +17,5 @@ const InputOtp = forwardRef<
 		{...props}
 	/>
 ))
-InputOtp.displayName = 'InputOtp'
 
 export default InputOtp

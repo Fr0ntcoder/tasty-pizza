@@ -15,6 +15,4 @@ const DialogDescription = forwardRef<
 	/>
 ))
 
-DialogDescription.displayName = 'DialogDescription'
-
 export default DialogDescription

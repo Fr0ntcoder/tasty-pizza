@@ -9,6 +9,5 @@ const DialogFooter = ({
 }: HTMLAttributes<HTMLDivElement>) => (
 	<div className={cn(styles.root, className)} {...props} />
 )
-DialogFooter.displayName = 'DialogFooter'
 
 export default DialogFooter

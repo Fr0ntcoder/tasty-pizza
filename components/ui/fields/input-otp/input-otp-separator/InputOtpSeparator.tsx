@@ -11,6 +11,5 @@ const InputOtpSeparator = forwardRef<
 		<Dot />
 	</div>
 ))
-InputOtpSeparator.displayName = 'InputOtpSeparator'
 
 export default InputOtpSeparator

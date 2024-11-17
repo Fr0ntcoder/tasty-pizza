@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { HTMLAttributes } from 'react'
 
-import styles from './DialogHeader.module.css'
+import styles from './DialogHeader.module.scss'
 
 const DialogHeader = ({
 	className,
@@ -9,7 +9,5 @@ const DialogHeader = ({
 }: HTMLAttributes<HTMLDivElement>) => (
 	<div className={cn(styles.root, className)} {...props} />
 )
-
-DialogHeader.displayName = 'DialogHeader'
 
 export default DialogHeader

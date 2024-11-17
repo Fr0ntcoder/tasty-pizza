@@ -1,5 +1,9 @@
-import InputOTPSlot from '@/components/ui/fields/input-otp/input-otp-slot'
+import { SheetOverlay, SheetPortal } from '@/components/ui/sheet'
 
 export default function Home() {
-	return <InputOTPSlot index={1} />
+	return (
+		<>
+			<SheetOverlay /> <SheetPortal />
+		</>
+	)
 }
