@@ -1,11 +1,17 @@
+@use './reset.scss';
+@use './animation.scss';
 @use './vars.scss';
 
 html {
 	scroll-behavior: smooth;
 }
 
+body,
+html {
+	line-height: 1.6;
+}
+
 button {
-	line-height: 1px;
 	border: none;
 	cursor: pointer;
 }

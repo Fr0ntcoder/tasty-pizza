@@ -1,7 +1,9 @@
 import { clsx } from 'clsx'
 import { createElement } from 'react'
 
-type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+import styles from './Title.module.scss'
+
+type TitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
 type Props = {
 	size?: TitleSize
@@ -16,16 +18,16 @@ export const Title = ({ text, size = 'sm', className }: Props) => {
 		md: 'h3',
 		lg: 'h2',
 		xl: 'h1',
-		'2xl': 'h1'
+		xxl: 'h1'
 	} as const
 
 	const mapClassNameBySize = {
-		xs: 'text-[16px] ys-text',
-		sm: 'text-[22px] ys-text',
-		md: 'text-[26px] ys-text',
-		lg: 'text-[32px] ys-display',
-		xl: 'text-[40px] ys-display',
-		'2xl': 'text-[48px] ys-display'
+		xs: styles.xs,
+		sm: styles.sm,
+		md: styles.md,
+		lg: styles.lg,
+		xl: styles.xl,
+		xxl: styles.xxl
 	} as const
 
 	return createElement(
