@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './Popover.module.scss'
 
-const PopoverContent = forwardRef<
+export const PopoverContent = forwardRef<
 	ElementRef<typeof PopoverPrimitive.Content>,
 	ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
 >(({ className, align = 'center', sideOffset = 4, ...props }, ref) => (
@@ -18,5 +18,3 @@ const PopoverContent = forwardRef<
 		/>
 	</PopoverPrimitive.Portal>
 ))
-
-export default PopoverContent

@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectTrigger.module.scss'
 
-const SelectTrigger = forwardRef<
+export const SelectTrigger = forwardRef<
 	ElementRef<typeof SelectPrimitive.Trigger>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (

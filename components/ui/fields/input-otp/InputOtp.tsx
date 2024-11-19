@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './InputOtp.module.scss'
 
-const InputOtp = forwardRef<
+export const InputOtp = forwardRef<
 	ElementRef<typeof OTPInput>,
 	ComponentPropsWithoutRef<typeof OTPInput>
 >(({ className, containerClassName, ...props }, ref) => (
@@ -17,5 +17,3 @@ const InputOtp = forwardRef<
 		{...props}
 	/>
 ))
-
-export default InputOtp

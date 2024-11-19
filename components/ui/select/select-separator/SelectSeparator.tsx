@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectSeparator.module.scss'
 
-const SelectSeparator = forwardRef<
+export const SelectSeparator = forwardRef<
 	ElementRef<typeof SelectPrimitive.Separator>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
@@ -16,5 +16,3 @@ const SelectSeparator = forwardRef<
 		{...props}
 	/>
 ))
-
-export default SelectSeparator

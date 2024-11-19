@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import styles from './SheetOverlay.module.scss'
 
-const SheetOverlay = React.forwardRef<
+export const SheetOverlay = React.forwardRef<
 	React.ElementRef<typeof SheetPrimitive.Overlay>,
 	React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const SheetOverlay = React.forwardRef<
 		ref={ref}
 	/>
 ))
-
-export default SheetOverlay

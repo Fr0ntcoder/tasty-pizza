@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectScrollUpButton.module.scss'
 
-const SelectScrollUpButton = forwardRef<
+export const SelectScrollUpButton = forwardRef<
 	ElementRef<typeof SelectPrimitive.ScrollUpButton>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
 >(({ className, ...props }, ref) => (
@@ -19,5 +19,3 @@ const SelectScrollUpButton = forwardRef<
 		<ChevronUp className={styles.icon} />
 	</SelectPrimitive.ScrollUpButton>
 ))
-
-export default SelectScrollUpButton

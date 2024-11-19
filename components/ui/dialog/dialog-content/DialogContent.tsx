@@ -5,7 +5,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './DialogContent.module.scss'
 
-const DialogContent = forwardRef<
+export const DialogContent = forwardRef<
 	ElementRef<typeof DialogPrimitive.Content>,
 	ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
@@ -24,5 +24,3 @@ const DialogContent = forwardRef<
 		</DialogPrimitive.Content>
 	</DialogPrimitive.DialogPortal>
 ))
-
-export default DialogContent

@@ -20,12 +20,12 @@ type ButtonSize = 'default' | 'sm' | 'lg' | 'icon'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
 	variant: ButtonVariants
-	size: ButtonSize
+	size?: ButtonSize
 	asChild?: boolean
 	loading?: boolean
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	(
 		{
 			className,
@@ -57,5 +57,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 		)
 	}
 )
-
-export default Button

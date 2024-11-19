@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SheetTitle.module.scss'
 
-const SheetTitle = forwardRef<
+export const SheetTitle = forwardRef<
 	ElementRef<typeof SheetPrimitive.Title>,
 	ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const SheetTitle = forwardRef<
 		{...props}
 	/>
 ))
-
-export default SheetTitle

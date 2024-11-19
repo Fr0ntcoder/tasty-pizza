@@ -1,11 +1,14 @@
 .root {
 	display: inline-flex;
+	height: 40px;
 	font-size: 14px;
 	font-weight: 500;
 	align-items: center;
 	justify-content: center;
+	padding: 8px 16px;
+	border: 1px solid transparent;
 	white-space: nowrap;
-	border-radius: 6px;
+	border-radius: 15px;
 	transition-property: color, background-color, border-color,
 		text-decoration-color, fill, stroke;
 	transition-duration: 200ms;
@@ -32,11 +35,13 @@
 	&-default {
 		background-color: var(--primary);
 		color: var(--primary-foreground);
-		transition: background-color 0.2s;
+		transition: all 0.2s ease-in-out;
 
-		&:hover {
-			background-color: rgba(var(--primary), 0.9);
-		}
+		/* &:hover {
+			border: 1px solid var(--primary);
+			color: var(--primary);
+			background-color: #fff;
+		} */
 	}
 
 	&-destructive {

@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectScrollDownButton.module.scss'
 
-const SelectScrollDownButton = forwardRef<
+export const SelectScrollDownButton = forwardRef<
 	ElementRef<typeof SelectPrimitive.ScrollDownButton>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
 >(({ className, ...props }, ref) => (
@@ -19,5 +19,3 @@ const SelectScrollDownButton = forwardRef<
 		<ChevronDown className={styles.icon} />
 	</SelectPrimitive.ScrollDownButton>
 ))
-
-export default SelectScrollDownButton

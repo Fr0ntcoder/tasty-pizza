@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectContent.module.scss'
 
-const SelectLabel = forwardRef<
+export const SelectLabel = forwardRef<
 	ElementRef<typeof SelectPrimitive.Label>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
 >(({ className, ...props }, ref) => (
@@ -16,5 +16,3 @@ const SelectLabel = forwardRef<
 		{...props}
 	/>
 ))
-
-export default SelectLabel

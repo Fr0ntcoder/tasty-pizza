@@ -16,7 +16,7 @@ type SliderProps = {
 	onValueChange?: (values: number[]) => void
 }
 
-const RangeSlider = forwardRef(
+export const RangeSlider = forwardRef(
 	(
 		{
 			className,
@@ -78,5 +78,3 @@ const RangeSlider = forwardRef(
 		)
 	}
 )
-
-export default RangeSlider

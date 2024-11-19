@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectItem.module.scss'
 
-const SelectItem = forwardRef<
+export const SelectItem = forwardRef<
 	ElementRef<typeof SelectPrimitive.Item>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
 >(({ className, children, ...props }, ref) => (
@@ -25,5 +25,3 @@ const SelectItem = forwardRef<
 		<SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
 	</SelectPrimitive.Item>
 ))
-
-export default SelectItem

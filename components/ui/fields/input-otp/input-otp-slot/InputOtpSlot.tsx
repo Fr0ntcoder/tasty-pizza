@@ -11,7 +11,7 @@ import {
 
 import styles from './InputOtpSlot.module.scss'
 
-const InputOtpSlot = forwardRef<
+export const InputOtpSlot = forwardRef<
 	ElementRef<'div'>,
 	ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {
@@ -33,5 +33,3 @@ const InputOtpSlot = forwardRef<
 		</div>
 	)
 })
-
-export default InputOtpSlot

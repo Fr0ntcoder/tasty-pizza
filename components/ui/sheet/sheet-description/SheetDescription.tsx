@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SheetDescription.module.scss'
 
-const SheetDescription = forwardRef<
+export const SheetDescription = forwardRef<
 	ElementRef<typeof SheetPrimitive.Description>,
 	ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const SheetDescription = forwardRef<
 		{...props}
 	/>
 ))
-
-export default SheetDescription

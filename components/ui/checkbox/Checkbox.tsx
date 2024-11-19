@@ -7,7 +7,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './Checkbox.module.scss'
 
-const Checkbox = forwardRef<
+export const Checkbox = forwardRef<
 	ElementRef<typeof CheckboxPrimitive.Root>,
 	ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -21,5 +21,3 @@ const Checkbox = forwardRef<
 		</CheckboxPrimitive.Indicator>
 	</CheckboxPrimitive.Root>
 ))
-
-export default Checkbox

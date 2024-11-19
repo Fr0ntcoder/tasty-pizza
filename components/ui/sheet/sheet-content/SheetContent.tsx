@@ -15,7 +15,7 @@ type SheetContentProps = {
 	children: ReactNode
 }
 
-const SheetContent = forwardRef<
+export const SheetContent = forwardRef<
 	ElementRef<typeof SheetPrimitive.Content>,
 	SheetContentProps
 >(({ side = 'right', className, children, ...props }, ref) => (
@@ -34,5 +34,3 @@ const SheetContent = forwardRef<
 		</SheetPrimitive.Content>
 	</SheetPortal>
 ))
-
-export default SheetContent

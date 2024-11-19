@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './DialogOverlay.module.scss'
 
-const DialogOverlay = forwardRef<
+export const DialogOverlay = forwardRef<
 	ElementRef<typeof DialogPrimitive.Overlay>,
 	ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const DialogOverlay = forwardRef<
 		{...props}
 	/>
 ))
-
-export default DialogOverlay

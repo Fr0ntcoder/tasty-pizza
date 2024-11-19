@@ -3,7 +3,7 @@
 import { Dot } from 'lucide-react'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
-const InputOtpSeparator = forwardRef<
+export const InputOtpSeparator = forwardRef<
 	ElementRef<'div'>,
 	ComponentPropsWithoutRef<'div'>
 >(({ ...props }, ref) => (
@@ -11,5 +11,3 @@ const InputOtpSeparator = forwardRef<
 		<Dot />
 	</div>
 ))
-
-export default InputOtpSeparator

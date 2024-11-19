@@ -4,6 +4,7 @@ import 'normalize.css'
 
 import styles from './Layout.module.scss'
 import './styles/globals.scss'
+import Header from '@/components/shared/header'
 
 const nunito = Nunito({
 	subsets: ['cyrillic'],
@@ -24,7 +25,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${nunito.variable} ${nunito.variable}`}>
-				<main className={styles.main}>{children}</main>
+				<main className={styles.main}>
+					<Header />
+					{children}
+				</main>
 			</body>
 		</html>
 	)

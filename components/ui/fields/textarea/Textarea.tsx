@@ -6,12 +6,10 @@ import styles from './Textarea.module.scss'
 export interface TextareaProps
 	extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
-const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
 	({ className, ...props }, ref) => {
 		return (
 			<textarea className={cn(styles.root, className)} ref={ref} {...props} />
 		)
 	}
 )
-
-export default Textarea

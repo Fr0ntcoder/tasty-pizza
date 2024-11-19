@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './DialogTitle.module.scss'
 
-const DialogTitle = forwardRef<
+export const DialogTitle = forwardRef<
 	ElementRef<typeof DialogPrimitive.Title>,
 	ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const DialogTitle = forwardRef<
 		{...props}
 	/>
 ))
-
-export default DialogTitle

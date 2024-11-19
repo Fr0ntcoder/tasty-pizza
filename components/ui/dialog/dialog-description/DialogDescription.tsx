@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './DialogDescription.module.scss'
 
-const DialogDescription = forwardRef<
+export const DialogDescription = forwardRef<
 	ElementRef<typeof DialogPrimitive.Description>,
 	ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
@@ -14,5 +14,3 @@ const DialogDescription = forwardRef<
 		{...props}
 	/>
 ))
-
-export default DialogDescription

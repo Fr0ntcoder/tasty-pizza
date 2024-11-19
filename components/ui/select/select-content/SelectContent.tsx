@@ -6,7 +6,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
 import styles from './SelectContent.module.scss'
 
-const SelectContent = forwardRef<
+export const SelectContent = forwardRef<
 	ElementRef<typeof SelectPrimitive.Content>,
 	ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 >(({ className, children, position = 'popper', ...props }, ref) => (
@@ -31,5 +31,3 @@ const SelectContent = forwardRef<
 		</SelectPrimitive.Content>
 	</SelectPrimitive.Portal>
 ))
-
-export default SelectContent
