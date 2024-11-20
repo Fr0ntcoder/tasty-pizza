@@ -1,0 +1,38 @@
+.root {
+	position: sticky;
+	top: 0;
+	background-color: #ffffff;
+	padding: 20px 0;
+	box-shadow:
+		0 10px 15px -3px rgba(0, 0, 0, 0.05),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	z-index: 10;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.block {
+	display: inline-flex;
+	align-items: center;
+}
+
+.btn {
+	transition: all 0.2s ease;
+
+	&.notvisible {
+		width: 0;
+		padding: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.visible {
+		visibility: visible;
+		margin-left: 20px;
+		opacity: 1;
+	}
+}

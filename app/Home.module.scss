@@ -1,8 +1,28 @@
 .root {
+	position: relative;
 	margin-top: 20px;
 }
 
 .title {
 	font-weight: 900;
 	margin-bottom: 30px;
+}
+
+.container {
+	display: flex;
+	padding-bottom: 15px;
+	gap: 60px;
+}
+
+.filters {
+	width: 250px;
+}
+
+.content {
+	flex: 1;
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
 }
