@@ -1,0 +1,12 @@
+.root {
+	border-bottom: 1px solid var(--border);
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: var(--muted) / 50%;
+	}
+
+	&[data-state='selected'] {
+		background-color: var(--muted);
+	}
+}

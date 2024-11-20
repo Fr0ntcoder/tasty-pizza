@@ -1,0 +1,63 @@
+.root {
+	position: relative;
+	max-height: 384px;
+	min-width: 128px;
+	overflow: hidden;
+	border-radius: 6px;
+	border: 1px solid var(--border);
+	background-color: var(--popover);
+	color: var(--popover-foreground);
+	z-index: 50;
+
+	&[data-state='open'] {
+		animation: var(--fade-in) var(--zoom-in-fade);
+	}
+
+	&[data-state='closed'] {
+		animation: var(--fade-out) var(--zoom-out-fade);
+	}
+
+	&[data-side='bottom'] {
+		animation: var(--slide-in-from-top-2);
+	}
+
+	&[data-side='left'] {
+		animation: var(--slide-in-from-right-2);
+	}
+
+	&[data-side='right'] {
+		animation: var(--slide-in-from-left-2);
+	}
+
+	&[data-side='top'] {
+		animation: var(--slide-in-from-bottom-2);
+	}
+
+	&.active {
+		&[data-side='bottom'] {
+			transform: translateY(4px);
+		}
+
+		&[data-side='left'] {
+			transform: translateX(-4px);
+		}
+
+		&[data-side='right'] {
+			transform: translateX(4px);
+		}
+
+		&[data-side='top'] {
+			transform: translateY(-4px);
+		}
+	}
+}
+
+.viewport {
+	padding: 4px;
+
+	&.active {
+		min-width: auto;
+		width: 100%;
+		height: auto;
+	}
+}

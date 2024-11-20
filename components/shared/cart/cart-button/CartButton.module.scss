@@ -1,0 +1,32 @@
+.root {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	&:hover {
+		& .arrow {
+			opacity: 1;
+			transform: translateX(0);
+		}
+
+		& .text {
+			opacity: 0;
+		}
+	}
+}
+
+.text {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	transition: all 0.3s ease;
+}
+
+.arrow {
+	position: absolute;
+	right: 20px;
+	transition: all 0.3s ease;
+	transform: translateX(-8px);
+	opacity: 0;
+}

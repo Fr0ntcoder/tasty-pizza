@@ -1,0 +1,32 @@
+.root {
+	display: flex;
+	width: 20px;
+	height: 20px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	background-color: #f3f4f6;
+	overflow: hidden;
+
+	&:focus-visible {
+		outline: none;
+		box-shadow:
+			0 0 0 2px #d1d5db,
+			0 0 0 4px var(--ring-offset-background);
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&[data-state='checked'] {
+		background-color: var(--primary);
+		color: var(--primary-foreground);
+	}
+}
+
+.indicator {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

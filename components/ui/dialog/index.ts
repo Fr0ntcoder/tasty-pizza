@@ -1,0 +1,7 @@
+export { DialogContent } from './dialog-content/DialogContent'
+export { DialogDescription } from './dialog-description/DialogDescription'
+export { DialogFooter } from './dialog-footer/DialogFooter'
+export { DialogHeader } from './dialog-header/DialogHeader'
+export * from './dialog-other/DialogOther'
+export { DialogOverlay } from './dialog-overlay/DialogOverlay'
+export { DialogTitle } from './dialog-title/DialogTitle'

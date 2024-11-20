@@ -1,0 +1,11 @@
+.root {
+	border-top: 1px solid var(--border);
+	background-color: var(--muted) / 50%;
+	font-weight: 500;
+
+	& > tr {
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

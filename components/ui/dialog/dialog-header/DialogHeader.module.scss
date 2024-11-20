@@ -1,0 +1,10 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	text-align: center;
+
+	@media (min-width: 640px) {
+		text-align: left;
+	}
+}

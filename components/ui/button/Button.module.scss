@@ -1,0 +1,119 @@
+.root {
+	display: inline-flex;
+	height: 40px;
+	font-size: 14px;
+	font-weight: 500;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	border-radius: 15px;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-duration: 200ms;
+	outline: none;
+
+	&:active {
+		transform: translateY(1px);
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow:
+			0 0 0 2px #4a5568,
+			0 0 0 4px var(--ring-offset-background);
+	}
+
+	&:disabled {
+		pointer-events: none;
+		opacity: 0.5;
+		background-color: #6b7280;
+	}
+}
+.variant {
+	&-default {
+		background-color: var(--primary);
+		color: var(--primary-foreground);
+		transition: all 0.2s ease-in-out;
+
+		/* &:hover {
+			border: 1px solid var(--primary);
+			color: var(--primary);
+			background-color: #fff;
+		} */
+	}
+
+	&-destructive {
+		background-color: var(--destructive);
+		color: var(--destructive-foreground);
+
+		&:hover {
+			background-color: rgba(var(--destructive), 0.9);
+		}
+	}
+
+	&-outline {
+		border: 1px solid var(--primary);
+		color: var(--primary);
+		background-color: transparent;
+		transition: background-color 0.2s;
+
+		&:hover {
+			background-color: var(--secondary);
+		}
+	}
+
+	&-secondary {
+		background-color: var(--secondary);
+		transition: background-color 0.2s;
+		color: var(--primary);
+
+		&:hover {
+			background-color: rgba(var(--secondary), 0.5);
+		}
+	}
+
+	&-ghost {
+		transition:
+			background-color 0.2s,
+			color 0.2s;
+		&:hover {
+			background-color: var(--secondary);
+			color: var(--secondary-foreground);
+		}
+	}
+
+	&-ghost {
+		text-decoration: none;
+		text-underline-offset: 4px;
+		color: var(--primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.size {
+	&-default {
+		height: 40px;
+		padding: 8px 16px;
+	}
+
+	&-sm {
+		padding: 0 12px;
+		border-radius: 6px;
+	}
+
+	&-lg {
+		height: 44px;
+		padding: 0 32px;
+		border-radius: 6px;
+	}
+
+	&-icon {
+		width: 40px;
+		height: 40px;
+	}
+}

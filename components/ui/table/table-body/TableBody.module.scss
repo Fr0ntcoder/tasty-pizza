@@ -1,0 +1,5 @@
+.root {
+	& > tr:last-child {
+		border: none;
+	}
+}

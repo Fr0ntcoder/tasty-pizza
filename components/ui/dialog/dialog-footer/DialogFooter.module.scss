@@ -1,0 +1,10 @@
+.root {
+	display: flex;
+	flex-direction: column-reverse;
+
+	@media (min-width: 640px) {
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 8px;
+	}
+}

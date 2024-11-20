@@ -1,35 +1,24 @@
-:root {
-	--foreground: #0c0a09;
-
-	--card: #ffffff;
-	--card-foreground: #0c0a09;
-
-	--popover: #ffffff;
-	--popover-foreground: #0c0a09;
-
-	--primary: #ff5e00;
-	--primary-foreground: #fafaf9;
-
-	--secondary: #fffaf5;
-	--secondary-foreground: #1c1917;
-
-	--muted: #f5f5f4;
-	--muted-foreground: #78716c;
-
-	--accent: #f5f5f4;
-	--accent-foreground: #1c1917;
-
-	--destructive: #ef4444;
-	--destructive-foreground: #fafaf9;
-
-	--border: #e7e5e4;
-	--input: #e6e6e6;
-	--ring: #f97316;
-	--radius: 18px;
-}
+@use './reset.scss';
+@use './animation.scss';
+@use './vars.scss';
 
 html {
 	scroll-behavior: smooth;
+}
+
+body,
+html {
+	line-height: 1.6;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: none;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

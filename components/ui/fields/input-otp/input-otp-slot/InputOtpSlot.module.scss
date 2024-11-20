@@ -1,0 +1,44 @@
+.root {
+	position: relative;
+	display: flex;
+	height: 40px;
+	width: 40px;
+	font-size: 14px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--input);
+	transition: all 0.2s;
+
+	&:first-child {
+		border-left: 1px solid var(--input);
+		border-radius: 6px 0 0 6px;
+	}
+
+	&:last-child {
+		border-radius: 0 6px 6px 0;
+	}
+
+	&.active {
+		box-shadow:
+			0 0 0 2px var(--ring),
+			0 0 0 calc(2px) var(--primary);
+		z-index: 10;
+	}
+}
+
+.caret {
+	display: flex;
+	position: absolute;
+	pointer-events: none;
+	inset: 0;
+	align-items: center;
+	justify-content: center;
+
+	&__text {
+		width: 16px;
+		height: 16px;
+		animation: var(--caret-blink);
+		background-color: var(--foreground);
+		transition-duration: 1s;
+	}
+}

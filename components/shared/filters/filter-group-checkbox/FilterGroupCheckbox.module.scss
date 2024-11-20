@@ -1,0 +1,21 @@
+.title {
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.input {
+	margin-bottom: 15px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.btn {
+	font-weight: 700;
+	background: transparent;
+	color: var(--primary);
+}
