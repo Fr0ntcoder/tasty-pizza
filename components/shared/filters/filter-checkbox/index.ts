@@ -1,1 +1,2 @@
-export { FilterCheckbox as default } from './FilterCheckbox'
+export * from './FilterCheckbox'
+/* export { FilterCheckboxProps as default} from './FilterCheckbox' */

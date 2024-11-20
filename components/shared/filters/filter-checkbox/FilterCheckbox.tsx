@@ -1,8 +1,10 @@
+'use-client'
+
 import Checkbox from '@/components/ui/checkbox'
 
 import styles from './FilterCheckbox.module.scss'
 
-type Props = {
+export type FilterCheckboxProps = {
 	text: string
 	value: string
 	endAdornment?: React.ReactNode
@@ -18,7 +20,7 @@ export const FilterCheckbox = ({
 	onCheckedChange,
 	checked,
 	name
-}: Props) => {
+}: FilterCheckboxProps) => {
 	return (
 		<div className={styles.root}>
 			<Checkbox

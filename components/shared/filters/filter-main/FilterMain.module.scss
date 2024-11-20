@@ -1,0 +1,26 @@
+.title {
+	margin-bottom: 15px;
+}
+
+.checkbox {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+.range {
+	position: relative;
+	margin-bottom: 50px;
+	&__text {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&__wrap {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+}
