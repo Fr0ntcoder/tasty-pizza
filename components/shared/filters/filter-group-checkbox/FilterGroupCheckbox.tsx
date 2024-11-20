@@ -1,7 +1,7 @@
 'use client'
 
 import cn from 'clsx'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 import {
 	FilterCheckbox,
@@ -35,26 +35,39 @@ export const FilterGroupCheckbox = ({
 	className
 }: Props) => {
 	const [showAll, setShowAll] = useState(false)
-	const list = showAll ? items : defaultItems?.slice(0, limit)
-	console.log(list)
+	const [searchValue, setSearchValue] = useState('')
+
+	const onChangeSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
+		setSearchValue(e.target.value)
+	}
+
+	const list = showAll
+		? items.filter(item =>
+				item.text.toLowerCase().includes(searchValue.toLowerCase())
+			)
+		: defaultItems?.slice(0, limit)
+
+	const checkboxList = list.map(item => (
+		<FilterCheckbox
+			checked={false}
+			key={String(item.value)}
+			value={item.value}
+			text={item.text}
+			endAdornment={item.endAdornment}
+		/>
+	))
+
 	return (
 		<div className={cn(styles.root, className)}>
 			<Title text={title} size='xs' className={styles.title} />
 			{showAll && (
-				<Input placeholder={searchInputPlaceholder} className={styles.input} />
+				<Input
+					onChange={onChangeSearchInput}
+					placeholder={searchInputPlaceholder}
+					className={styles.input}
+				/>
 			)}
-			<div className={styles.list}>
-				{list.map((item, i) => (
-					<FilterCheckbox
-						/* onCheckedChange={i => console.log(i)} */
-						checked={false}
-						key={String(item.value)}
-						value={item.value}
-						text={item.text}
-						endAdornment={item.endAdornment}
-					/>
-				))}
-			</div>
+			<div className={styles.list}>{checkboxList}</div>
 			{items.length > limit && (
 				<button onClick={() => setShowAll(!showAll)} className={styles.btn}>
 					{showAll ? 'Скрыть' : '+ Показать все'}
