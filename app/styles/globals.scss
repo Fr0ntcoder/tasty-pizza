@@ -1,8 +1,9 @@
-@use './reset.scss';
-@use './animation.scss';
-@use './vars.scss';
+@use './reset';
+@use './animation';
+@use './vars';
 
 html {
+	font-family: 'Nunito', sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -21,57 +22,7 @@ textarea {
 	border: none;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+a {
+	text-decoration: none;
+	color: #000;
 }
-
-* {
-	font-family: var(--font-nunito), sans-serif;
-}
-
-.scrollbar::-webkit-scrollbar {
-	width: 4px;
-}
-
-.scrollbar::-webkit-scrollbar-track {
-	border-radius: 6px;
-	background: #fff;
-}
-
-.scrollbar::-webkit-scrollbar-thumb {
-	background: #dbdadd;
-	border-radius: 6px;
-}
-
-.scrollbar::-webkit-scrollbar-thumb:hover {
-	background: #dbdadd;
-}
-
-/* @layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-}
-
-@layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
-} */
-
-/* #nprogress .bar {
-	@apply bg-primary !important;
-}
-
-#nprogress .peg {
-	@apply shadow-md shadow-primary !important;
-}
-
-#nprogress .spinner-icon {
-	@apply border-t-primary border-l-primary !important;
-} */

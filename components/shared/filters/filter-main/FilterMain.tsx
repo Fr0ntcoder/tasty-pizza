@@ -1,10 +1,12 @@
 'use-client'
 
-import { FilterCheckbox } from '@/components/shared/filters/filter-checkbox'
-import FilterGroupCheckbox from '@/components/shared/filters/filter-group-checkbox'
+import {
+	FilterCheckbox,
+	FilterGroupCheckbox
+} from '@/components/shared/filters'
 import Title from '@/components/shared/title'
 
-import Input from '@/components/ui/fields/input'
+import { Input } from '@/components/ui/fields'
 import RangeSlider from '@/components/ui/range-slider'
 
 import styles from './FilterMain.module.scss'

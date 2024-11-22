@@ -23,8 +23,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en'>
-			<body className={`${nunito.variable} ${nunito.variable}`}>
+		<html className={nunito.variable} lang='ru'>
+			<body>
 				<main className={styles.main}>
 					<Header />
 					{children}

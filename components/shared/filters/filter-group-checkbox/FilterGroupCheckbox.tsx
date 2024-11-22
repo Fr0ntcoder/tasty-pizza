@@ -6,10 +6,10 @@ import { ChangeEvent, useState } from 'react'
 import {
 	FilterCheckbox,
 	FilterCheckboxProps
-} from '@/components/shared/filters/filter-checkbox'
+} from '@/components/shared/filters'
 import Title from '@/components/shared/title'
 
-import Input from '@/components/ui/fields/input'
+import { Input } from '@/components/ui/fields'
 
 import styles from './FilterGroupCheckbox.module.scss'
 
