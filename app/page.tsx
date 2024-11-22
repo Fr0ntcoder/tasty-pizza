@@ -56,6 +56,120 @@ export default function Home() {
 						]}
 						categoryId={1}
 					/>
+					<ProductGroupCard
+						title='Комбо'
+						items={[
+							{
+								id: 1,
+								name: 'Чизубергер1',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 350,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 2,
+								name: 'Чизубергер2',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 450,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 3,
+								name: 'Чизубергер3',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 270,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 4,
+								name: 'Чизубергер4',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 260,
+								items: [{ prise: 350 }]
+							}
+						]}
+						categoryId={2}
+					/>
+					<ProductGroupCard
+						title='Закуски'
+						items={[
+							{
+								id: 1,
+								name: 'Чизубергер1',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 350,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 2,
+								name: 'Чизубергер2',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 450,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 3,
+								name: 'Чизубергер3',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 270,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 4,
+								name: 'Чизубергер4',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 260,
+								items: [{ prise: 350 }]
+							}
+						]}
+						categoryId={3}
+					/>
+					<ProductGroupCard
+						title='Коктейли'
+						items={[
+							{
+								id: 1,
+								name: 'Чизубергер1',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 350,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 2,
+								name: 'Чизубергер2',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 450,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 3,
+								name: 'Чизубергер3',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 270,
+								items: [{ prise: 350 }]
+							},
+							{
+								id: 4,
+								name: 'Чизубергер4',
+								imageUrl:
+									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								price: 260,
+								items: [{ prise: 350 }]
+							}
+						]}
+						categoryId={4}
+					/>
 				</div>
 			</Container>
 		</>
