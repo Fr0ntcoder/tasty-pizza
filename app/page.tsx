@@ -24,8 +24,7 @@ export default function Home() {
 							{
 								id: 1,
 								name: 'Чизубергер1',
-								imageUrl:
-									'https://media.dodostatic.net/image/r:292x292/11EF438E93884BFEBFE79D11095AE2D4.avif',
+								imageUrl: '/assets/ingredients/kubiki-brynzy.png',
 								price: 350,
 								items: [{ prise: 350 }]
 							},
