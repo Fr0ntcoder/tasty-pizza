@@ -26,6 +26,13 @@ button {
 input,
 textarea {
 	border: none;
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
 }
 
 a {

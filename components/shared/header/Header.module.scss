@@ -6,7 +6,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 32px 0;
+	gap: 30px;
+	padding: 20px 0;
 }
 
 .btn {
@@ -19,4 +20,8 @@
 .block {
 	display: flex;
 	gap: 15px;
+}
+
+.search {
+	flex: 1;
 }

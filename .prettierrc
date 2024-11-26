@@ -12,6 +12,7 @@
 		"^@/app/(.*)$",
 		"^@/components/shared/(.*)$",
 		"^@/components/ui/(.*)$",
+		"^@/services/(.*)$",
 		"^../(.*)$",
 		"^./(.*)$"
 	],
