@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 
 import {
 	FilterCheckbox,
@@ -9,6 +9,8 @@ import Title from '@/components/shared/title'
 import { Input } from '@/components/ui/fields'
 import RangeSlider from '@/components/ui/range-slider'
 
+import { useFilterIngredients } from '@/hooks/useFilterIngredients'
+
 import styles from './FilterMain.module.scss'
 
 type Props = {
@@ -16,6 +18,13 @@ type Props = {
 }
 
 export const FilterMain = ({ className }: Props) => {
+	const { ingredients, loading } = useFilterIngredients()
+
+	const items = ingredients.map(item => ({
+		value: String(item.id),
+		text: item.name
+	}))
+
 	return (
 		<>
 			<Title text='Фильтрация' size='sm' className={styles.title} />
@@ -41,58 +50,9 @@ export const FilterMain = ({ className }: Props) => {
 				<FilterGroupCheckbox
 					title='Ингредиенты'
 					limit={3}
-					defaultItems={[
-						{
-							text: 'Сырный соус',
-							value: '1'
-						},
-						{
-							text: 'Моццфрелла',
-							value: '2'
-						},
-						{
-							text: 'Чеснок',
-							value: '3'
-						},
-						{
-							text: 'Сырный соус',
-							value: '4'
-						},
-						{
-							text: 'Сырный соус',
-							value: '5'
-						},
-						{
-							text: 'Сырный соус',
-							value: '6'
-						},
-						{
-							text: 'Сырный соус',
-							value: '7'
-						}
-					]}
-					items={[
-						{
-							text: 'Сырный соус',
-							value: '1'
-						},
-						{
-							text: 'Моццфрелла',
-							value: '2'
-						},
-						{
-							text: 'Чеснок',
-							value: '3'
-						},
-						{
-							text: 'Сырный соус',
-							value: '4'
-						},
-						{
-							text: 'Сырный соус',
-							value: '5'
-						}
-					]}
+					defaultItems={items.slice(0, 6)}
+					items={items}
+					loading={loading}
 				/>
 			</div>
 		</>

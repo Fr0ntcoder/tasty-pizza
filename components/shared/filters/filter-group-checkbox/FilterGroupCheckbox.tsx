@@ -2,6 +2,8 @@
 
 import cn from 'clsx'
 import { ChangeEvent, useState } from 'react'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import {
 	FilterCheckbox,
@@ -18,6 +20,7 @@ type Props = {
 	items: FilterCheckboxProps[]
 	defaultItems: FilterCheckboxProps[]
 	limit: number
+	loading?: boolean
 	searchInputPlaceholder?: string
 	onChange?: (values: string[]) => void
 	defaultValue?: string[]
@@ -32,6 +35,7 @@ export const FilterGroupCheckbox = ({
 	searchInputPlaceholder = 'Поиск...',
 	onChange,
 	defaultValue,
+	loading,
 	className
 }: Props) => {
 	const [showAll, setShowAll] = useState(false)
@@ -39,6 +43,27 @@ export const FilterGroupCheckbox = ({
 
 	const onChangeSearchInput = (e: ChangeEvent<HTMLInputElement>) => {
 		setSearchValue(e.target.value)
+	}
+
+	if (loading) {
+		return (
+			<div className={styles.loading}>
+				<Title text={title} size='xs' className={styles.title} />
+
+				<Skeleton
+					className={styles.skeleton}
+					baseColor='#f5f5f4'
+					highlightColor='rgba(90, 5, 25,.5)'
+					count={limit}
+					style={{ marginBottom: '15px' }}
+				/>
+				<Skeleton
+					baseColor='#f5f5f4'
+					highlightColor='rgba(90, 5, 25,.5)'
+					width={130}
+				/>
+			</div>
+		)
 	}
 
 	const list = showAll
