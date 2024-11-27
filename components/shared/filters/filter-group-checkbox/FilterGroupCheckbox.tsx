@@ -18,13 +18,15 @@ import styles from './FilterGroupCheckbox.module.scss'
 type Props = {
 	title: string
 	items: FilterCheckboxProps[]
-	defaultItems: FilterCheckboxProps[]
-	limit: number
+	defaultItems?: FilterCheckboxProps[]
+	limit?: number
 	loading?: boolean
 	searchInputPlaceholder?: string
-	onChange?: (values: string[]) => void
+	onClickCheckbox?: (id: string) => void
 	defaultValue?: string[]
+	selected?: Set<string>
 	className?: string
+	name?: string
 }
 
 export const FilterGroupCheckbox = ({
@@ -33,9 +35,11 @@ export const FilterGroupCheckbox = ({
 	defaultItems,
 	limit,
 	searchInputPlaceholder = 'Поиск...',
-	onChange,
+	onClickCheckbox,
+	selected,
 	defaultValue,
 	loading,
+	name,
 	className
 }: Props) => {
 	const [showAll, setShowAll] = useState(false)
@@ -54,14 +58,17 @@ export const FilterGroupCheckbox = ({
 					className={styles.skeleton}
 					baseColor='#f5f5f4'
 					highlightColor='rgba(90, 5, 25,.5)'
-					count={limit}
+					count={items.length || limit}
 					style={{ marginBottom: '15px' }}
 				/>
-				<Skeleton
-					baseColor='#f5f5f4'
-					highlightColor='rgba(90, 5, 25,.5)'
-					width={130}
-				/>
+
+				{limit && items.length > limit && (
+					<Skeleton
+						baseColor='#f5f5f4'
+						highlightColor='rgba(90, 5, 25,.5)'
+						width={130}
+					/>
+				)}
 			</div>
 		)
 	}
@@ -70,15 +77,17 @@ export const FilterGroupCheckbox = ({
 		? items.filter(item =>
 				item.text.toLowerCase().includes(searchValue.toLowerCase())
 			)
-		: defaultItems?.slice(0, limit)
+		: (defaultItems || items)?.slice(0, limit)
 
-	const checkboxList = list.map(item => (
+	const checkboxList = list?.map(item => (
 		<FilterCheckbox
-			checked={false}
+			checked={selected?.has(item.value)}
 			key={String(item.value)}
 			value={item.value}
 			text={item.text}
 			endAdornment={item.endAdornment}
+			onCheckedChange={() => onClickCheckbox?.(item.value)}
+			name={name}
 		/>
 	))
 
@@ -93,7 +102,7 @@ export const FilterGroupCheckbox = ({
 				/>
 			)}
 			<div className={styles.list}>{checkboxList}</div>
-			{items.length > limit && (
+			{limit && items.length > limit && (
 				<button onClick={() => setShowAll(!showAll)} className={styles.btn}>
 					{showAll ? 'Скрыть' : '+ Показать все'}
 				</button>

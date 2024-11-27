@@ -28,10 +28,10 @@ export const FilterCheckbox = ({
 				checked={checked}
 				value={value}
 				className={styles.checkbox}
-				id={`checkbox-${name}-${String(value)}`}
+				id={`checkbox-${String(name)}-${String(value)}`}
 			/>
 			<label
-				htmlFor={`checkbox-${name}-${String(value)}`}
+				htmlFor={`checkbox-${String(name)}-${String(value)}`}
 				className={styles.label}
 			>
 				{text}

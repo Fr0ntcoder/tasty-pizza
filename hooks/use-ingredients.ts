@@ -3,17 +3,12 @@ import { useEffect, useState } from 'react'
 
 import { Api } from '@/services/api-clients'
 
-type ReturnProps = {
-	ingredients: Ingredient[]
-	loading: boolean
-}
-
-export const useFilterIngredients = (): ReturnProps => {
+export const useIngredients = () => {
 	const [ingredients, setIngredients] = useState<Ingredient[]>([])
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
-		async function getIngredients() {
+		async function fetchIngredients() {
 			try {
 				setLoading(true)
 				const response = await Api.ingredients.getAll()
@@ -25,7 +20,7 @@ export const useFilterIngredients = (): ReturnProps => {
 			}
 		}
 
-		getIngredients()
+		fetchIngredients()
 	}, [])
 
 	return { ingredients, loading }
