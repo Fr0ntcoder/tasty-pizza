@@ -1,6 +1,6 @@
 'use client'
 
-import { FilterGroupCheckbox } from '@/components/shared/filters'
+import { FilterGroupCheckbox } from '@/components/shared/filters/filter-group-checkbox/FilterGroupCheckbox'
 import Title from '@/components/shared/title'
 
 import { Input } from '@/components/ui/fields'

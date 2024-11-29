@@ -22,5 +22,11 @@ export const useQueryFilters = (filters: Filters) => {
 		router.push(`?${query}`, {
 			scroll: false
 		})
-	}, [filters, router])
+	}, [
+		filters.pizzaTypes,
+		filters.pizzaSizes,
+		filters.selectedIngredients,
+		filters.prices,
+		router
+	])
 }

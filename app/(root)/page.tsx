@@ -18,7 +18,6 @@ export default async function Home() {
 			}
 		}
 	})
-	console.log(categories)
 	const list = categories.map(
 		item =>
 			item.products.length > 0 && (
@@ -36,7 +35,9 @@ export default async function Home() {
 			<Container className={styles.root}>
 				<Title text='Все пиццы' size='lg' className={styles.title} />
 			</Container>
-			<TopBar />
+			<TopBar
+				categories={categories.filter(item => item.products.length > 0)}
+			/>
 			<Container className={styles.container}>
 				<div className={styles.filters}>
 					<FilterMain />

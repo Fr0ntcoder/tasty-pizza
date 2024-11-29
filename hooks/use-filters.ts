@@ -1,4 +1,4 @@
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 import { useSet } from 'react-use'
 
@@ -28,7 +28,6 @@ export type ReturnProps = {
 } & Filters
 
 export const useFilters = (): ReturnProps => {
-	const router = useRouter()
 	const searchParams = useSearchParams() as unknown as Map<
 		keyof QueryFilters,
 		string

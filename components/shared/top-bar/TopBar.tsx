@@ -1,5 +1,6 @@
 'use client'
 
+import { Category } from '@prisma/client'
 import cn from 'clsx'
 import { useState } from 'react'
 
@@ -11,16 +12,17 @@ import SortPopup from '@/components/shared/sort-popup'
 import styles from './TopBar.module.scss'
 
 type Props = {
+	categories: Category[]
 	className?: string
 }
 
-export const TopBar = ({ className }: Props) => {
+export const TopBar = ({ categories, className }: Props) => {
 	const [cartVisible, setCartVisible] = useState(false)
 
 	return (
 		<div className={cn(styles.root, className)}>
 			<Container className={styles.container}>
-				<Categories />
+				<Categories items={categories} />
 				<div className={styles.block}>
 					<SortPopup />
 					<CartButton

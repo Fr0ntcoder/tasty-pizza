@@ -1,0 +1,28 @@
+.root {
+	display: flex;
+	justify-content: space-between;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn {
+	display: flex;
+	font-weight: 600;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border-radius: 15px;
+	background: #f9f6f6;
+
+	&__active {
+		background: #fff;
+		box-shadow:
+			0 4px 6px rgba(0, 0, 0, 0.1),
+			0 1px 3px rgba(0, 0, 0, 0.08);
+	}
+
+	&__disabled {
+		pointer-events: none;
+		color: var(--text);
+	}
+}

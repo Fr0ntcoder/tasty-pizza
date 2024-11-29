@@ -1,6 +1,7 @@
 import cn from 'clsx'
 import { User } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { CartButton } from '@/components/shared/cart'
 import Container from '@/components/shared/container'
@@ -18,7 +19,9 @@ export const Header = ({ className }: Props) => {
 	return (
 		<header className={cn(styles.root, className)}>
 			<Container className={styles.container}>
-				<Image src='/logo.png' width={70} height={70} alt='logo' />
+				<Link href='/'>
+					<Image src='/logo.png' width={70} height={70} alt='logo' />
+				</Link>
 				<div className={styles.search}>
 					<SearchInput />
 				</div>

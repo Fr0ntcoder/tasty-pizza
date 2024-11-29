@@ -1,15 +1,17 @@
 'use client'
 
+import { Category } from '@prisma/client'
 import cn from 'clsx'
 
 import styles from './Categories.module.scss'
 import { useCategoryStore } from '@/store/category'
 
 type Props = {
+	items: Category[]
 	className?: string
 }
 
-const categories = [
+/* const categories = [
 	{
 		id: 1,
 		name: 'Пицца'
@@ -38,12 +40,12 @@ const categories = [
 		id: 7,
 		name: 'Десерты'
 	}
-]
+] */
 
-export const Categories = ({ className }: Props) => {
+export const Categories = ({ items, className }: Props) => {
 	const categoryActiveId = useCategoryStore(state => state.activeId)
 
-	const categoriesList = categories.map((item, i) => (
+	const categoriesList = items.map((item, i) => (
 		<a
 			href={`/#${item.name}`}
 			key={i}
