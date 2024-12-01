@@ -10,11 +10,14 @@
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
 		"^@/prisma/(.*)$",
+		"^@/shared/components/shared/(.*)$",
+		"^@/shared/components/ui/(.*)$",
+		"^@/shared/constants/(.*)$",
+		"^@/shared/hooks/(.*)$",
+		"^@/shared/services/(.*)$",
+		"^@/shared/store/(.*)$",
+		"^@/@types/(.*)$",
 		"^@/app/(.*)$",
-		"^@/components/shared/(.*)$",
-		"^@/components/ui/(.*)$",
-		"^@/hooks/(.*)$",
-		"^@/services/(.*)$",
 		"^../(.*)$",
 		"^./(.*)$"
 	],

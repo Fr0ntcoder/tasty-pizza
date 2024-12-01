@@ -1,13 +1,14 @@
-import Container from '@/components/shared/container'
-import { FilterMain } from '@/components/shared/filters'
-import { ProductGroupCard } from '@/components/shared/product'
-import Title from '@/components/shared/title'
-import TopBar from '@/components/shared/top-bar'
-
-import styles from './Home.module.scss'
 import { prisma } from '@/prisma/prisma-client'
 
-export default async function Home() {
+import Container from '@/shared/components/shared/container'
+import { FilterMain } from '@/shared/components/shared/filters'
+import { ProductGroupCard } from '@/shared/components/shared/product'
+import Title from '@/shared/components/shared/title'
+import TopBar from '@/shared/components/shared/top-bar'
+
+import styles from './Home.module.scss'
+
+export default async function HomePage() {
 	const categories = await prisma.category.findMany({
 		include: {
 			products: {

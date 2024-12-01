@@ -1,25 +1,27 @@
-.wrap {
+.root {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 15px;
-	margin-top: 30px;
+}
+
+.content {
+	padding: 30px;
+	background: #fbecec;
 }
 
 .image {
 	display: flex;
 	justify-content: center;
+	padding: 30px;
+	img {
+		max-width: 300px;
+	}
 }
-.content {
-	display: block;
-	padding: 15px;
-	background: #fcfcfc;
-}
-
 .title {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
-.details {
-	margin-bottom: 10px;
+.text {
+	margin: 0 0 10px 0;
 	color: var(--text);
 }

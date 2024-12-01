@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { ReactNode } from 'react'
 
-import Header from '@/components/shared/header'
+import Header from '@/shared/components/shared/header'
 
 import styles from './Layout.module.scss'
 
@@ -9,15 +10,18 @@ export const metadata: Metadata = {
 	description: ''
 }
 
-export default function HomeLayout({
-	children
+export default function RootLayout({
+	children,
+	modal
 }: Readonly<{
-	children: React.ReactNode
+	children: ReactNode
+	modal: ReactNode
 }>) {
 	return (
 		<main className={styles.main}>
 			<Header />
 			{children}
+			{modal}
 		</main>
 	)
 }

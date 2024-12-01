@@ -2,10 +2,10 @@ import { notFound } from 'next/navigation'
 
 import { prisma } from '@/prisma/prisma-client'
 
-import Container from '@/components/shared/container'
-import { ProductImage } from '@/components/shared/product'
-import Title from '@/components/shared/title'
-import ToogleVariants from '@/components/shared/toogle-variants'
+import Container from '@/shared/components/shared/container'
+import { ProductImage } from '@/shared/components/shared/product'
+import Title from '@/shared/components/shared/title'
+import ToogleVariants from '@/shared/components/shared/toogle-variants'
 
 import styles from './ProductPage.module.scss'
 
@@ -23,7 +23,9 @@ export default async function ProductPage({
 	return (
 		<Container>
 			<div className={styles.wrap}>
-				<ProductImage imageUrl={product.imageUrl} size={20} />
+				<div className={styles.image}>
+					<ProductImage imageUrl={product.imageUrl} size={20} />
+				</div>
 				<div className={styles.content}>
 					<Title text={product.name} size='md' className={styles.title} />
 					<div className={styles.details}>
