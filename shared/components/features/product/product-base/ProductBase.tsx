@@ -7,6 +7,7 @@ import styles from './ProductBase.module.scss'
 type TProductBase = {
 	imageUrl: string
 	name: string
+	price: number
 	onClickAdd?: VoidFunction
 	className?: string
 }
@@ -14,11 +15,10 @@ type TProductBase = {
 export const ProductBase = ({
 	imageUrl,
 	name,
+	price,
 	onClickAdd,
 	className
 }: TProductBase) => {
-	const textDetails = 'какой-то текст'
-	const totalPrice = 200
 	return (
 		<div className={cn(styles.root, className)}>
 			<div className={styles.image}>
@@ -27,9 +27,8 @@ export const ProductBase = ({
 
 			<div className={styles.content}>
 				<Title text={name} className={styles.title} />
-				<p className={styles.text}>{textDetails}</p>
-				<Button variant='default' onClick={onClickAdd}>
-					Добавить в корзину {totalPrice} ₽
+				<Button variant='default' className={styles.btn} size='default'>
+					Добавить в корзину {price} ₽
 				</Button>
 			</div>
 		</div>

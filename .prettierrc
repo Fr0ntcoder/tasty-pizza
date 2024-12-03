@@ -17,6 +17,7 @@
 		"^@/shared/hooks/(.*)$",
 		"^@/shared/services/(.*)$",
 		"^@/shared/store/(.*)$",
+		"^@/shared/lib",
 		"^@/@types/(.*)$",
 		"^@/app/(.*)$",
 		"^../(.*)$",

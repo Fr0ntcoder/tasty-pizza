@@ -1,6 +1,5 @@
 .root {
 	display: inline-flex;
-	height: 40px;
 	font-size: 14px;
 	font-weight: 700;
 	align-items: center;
@@ -35,12 +34,6 @@
 		background-color: var(--primary);
 		color: var(--primary-foreground);
 		transition: all 0.2s ease-in-out;
-
-		/* &:hover {
-			border: 1px solid var(--primary);
-			color: var(--primary);
-			background-color: #fff;
-		} */
 	}
 
 	&-destructive {
@@ -96,17 +89,17 @@
 
 .size {
 	&-default {
-		height: 40px;
+		font-size: 14px;
 		padding: 8px 16px;
 	}
 
 	&-sm {
-		padding: 0 12px;
-		border-radius: 6px;
+		font-size: 16px;
+		padding: 10px;
 	}
 
 	&-lg {
-		height: 44px;
+		font-size: 18px;
 		padding: 0 32px;
 		border-radius: 6px;
 	}

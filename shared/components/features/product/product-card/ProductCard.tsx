@@ -38,7 +38,7 @@ export const ProductCard = ({
 				<span className={styles.bottom__price}>
 					от <b>{price} ₽</b>
 				</span>
-				<Button variant='default' size='sm' className={styles.bottom__btn}>
+				<Button variant='default' size='default' className={styles.bottom__btn}>
 					<Plus size={20} strokeWidth={2} /> Добавить
 				</Button>
 			</div>

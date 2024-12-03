@@ -1,8 +1,7 @@
 .root {
 	position: fixed;
 	gap: 16px;
-	padding: 24px;
-	background-color: var(--primary);
+	background: #fff;
 	transition: all 0.3s ease-in-out;
 	z-index: 50;
 
@@ -62,7 +61,7 @@
 		inset-block: 0;
 		right: 0;
 		height: 100%;
-		width: 75%;
+		width: 300px;
 		border-left: 1px solid var(--border);
 
 		&[data-state='closed'] {
@@ -81,6 +80,7 @@
 	top: 1rem;
 	border-radius: 0.125rem;
 	opacity: 0.7;
+	background: none;
 	transition: opacity 0.3s ease;
 
 	&:hover {

@@ -10,6 +10,9 @@
 }
 
 .image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 30px;
 }
 .title {
@@ -19,4 +22,26 @@
 .text {
 	margin: 0 0 10px 0;
 	color: var(--text);
+}
+
+.toggle {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.btn {
+	display: flex;
+	width: 100%;
+}
+
+.ingredients {
+	display: grid;
+	height: 300px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
+	margin-bottom: 30px;
+	padding: 5px 10px 10px 0;
+	overflow-y: auto;
 }

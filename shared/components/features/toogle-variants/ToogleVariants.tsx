@@ -13,13 +13,13 @@ type Variant = {
 type TToogleVariants = {
 	items: readonly Variant[]
 	onClick?: (value: Variant['value']) => void
-	selectedValue?: Variant['value']
+	value?: Variant['value']
 	className?: string
 }
 
 export const ToogleVariants = ({
 	items,
-	selectedValue,
+	value,
 	onClick,
 	className
 }: TToogleVariants) => {
@@ -28,7 +28,7 @@ export const ToogleVariants = ({
 			key={item.name}
 			onClick={() => onClick?.(item.value)}
 			className={cn(styles.btn, {
-				[styles.btn__active]: item.value === selectedValue,
+				[styles.btn__active]: item.value === value,
 				[styles.btn__disabled]: item.disabled
 			})}
 		>

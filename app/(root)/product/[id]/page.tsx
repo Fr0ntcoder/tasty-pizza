@@ -33,7 +33,7 @@ export default async function ProductPage({
 						neque libero, sapiente dicta dolorem.
 					</div>
 					<ToogleVariants
-						selectedValue='2'
+						value='2'
 						items={[
 							{
 								name: 'Маленькая',

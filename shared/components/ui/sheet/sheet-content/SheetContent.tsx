@@ -11,8 +11,8 @@ type SheetContentSide = 'top' | 'bottom' | 'left' | 'right'
 
 type TSheetContent = {
 	side: SheetContentSide
-	className: string
-	children: ReactNode
+	className?: string
+	children?: ReactNode
 }
 
 export const SheetContent = forwardRef<

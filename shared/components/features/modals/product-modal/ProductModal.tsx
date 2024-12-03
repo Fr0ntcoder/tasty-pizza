@@ -2,13 +2,13 @@
 
 import { useRouter } from 'next/navigation'
 
-import { ProductBase, ProductPizza } from '@/shared/components/features/product'
-
 import {
 	Dialog,
 	DialogContent,
 	DialogTitle
 } from '@/shared/components/ui/dialog'
+
+import { ProductBase, ProductPizza } from '@/shared/components/features/product'
 
 import { TProductWithRelation } from '@/@types/product'
 
@@ -31,11 +31,16 @@ export const ProductModal = ({ product, className }: TProductModal) => {
 					<ProductPizza
 						imageUrl={product.imageUrl}
 						name={product.name}
-						ingredients={[]}
-						items={[]}
+						ingredients={product.ingredients}
+						items={product.items}
+						onAddCart={undefined}
 					/>
 				) : (
-					<ProductBase imageUrl={product.imageUrl} name={product.name} />
+					<ProductBase
+						imageUrl={product.imageUrl}
+						name={product.name}
+						price={product.items[0].price}
+					/>
 				)}
 			</DialogContent>
 		</Dialog>
