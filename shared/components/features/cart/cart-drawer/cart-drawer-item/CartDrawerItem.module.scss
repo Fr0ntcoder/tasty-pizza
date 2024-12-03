@@ -1,0 +1,38 @@
+.root {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 15px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow:
+		0 4px 6px rgba(0, 0, 0, 0.1),
+		0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.content {
+	flex: 1;
+}
+.info {
+	margin-bottom: 15px;
+}
+.block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&__icon {
+		cursor: pointer;
+	}
+}

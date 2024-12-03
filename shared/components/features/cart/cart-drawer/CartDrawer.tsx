@@ -1,3 +1,6 @@
+'use client'
+
+import cn from 'clsx'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
@@ -11,6 +14,10 @@ import {
 	SheetTitle,
 	SheetTrigger
 } from '@/shared/components/ui/sheet'
+
+import { CartDrawerItem } from '@/shared/components/features/cart/cart-drawer/cart-drawer-item/CartDrawerItem'
+
+import { getCartItems } from '@/shared/lib'
 
 import styles from './CartDrawer.module.scss'
 
@@ -31,6 +38,32 @@ export const CartDrawer = ({
 						В корзине <span>3 товара</span>
 					</SheetTitle>
 				</SheetHeader>
+				<div className={cn(styles.wrap, 'scrollbar')}>
+					<div className={styles.list}>
+						<CartDrawerItem
+							id='1'
+							imageUrl='/assets/pizza/chorizo-fresh.webp'
+							details={getCartItems(2, 30, [
+								{ name: 'цыпленок' },
+								{ name: 'моцарела' }
+							])}
+							name='Чоризо фреш'
+							price={250}
+							quantity={1}
+						/>
+						<CartDrawerItem
+							id='1'
+							imageUrl='/assets/pizza/chorizo-fresh.webp'
+							details={getCartItems(2, 30, [
+								{ name: 'цыпленок' },
+								{ name: 'моцарела' }
+							])}
+							name='Чоризо фреш'
+							price={250}
+							quantity={1}
+						/>
+					</div>
+				</div>
 				<SheetFooter>
 					<div className={styles.footer}>
 						<div className={styles.footer__wrap}>
