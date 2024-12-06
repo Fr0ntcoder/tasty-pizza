@@ -1,3 +1,5 @@
+'use client'
+
 import cn from 'clsx'
 import { Trash2Icon } from 'lucide-react'
 
@@ -14,6 +16,7 @@ import styles from './CartDrawerItem.module.scss'
 
 type TCartDrawerItem = {
 	className?: string
+	onUpdateQuantity?: (type: 'plus' | 'minus') => void
 } & TCartItem
 
 export const CartDrawerItem = ({
@@ -22,6 +25,7 @@ export const CartDrawerItem = ({
 	price,
 	quantity,
 	details,
+	onUpdateQuantity,
 	className
 }: TCartDrawerItem) => {
 	return (
@@ -30,12 +34,7 @@ export const CartDrawerItem = ({
 			<div className={styles.content}>
 				<CartItemInfo details={details} name={name} className={styles.info} />
 				<div className={styles.block}>
-					<Count
-						onClick={type => {
-							console.log(type)
-						}}
-						value={quantity}
-					/>
+					<Count value={quantity} onClick={onUpdateQuantity} />
 					<span className={styles.price}>
 						<CartItemPrice value={price} />
 						<Trash2Icon size={18} className={styles.price__icon} />

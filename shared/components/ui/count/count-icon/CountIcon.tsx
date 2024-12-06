@@ -2,7 +2,7 @@ import cn from 'clsx'
 import { Minus, Plus } from 'lucide-react'
 
 import { Button } from '@/shared/components/ui/button'
-import { Count, TCount } from '@/shared/components/ui/count'
+import { TCount } from '@/shared/components/ui/count'
 
 import styles from './CountIcon.module.scss'
 
@@ -34,7 +34,6 @@ export const CountIcon = ({
 			) : (
 				<Minus size={size === 'sm' ? 15 : 20} />
 			)}
-			<Count />
 		</Button>
 	)
 }

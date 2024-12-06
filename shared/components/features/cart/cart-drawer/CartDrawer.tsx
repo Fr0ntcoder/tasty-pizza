@@ -15,13 +15,13 @@ import {
 	SheetTrigger
 } from '@/shared/components/ui/sheet'
 
-import { CartDrawerItem } from '@/shared/components/features/cart'
+import { CartDrawerItem } from '@/shared/components/features/cart/cart-drawer/cart-drawer-item/CartDrawerItem'
 
 import { TPizzaSize, TPizzaType } from '@/shared/constants/pizza'
 
 import { useCartStore } from '@/shared/store'
 
-import { getCartItems } from '@/shared/lib'
+import { formatWordCart, getCartItems } from '@/shared/lib'
 
 import styles from './CartDrawer.module.scss'
 
@@ -33,12 +33,22 @@ export const CartDrawer = ({
 	children,
 	className
 }: PropsWithChildren<TCartDrawer>) => {
-	const { items, totalAmount, fetchCartItems } = useCartStore()
+	const { items, totalAmount, fetchCartItems, updateItemQuantity } =
+		useCartStore()
 
 	useEffect(() => {
 		fetchCartItems()
 	}, [])
 
+	const onUpdateQuantity = (
+		id: number,
+		quantity: number,
+		type: 'plus' | 'minus'
+	) => {
+		const newQuantity = type === 'plus' ? quantity + 1 : quantity - 1
+
+		updateItemQuantity(id, newQuantity)
+	}
 	const list = items.map(item => (
 		<CartDrawerItem
 			key={item.id}
@@ -56,6 +66,7 @@ export const CartDrawer = ({
 			name={item.name}
 			price={item.price}
 			quantity={item.quantity}
+			onUpdateQuantity={type => onUpdateQuantity(item.id, item.quantity, type)}
 		/>
 	))
 	return (
@@ -64,7 +75,7 @@ export const CartDrawer = ({
 			<SheetContent side='right' className={styles.content}>
 				<SheetHeader>
 					<SheetTitle className={styles.title}>
-						В корзине <span>3 товара</span>
+						В корзине <span>{formatWordCart(items.length)}</span>
 					</SheetTitle>
 				</SheetHeader>
 				<div className={cn(styles.wrap, 'scrollbar')}>
