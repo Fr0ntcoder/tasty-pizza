@@ -2,10 +2,11 @@ import { notFound } from 'next/navigation'
 
 import { prisma } from '@/prisma/prisma-client'
 
-import { Container, Title } from '@/shared/components/ui'
+import { Container } from '@/shared/components/ui/container'
+import { Title } from '@/shared/components/ui/title'
 
 import { ProductImage } from '@/shared/components/features/product'
-import ToogleVariants from '@/shared/components/features/toogle-variants'
+import { ToogleVariants } from '@/shared/components/features/toogle-variants'
 
 import styles from './ProductPage.module.scss'
 

@@ -1,1 +1,1 @@
-export { SortPopup as default } from './SortPopup'
+export { SortPopup } from './SortPopup'

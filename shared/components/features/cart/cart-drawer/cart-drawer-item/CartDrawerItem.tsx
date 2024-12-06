@@ -8,7 +8,7 @@ import {
 	CartItemInfo,
 	CartItemPrice
 } from '@/shared/components/features/cart'
-import { TCartItem } from '@/shared/components/features/cart/cart-item/cart-item-types'
+import { TCartItem } from '@/shared/components/features/cart/cart-item/types'
 
 import styles from './CartDrawerItem.module.scss'
 

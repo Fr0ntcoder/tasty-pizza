@@ -1,6 +1,8 @@
 'use client'
 
-import { Input, RangeSlider, Title } from '@/shared/components/ui'
+import { Input } from '@/shared/components/ui/input'
+import { RangeSlider } from '@/shared/components/ui/range-slider'
+import { Title } from '@/shared/components/ui/title'
 
 import { FilterGroupCheckbox } from '@/shared/components/features/filters'
 

@@ -5,7 +5,8 @@ import { ChangeEvent, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-import { Input, Title } from '@/shared/components/ui'
+import { Input } from '@/shared/components/ui/input'
+import { Title } from '@/shared/components/ui/title'
 
 import {
 	FilterCheckbox,

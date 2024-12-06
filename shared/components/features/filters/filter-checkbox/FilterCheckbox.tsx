@@ -1,6 +1,6 @@
-'use-client'
+'use client'
 
-import { Checkbox } from '@/shared/components/ui'
+import { Checkbox } from '@/shared/components/ui/checkbox'
 
 import styles from './FilterCheckbox.module.scss'
 

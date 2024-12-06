@@ -1,11 +1,11 @@
-import { Ingredient } from '@prisma/client'
-
 import { TPizzaSize, TPizzaType, mapPizzaType } from '@/shared/constants/pizza'
 
+import { TCartStateItem } from '@/shared/lib/get-cart-details'
+
 export const getCartItems = (
+	ingredients: TCartStateItem['ingredients'],
 	pizzaType: TPizzaType,
-	pizzaSize: TPizzaSize,
-	ingredients: Ingredient[]
+	pizzaSize: TPizzaSize
 ): string => {
 	const details = []
 

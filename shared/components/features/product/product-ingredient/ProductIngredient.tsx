@@ -2,7 +2,7 @@ import cn from 'clsx'
 import { CircleCheck } from 'lucide-react'
 import Image from 'next/image'
 
-import { Title } from '@/shared/components/ui'
+import { Title } from '@/shared/components/ui/title'
 
 import styles from './ProductIngredient.module.scss'
 

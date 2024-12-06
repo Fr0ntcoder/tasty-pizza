@@ -37,6 +37,7 @@
 		"react-dom": "19.0.0-rc-66855b96-20241106",
 		"react-loading-skeleton": "^3.5.0",
 		"react-use": "^17.5.1",
+		"shallow": "^1.0.0",
 		"ts-node": "^10.9.2",
 		"zustand": "^5.0.1"
 	},

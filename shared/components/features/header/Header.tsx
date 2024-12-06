@@ -3,10 +3,11 @@ import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Button, Container } from '@/shared/components/ui'
+import { Button } from '@/shared/components/ui/button'
+import { Container } from '@/shared/components/ui/container'
 
 import { CartButton } from '@/shared/components/features/cart'
-import SearchInput from '@/shared/components/features/search-input'
+import { SearchInput } from '@/shared/components/features/search-input'
 
 import styles from './Header.module.scss'
 

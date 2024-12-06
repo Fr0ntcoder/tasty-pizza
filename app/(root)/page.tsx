@@ -1,10 +1,11 @@
 import { prisma } from '@/prisma/prisma-client'
 
-import { Container, Title } from '@/shared/components/ui'
+import { Container } from '@/shared/components/ui/container'
+import { Title } from '@/shared/components/ui/title'
 
 import { FilterMain } from '@/shared/components/features/filters'
 import { ProductGroupCard } from '@/shared/components/features/product'
-import TopBar from '@/shared/components/features/top-bar'
+import { TopBar } from '@/shared/components/features/top-bar'
 
 import styles from './Home.module.scss'
 

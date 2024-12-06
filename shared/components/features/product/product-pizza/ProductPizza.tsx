@@ -5,13 +5,14 @@ import cn from 'clsx'
 import { useEffect, useState } from 'react'
 import { useSet } from 'react-use'
 
-import { Button, Title } from '@/shared/components/ui'
+import { Button } from '@/shared/components/ui/button'
+import { Title } from '@/shared/components/ui/title'
 
 import {
 	ProductImage,
 	ProductIngredient
 } from '@/shared/components/features/product'
-import ToogleVariants from '@/shared/components/features/toogle-variants'
+import { ToogleVariants } from '@/shared/components/features/toogle-variants'
 
 import {
 	TPizzaSize,

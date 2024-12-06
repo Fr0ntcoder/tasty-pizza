@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 
-import Header from '@/shared/components/features/header'
+import { Header } from '@/shared/components/features/header'
 
 import styles from './Layout.module.scss'
 

@@ -1,1 +1,1 @@
-export { Categories as default } from './Categories'
+export { Categories } from './Categories'

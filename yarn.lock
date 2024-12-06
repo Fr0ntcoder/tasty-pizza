@@ -1825,6 +1825,11 @@ set-harmonic-interval@^1.0.1:
   resolved "https://registry.yarnpkg.com/set-harmonic-interval/-/set-harmonic-interval-1.0.1.tgz#e1773705539cdfb80ce1c3d99e7f298bb3995249"
   integrity sha512-AhICkFV84tBP1aWqPwLZqFvAwqEoVA9kxNMniGEUvzOlm4vLmOFLiTT3UZ6bziJTy4bOVpzWGTfSCbmaayGx8g==
 
+shallow@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/shallow/-/shallow-1.0.0.tgz#f910d19de6c0de4647a63f0e3adcd587bf913c6b"
+  integrity sha512-vZuIug+9xQ0kMw1pBXk9XoK4kIS2KOHDjDb6AtyaI8yGRwvuHEZFmmpcThJ24YIN/3qa3/GyaTcvfG8I4ub/Dw==
+
 sharp@^0.33.5:
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.33.5.tgz#13e0e4130cc309d6a9497596715240b2ec0c594e"

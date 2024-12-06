@@ -8,8 +8,9 @@ import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { useClickAway, useDebounce } from 'react-use'
 
-import styles from './SearchInput.module.scss'
 import { Api } from '@/shared/services/api-clients'
+
+import styles from './SearchInput.module.scss'
 
 type TSearchInput = {
 	className?: string

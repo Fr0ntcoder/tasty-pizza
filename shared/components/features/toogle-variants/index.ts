@@ -1,1 +1,1 @@
-export { ToogleVariants as default } from './ToogleVariants'
+export { ToogleVariants } from './ToogleVariants'

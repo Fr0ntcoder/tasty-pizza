@@ -4,7 +4,7 @@ import cn from 'clsx'
 import { useEffect, useRef } from 'react'
 import { useIntersection } from 'react-use'
 
-import { Title } from '@/shared/components/ui'
+import { Title } from '@/shared/components/ui/title'
 
 import { ProductCard } from '@/shared/components/features/product'
 
