@@ -1,12 +1,11 @@
 'use client'
 
+import { RangeSlider, Title } from '@/components/ui/common'
 import { Input } from '@/components/ui/common/form-elements'
-import { RangeSlider } from '@/components/ui/common/range-slider'
-import { Title } from '@/components/ui/common/title'
 
 import { useFilters, useIngredients, useQueryFilters } from '@/shared/hooks'
 
-import { FilterGroupCheckbox } from './filter-group-checkbox'
+import { FilterGroupCheckbox } from './filter-group-checkbox/FilterGroupCheckbox'
 
 import styles from './FilterMain.module.scss'
 

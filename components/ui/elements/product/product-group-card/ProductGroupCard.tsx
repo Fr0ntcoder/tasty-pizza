@@ -4,11 +4,10 @@ import cn from 'clsx'
 import { useEffect, useRef } from 'react'
 import { useIntersection } from 'react-use'
 
-import { Title } from '@/components/ui/common/title'
+import { Title } from '@/components/ui/common'
+import { ProductCard } from '@/components/ui/elements/product'
 
 import { useCategoryStore } from '@/shared/store/category'
-
-import { ProductCard } from '../product-card'
 
 import styles from './ProductGroupCard.module.scss'
 

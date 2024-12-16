@@ -1,1 +1,0 @@
-export { ProductGroupCard } from './ProductGroupCard'

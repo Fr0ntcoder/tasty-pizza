@@ -3,8 +3,8 @@ import cn from 'clsx'
 import { X } from 'lucide-react'
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 
-import { DialogPortal } from '../dialog-other'
-import { DialogOverlay } from '../dialog-overlay'
+import { DialogPortal } from '../dialog-other/DialogOther'
+import { DialogOverlay } from '../dialog-overlay/DialogOverlay'
 
 import styles from './DialogContent.module.scss'
 

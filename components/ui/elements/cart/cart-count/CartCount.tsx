@@ -2,7 +2,7 @@ import cn from 'clsx'
 
 import { ICartCount } from '@/@types/cart'
 
-import { CartCountIcon } from './cart-count-icon'
+import { CartCountIcon } from './cart-count-icon/CartCountIcon'
 
 import styles from './CartCount.module.scss'
 

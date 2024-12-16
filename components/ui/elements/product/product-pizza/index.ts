@@ -1,1 +1,0 @@
-export { ProductPizza } from './ProductPizza'

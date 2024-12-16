@@ -4,11 +4,11 @@ import { Category } from '@prisma/client'
 import cn from 'clsx'
 import { useState } from 'react'
 
-import { Container } from '@/components/ui/common/container'
+import { Container } from '@/components/ui/common'
 import { CartButton } from '@/components/ui/elements/cart'
 
-import { Navigation } from './navigation'
-import { SortPopup } from './sort-popup'
+import { Navigation } from './navigation/Navigation'
+import { SortPopup } from './sort-popup/SortPopup'
 
 import styles from './TopBar.module.scss'
 

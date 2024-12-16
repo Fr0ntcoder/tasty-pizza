@@ -1,8 +1,7 @@
 import { Product } from '@prisma/client'
 import { notFound } from 'next/navigation'
 
-import { Container } from '@/components/ui/common/container'
-import { Title } from '@/components/ui/common/title'
+import { Container, Title } from '@/components/ui/common'
 import { ProductImage, ProductToggle } from '@/components/ui/elements/product'
 
 import styles from './ProductSingle.module.scss'

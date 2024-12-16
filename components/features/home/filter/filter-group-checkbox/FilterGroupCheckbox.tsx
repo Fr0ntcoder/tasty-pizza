@@ -5,10 +5,10 @@ import { ChangeEvent, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
+import { Title } from '@/components/ui/common'
 import { Input } from '@/components/ui/common/form-elements'
-import { Title } from '@/components/ui/common/title'
 
-import { FilterCheckbox } from '../filter-checkbox'
+import { FilterCheckbox } from '../filter-checkbox/FilterCheckbox'
 import { IFilterCheckbox } from '../filter-checkbox/types'
 
 import styles from './FilterGroupCheckbox.module.scss'

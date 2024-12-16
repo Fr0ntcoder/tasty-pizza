@@ -5,8 +5,12 @@ import cn from 'clsx'
 import { useEffect, useState } from 'react'
 import { useSet } from 'react-use'
 
-import { Button } from '@/components/ui/common/button'
-import { Title } from '@/components/ui/common/title'
+import { Button, Title } from '@/components/ui/common'
+import {
+	ProductImage,
+	ProductIngredient,
+	ProductToggle
+} from '@/components/ui/elements/product'
 
 import {
 	TPizzaSize,
@@ -17,10 +21,6 @@ import {
 } from '@/shared/constants/pizza'
 
 import { calcPizzaPrice } from '@/shared/lib'
-
-import { ProductImage } from '../product-image'
-import { ProductIngredient } from '../product-ingredient'
-import { ProductToggle } from '../product-toggle'
 
 import styles from './ProductPizza.module.scss'
 

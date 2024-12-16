@@ -1,11 +1,10 @@
 import cn from 'clsx'
 
-import { Container } from '@/components/ui/common/container'
-import { Title } from '@/components/ui/common/title'
+import { Container, Title } from '@/components/ui/common'
 import { ProductGroupCard } from '@/components/ui/elements/product'
 
-import { FilterMain } from './filter'
-import { TopBar } from './top-bar'
+import { FilterMain } from './filter/FilterMain'
+import { TopBar } from './top-bar/TopBar'
 
 import styles from './Home.module.scss'
 

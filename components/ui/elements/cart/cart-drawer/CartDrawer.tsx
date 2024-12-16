@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { PropsWithChildren, useEffect } from 'react'
 
-import { Button } from '@/components/ui/common/button'
+import { Button } from '@/components/ui/common'
 import {
 	Sheet,
 	SheetContent,
@@ -21,7 +21,7 @@ import { useCartStore } from '@/shared/store'
 
 import { formatWordCart, getCartItems } from '@/shared/lib'
 
-import { CartDrawerItem } from './cart-drawer-item'
+import { CartDrawerItem } from './cart-drawer-item/CartDrawerItem'
 
 import styles from './CartDrawer.module.scss'
 

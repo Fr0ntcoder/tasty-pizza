@@ -7,11 +7,9 @@ import {
 	DialogContent,
 	DialogTitle
 } from '@/components/ui/common/dialog'
+import { ProductBase, ProductPizza } from '@/components/ui/elements/product'
 
 import { IProductWithRelation } from '@/@types/product'
-
-import { ProductBase } from '../product-base'
-import { ProductPizza } from '../product-pizza'
 
 import styles from './ProductModal.module.scss'
 

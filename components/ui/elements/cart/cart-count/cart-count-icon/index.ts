@@ -1,1 +1,0 @@
-export { CartCountIcon } from './CartCountIcon'

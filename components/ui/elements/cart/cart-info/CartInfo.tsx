@@ -1,6 +1,6 @@
 import cn from 'clsx'
 
-import { Title } from '@/components/ui/common/title'
+import { Title } from '@/components/ui/common'
 
 import styles from './CartInfo.module.scss'
 

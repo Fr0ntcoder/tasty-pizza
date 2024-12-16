@@ -1,1 +1,0 @@
-export { CartImage } from './CartImage'

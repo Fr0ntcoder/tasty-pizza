@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { Minus, Plus } from 'lucide-react'
 
-import { Button } from '@/components/ui/common/button'
+import { Button } from '@/components/ui/common'
 
 import { ICartCount } from '@/@types/cart'
 
