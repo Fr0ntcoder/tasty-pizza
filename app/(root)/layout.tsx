@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 
-import { Header } from '@/shared/components/features/header'
-
-import styles from './Layout.module.scss'
+import { MainLayout } from '@/components/layouts/main-layout'
 
 export const metadata: Metadata = {
 	title: 'Tasty Pizza',
@@ -18,10 +16,9 @@ export default function RootLayout({
 	modal: ReactNode
 }>) {
 	return (
-		<main className={styles.main}>
-			<Header />
+		<MainLayout>
 			{children}
 			{modal}
-		</main>
+		</MainLayout>
 	)
 }

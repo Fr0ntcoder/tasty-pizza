@@ -1,0 +1,1 @@
+export { ProductBase } from './ProductBase'

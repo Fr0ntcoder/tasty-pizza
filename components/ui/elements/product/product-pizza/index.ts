@@ -1,0 +1,1 @@
+export { ProductPizza } from './ProductPizza'

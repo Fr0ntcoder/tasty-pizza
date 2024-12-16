@@ -1,8 +1,0 @@
-export { SelectContent } from './select-content//SelectContent'
-export { SelectItem } from './select-item/SelectItem'
-export { SelectLabel } from './select-label/SelectLabel'
-export * from './select-other/SelectOther'
-export { SelectScrollDownButton } from './select-scroll-down-button/SelectScrollDownButton'
-export { SelectScrollUpButton } from './select-scroll-up-button/SelectScrollUpButton'
-export { SelectSeparator } from './select-separator/SelectSeparator'
-export { SelectTrigger } from './select-trigger/SelectTrigger'

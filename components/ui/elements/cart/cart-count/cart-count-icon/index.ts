@@ -1,0 +1,1 @@
+export { CartCountIcon } from './CartCountIcon'

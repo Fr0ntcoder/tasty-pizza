@@ -1,8 +1,6 @@
-import { notFound } from 'next/navigation'
-
 import { prisma } from '@/prisma/prisma-client'
 
-import { ProductModal } from '@/shared/components/features/modals'
+import { ProductModal } from '@/components/ui/elements/product'
 
 export default async function ModalPage({
 	params: { id }
@@ -16,10 +14,6 @@ export default async function ModalPage({
 			items: true
 		}
 	})
-
-	if (!product) {
-		return notFound()
-	}
 
 	return <ProductModal product={product} />
 }

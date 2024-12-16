@@ -1,0 +1,1 @@
+export { ProductIngredient } from './ProductIngredient'

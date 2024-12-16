@@ -1,6 +1,6 @@
 import { Ingredient, Product, ProductItem } from '@prisma/client'
 
-export type TProductWithRelation = {
+export interface IProductWithRelation extends Product {
 	items: ProductItem[]
 	ingredients: Ingredient[]
-} & Product
+}

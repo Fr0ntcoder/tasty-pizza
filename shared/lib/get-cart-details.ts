@@ -1,8 +1,8 @@
-import { TCartItem } from '@/shared/components/features/cart/cart-item/types'
-
 import { TCartDTO } from '@/shared/services/dto/cart.dto'
 
 import { calcCartItem } from '@/shared/lib'
+
+import { TCartItem } from '@/shared/components/features/cart/cart-item/types'
 
 export type TCartStateItem = {
 	id: number

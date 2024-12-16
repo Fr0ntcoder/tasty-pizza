@@ -10,18 +10,22 @@
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
 		"^@/prisma/(.*)$",
-		"^@/shared/components/ui",
-		"^@/shared/components/ui/(.*)$",
-		"^@/shared/components/features/(.*)$",
+		"^@/shared/ui",
+		"^@/components/features(.*)$",
+		"^@/components/layouts(.*)$",
+		"^@/components/ui(.*)$",
+		"^@/shared/hooks",
 		"^@/shared/constants/(.*)$",
-		"^@/shared/hooks/(.*)$",
 		"^@/shared/services/(.*)$",
 		"^@/shared/store",
 		"^@/shared/lib",
 		"^@/@types/(.*)$",
 		"^@/app/(.*)$",
+		"^@/.*$",
 		"^../(.*)$",
-		"^./(.*)$"
+		"^./(?!.*\\.module\\.scss$).*$",
+		"^./.*\\.module\\.scss$",
+		"(.scss)$"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true

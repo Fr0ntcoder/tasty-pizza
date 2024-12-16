@@ -1,7 +1,0 @@
-export { SheetContent } from './sheet-content/SheetContent'
-export { SheetDescription } from './sheet-description/SheetDescription'
-export { SheetFooter } from './sheet-footer/SheetFooter'
-export { SheetHeader } from './sheet-header/SheetHeader'
-export * from './sheet-other/SheetOther'
-export { SheetOverlay } from './sheet-overlay/SheetOverlay'
-export { SheetTitle } from './sheet-title/SheetTitle'
