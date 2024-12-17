@@ -4,8 +4,8 @@ import { Category } from '@prisma/client'
 import cn from 'clsx'
 import { useState } from 'react'
 
-import { Container } from '@/components/ui/common'
-import { CartButton } from '@/components/ui/elements/cart'
+import { CartButton } from '@/components/ui/common/cart'
+import { Container } from '@/components/ui/elements'
 
 import { Navigation } from './navigation/Navigation'
 import { SortPopup } from './sort-popup/SortPopup'

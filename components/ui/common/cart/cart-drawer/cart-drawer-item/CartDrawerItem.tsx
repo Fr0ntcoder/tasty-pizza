@@ -8,7 +8,7 @@ import {
 	CartItemImage,
 	CartItemInfo,
 	CartItemPrice
-} from '@/components/ui/elements/cart'
+} from '@/components/ui/common/cart'
 
 import { ICartItem } from '@/@types/cart'
 

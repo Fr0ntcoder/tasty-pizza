@@ -3,9 +3,9 @@
 import cn from 'clsx'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { PropsWithChildren, useEffect } from 'react'
+import { PropsWithChildren } from 'react'
 
-import { Button } from '@/components/ui/common'
+import { Button } from '@/components/ui/elements'
 import {
 	Sheet,
 	SheetContent,
@@ -13,11 +13,11 @@ import {
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger
-} from '@/components/ui/common/sheet'
+} from '@/components/ui/elements/sheet'
+
+import { useCart } from '@/shared/hooks'
 
 import { TPizzaSize, TPizzaType } from '@/shared/constants/pizza'
-
-import { useCartStore } from '@/shared/store'
 
 import { formatWordCart, getCartItems } from '@/shared/lib'
 
@@ -33,22 +33,8 @@ export const CartDrawer = ({
 	children,
 	className
 }: PropsWithChildren<ICartDrawer>) => {
-	const { items, totalAmount, fetchCartItems, updateItemQuantity } =
-		useCartStore()
+	const { items, onUpdateQuantity, totalAmount } = useCart()
 
-	useEffect(() => {
-		fetchCartItems()
-	}, [])
-
-	const onUpdateQuantity = (
-		id: number,
-		quantity: number,
-		type: 'plus' | 'minus'
-	) => {
-		const newQuantity = type === 'plus' ? quantity + 1 : quantity - 1
-
-		updateItemQuantity(id, newQuantity)
-	}
 	const list = items.map(item => (
 		<CartDrawerItem
 			key={item.id}

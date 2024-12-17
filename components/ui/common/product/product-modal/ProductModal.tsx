@@ -2,12 +2,12 @@
 
 import { notFound, useRouter } from 'next/navigation'
 
+import { ProductBase, ProductPizza } from '@/components/ui/common/product'
 import {
 	Dialog,
 	DialogContent,
 	DialogTitle
-} from '@/components/ui/common/dialog'
-import { ProductBase, ProductPizza } from '@/components/ui/elements/product'
+} from '@/components/ui/elements/dialog'
 
 import { IProductWithRelation } from '@/@types/product'
 

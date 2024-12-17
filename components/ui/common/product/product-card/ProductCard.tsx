@@ -3,7 +3,7 @@
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
 
-import { Button, Title } from '@/components/ui/common'
+import { Button, Title } from '@/components/ui/elements'
 
 import styles from './ProductCard.module.scss'
 

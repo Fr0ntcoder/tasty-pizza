@@ -5,12 +5,12 @@ import cn from 'clsx'
 import { useEffect, useState } from 'react'
 import { useSet } from 'react-use'
 
-import { Button, Title } from '@/components/ui/common'
 import {
 	ProductImage,
 	ProductIngredient,
 	ProductToggle
-} from '@/components/ui/elements/product'
+} from '@/components/ui/common/product'
+import { Button, Title } from '@/components/ui/elements'
 
 import {
 	TPizzaSize,

@@ -1,7 +1,7 @@
 import cn from 'clsx'
 
-import { Container, Title } from '@/components/ui/common'
-import { ProductGroupCard } from '@/components/ui/elements/product'
+import { ProductGroupCard } from '@/components/ui/common/product'
+import { Container, Title } from '@/components/ui/elements'
 
 import { FilterMain } from './filter/FilterMain'
 import { TopBar } from './top-bar/TopBar'

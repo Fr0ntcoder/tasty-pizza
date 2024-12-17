@@ -1,6 +1,6 @@
 'use client'
 
-import { Checkbox } from '@/components/ui/common/form-elements'
+import { Checkbox } from '@/components/ui/elements/form-elements'
 
 import { IFilterCheckbox } from './types'
 

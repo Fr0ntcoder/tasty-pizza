@@ -3,7 +3,7 @@
 import cn from 'clsx'
 import { ArrowRight, ShoppingCart } from 'lucide-react'
 
-import { Button } from '@/components/ui/common'
+import { Button } from '@/components/ui/elements'
 
 import { CartDrawer } from '../cart-drawer/CartDrawer'
 

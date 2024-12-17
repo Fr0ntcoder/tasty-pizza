@@ -3,7 +3,7 @@ import cn from 'clsx'
 import { X } from 'lucide-react'
 import { ElementRef, ReactNode, forwardRef } from 'react'
 
-import { SheetOverlay, SheetPortal } from '@/components/ui/common/sheet'
+import { SheetOverlay, SheetPortal } from '@/components/ui/elements/sheet'
 
 import styles from './SheetContent.module.scss'
 

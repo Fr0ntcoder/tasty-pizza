@@ -1,7 +1,7 @@
 'use client'
 
-import { RangeSlider, Title } from '@/components/ui/common'
-import { Input } from '@/components/ui/common/form-elements'
+import { RangeSlider, Title } from '@/components/ui/elements'
+import { Input } from '@/components/ui/elements/form-elements'
 
 import { useFilters, useIngredients, useQueryFilters } from '@/shared/hooks'
 
