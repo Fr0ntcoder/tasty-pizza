@@ -10,13 +10,13 @@ import { useClickAway, useDebounce } from 'react-use'
 
 import { Api } from '@/shared/services/api-clients'
 
-import styles from './SearchInput.module.scss'
+import styles from './HeaderSearch.module.scss'
 
 interface ISearchInput {
 	className?: string
 }
 
-export const SearchInput = ({ className }: ISearchInput) => {
+export const HeaderSearch = ({ className }: ISearchInput) => {
 	const [searchQuery, setSearchQuery] = useState('')
 	const [focused, setFocused] = useState(false)
 	const [products, setProducts] = useState<Product[]>([])

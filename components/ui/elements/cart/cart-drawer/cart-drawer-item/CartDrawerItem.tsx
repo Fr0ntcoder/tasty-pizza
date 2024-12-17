@@ -4,10 +4,10 @@ import cn from 'clsx'
 import { Trash2Icon } from 'lucide-react'
 
 import {
-	CartCount,
-	CartImage,
-	CartInfo,
-	CartPrice
+	CartItemCount,
+	CartItemImage,
+	CartItemInfo,
+	CartItemPrice
 } from '@/components/ui/elements/cart'
 
 import { ICartItem } from '@/@types/cart'
@@ -30,13 +30,13 @@ export const CartDrawerItem = ({
 }: ICartDrawerItem) => {
 	return (
 		<div className={cn(styles.root, className)}>
-			<CartImage src={imageUrl} />
+			<CartItemImage src={imageUrl} />
 			<div className={styles.content}>
-				<CartInfo details={details} name={name} className={styles.info} />
+				<CartItemInfo details={details} name={name} className={styles.info} />
 				<div className={styles.block}>
-					<CartCount value={quantity} onClick={onUpdateQuantity} />
+					<CartItemCount value={quantity} onClick={onUpdateQuantity} />
 					<span className={styles.price}>
-						<CartPrice value={price} />
+						<CartItemPrice value={price} />
 						<Trash2Icon size={18} className={styles.price__icon} />
 					</span>
 				</div>

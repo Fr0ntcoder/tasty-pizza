@@ -4,9 +4,9 @@ import { ICartCount } from '@/@types/cart'
 
 import { CartCountIcon } from './cart-count-icon/CartCountIcon'
 
-import styles from './CartCount.module.scss'
+import styles from './CartItemCount.module.scss'
 
-export const CartCount = ({
+export const CartItemCount = ({
 	className,
 	onClick,
 	value = 1,

@@ -4,7 +4,8 @@ import cn from 'clsx'
 import { ArrowRight, ShoppingCart } from 'lucide-react'
 
 import { Button } from '@/components/ui/common'
-import { CartDrawer } from '@/components/ui/elements/cart'
+
+import { CartDrawer } from '../cart-drawer/CartDrawer'
 
 import styles from './CartButton.module.scss'
 
