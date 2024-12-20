@@ -3,8 +3,9 @@ import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { CartButton } from '@/components/ui/common/cart'
-import { Button, Container } from '@/components/ui/elements'
+import { Button, Container } from '@/components/ui'
+
+import { CartButton } from '@/components/features/cart'
 
 import { HeaderSearch } from './header-search/HeaderSearch'
 

@@ -1,6 +1,6 @@
 import { prisma } from '@/prisma/prisma-client'
 
-import { Home } from '@/components/features/home'
+import { Home } from '@/components/screens/home'
 
 export default async function HomePage() {
 	const categories = await prisma.category.findMany({

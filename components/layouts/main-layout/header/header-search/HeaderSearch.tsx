@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useRef, useState } from 'react'
 import { useClickAway, useDebounce } from 'react-use'
 
-import { Api } from '@/shared/services/api-clients'
+import { Api } from '@/services/api-clients'
 
 import styles from './HeaderSearch.module.scss'
 
