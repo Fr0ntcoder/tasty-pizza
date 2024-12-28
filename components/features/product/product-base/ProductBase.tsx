@@ -8,7 +8,8 @@ interface IProductBase {
 	imageUrl: string
 	name: string
 	price: number
-	onClickAdd?: VoidFunction
+	onSubmit?: VoidFunction
+	loading?: boolean
 	className?: string
 }
 
@@ -16,7 +17,8 @@ export const ProductBase = ({
 	imageUrl,
 	name,
 	price,
-	onClickAdd,
+	onSubmit,
+	loading,
 	className
 }: IProductBase) => {
 	return (
@@ -27,7 +29,13 @@ export const ProductBase = ({
 
 			<div className={styles.content}>
 				<Title text={name} className={styles.title} />
-				<Button variant='default' className={styles.btn} size='default'>
+				<Button
+					loading={loading}
+					onClick={() => onSubmit?.()}
+					variant='default'
+					className={styles.btn}
+					size='default'
+				>
 					Добавить в корзину {price} ₽
 				</Button>
 			</div>

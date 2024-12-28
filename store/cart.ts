@@ -1,8 +1,9 @@
 import { create } from 'zustand'
 
 import { Api } from '@/services/api-clients'
+import { ICreateCartItemValues } from '@/services/dto/cart.dto'
 
-import { TCartStateItem, getCartDetails } from '@/lib/get-cart-details'
+import { TCartStateItem, getCartDetails } from '@/lib/cart/get-cart-details'
 
 export type TCartState = {
 	loading: boolean
@@ -34,7 +35,19 @@ export const useCartStore = create<TCartState>((set, get) => ({
 			set({ loading: false })
 		}
 	},
-	removeCartItem: async (id: number) => {},
+	removeCartItem: async (id: number) => {
+		try {
+			set({ loading: true, error: false })
+			const data = await Api.cart.removeCartItem(id)
+			const cartDetails = getCartDetails(data)
+			set(cartDetails)
+		} catch (error) {
+			console.error(error)
+			set({ error: true })
+		} finally {
+			set({ loading: false })
+		}
+	},
 	updateItemQuantity: async (id: number, quantity: number) => {
 		try {
 			set({ loading: true, error: false })
@@ -48,5 +61,17 @@ export const useCartStore = create<TCartState>((set, get) => ({
 			set({ loading: false })
 		}
 	},
-	addCartItem: async (values: any) => {}
+	addCartItem: async (values: ICreateCartItemValues) => {
+		try {
+			set({ loading: true, error: false })
+			const data = await Api.cart.addCartItem(values)
+			const cartDetails = getCartDetails(data)
+			set(cartDetails)
+		} catch (error) {
+			console.error(error)
+			set({ error: true })
+		} finally {
+			set({ loading: false })
+		}
+	}
 }))

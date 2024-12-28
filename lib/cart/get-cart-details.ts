@@ -1,6 +1,6 @@
-import { TCartDTO } from '@/services/dto/cart.dto'
+import { ICartDTO } from '@/services/dto/cart.dto'
 
-import { calcCartItem } from '@/lib'
+import { calcCartItem } from '@/lib/cart/calc-cart-item'
 
 import { ICartItem } from '@/@types/cart'
 
@@ -31,7 +31,7 @@ type ReturnProps = {
 	totalAmount: number
 }
 
-export const getCartDetails = (data: TCartDTO): ReturnProps => {
+export const getCartDetails = (data: ICartDTO): ReturnProps => {
 	const items = data.items.map(item => ({
 		id: item.id,
 		quantity: item.quantity,

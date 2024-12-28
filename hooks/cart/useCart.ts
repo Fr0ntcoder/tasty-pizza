@@ -3,8 +3,15 @@ import { useEffect } from 'react'
 import { useCartStore } from '@/store'
 
 export const useCart = () => {
-	const { items, totalAmount, fetchCartItems, updateItemQuantity } =
-		useCartStore()
+	const {
+		items,
+		totalAmount,
+		fetchCartItems,
+		updateItemQuantity,
+		removeCartItem,
+		addCartItem,
+		loading
+	} = useCartStore()
 
 	useEffect(() => {
 		fetchCartItems()
@@ -20,5 +27,12 @@ export const useCart = () => {
 		updateItemQuantity(id, newQuantity)
 	}
 
-	return { items, totalAmount, onUpdateQuantity }
+	return {
+		items,
+		totalAmount,
+		loading,
+		onUpdateQuantity,
+		removeCartItem,
+		addCartItem
+	}
 }

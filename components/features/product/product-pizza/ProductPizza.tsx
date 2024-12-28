@@ -2,8 +2,6 @@
 
 import { Ingredient, ProductItem } from '@prisma/client'
 import cn from 'clsx'
-import { useEffect, useState } from 'react'
-import { useSet } from 'react-use'
 
 import { Button, Title } from '@/components/ui'
 
@@ -13,15 +11,11 @@ import {
 	ProductToggle
 } from '@/components/features/product'
 
-import {
-	TPizzaSize,
-	TPizzaType,
-	mapPizzaType,
-	pizzaSizes,
-	pizzaTypes
-} from '@/constants/pizza'
+import { usePizzaOptions } from '@/hooks/use-pizza-options'
 
-import { calcPizzaPrice } from '@/lib'
+import { TPizzaSize, TPizzaType, pizzaTypes } from '@/constants/pizza'
+
+import { getPizzaDetails } from '@/lib/pizza'
 
 import styles from './ProductPizza.module.scss'
 
@@ -30,7 +24,8 @@ type TProductPizza = {
 	name: string
 	ingredients: Ingredient[]
 	items: ProductItem[]
-	onAddCart?: VoidFunction
+	onSubmit: (itemId: number, ingredients: number[]) => void
+	loading?: boolean
 	className?: string
 }
 
@@ -39,23 +34,28 @@ export const ProductPizza = ({
 	name,
 	ingredients,
 	items,
-	onAddCart,
+	onSubmit,
+	loading,
 	className
 }: TProductPizza) => {
-	const [size, setSize] = useState<TPizzaSize>(20)
-	const [type, setType] = useState<TPizzaType>(1)
-	const [selectedIngredients, { toggle: addIngredient }] = useSet(
-		new Set<number>([])
-	)
-
-	const totalPrice = calcPizzaPrice(
+	const {
 		type,
 		size,
+		selectedIngredients,
+		addIngredient,
+		availableSizes,
+		currentItemId,
+		setSize,
+		setType
+	} = usePizzaOptions(items)
+
+	const { totalPrice, textDetails } = getPizzaDetails(
+		size,
+		type,
 		items,
-		ingredients,
-		selectedIngredients
+		selectedIngredients,
+		ingredients
 	)
-	const textDetails = `${size} см, ${mapPizzaType[type]} пицца, ингредиенты`
 
 	const ingredientList = ingredients.map(item => (
 		<ProductIngredient
@@ -68,31 +68,12 @@ export const ProductPizza = ({
 		/>
 	))
 
-	const filtredPizza = items.filter(item => item.pizzaType === type)
-
-	const availablePizzaSizes = pizzaSizes.map(item => ({
-		name: item.name,
-		value: item.value,
-		disabled: !filtredPizza.some(
-			pizza => Number(pizza.size) === Number(item.value)
-		)
-	}))
-
 	const handleClickAdd = () => {
-		onAddCart?.()
-	}
-
-	useEffect(() => {
-		const isAvailableSize = availablePizzaSizes.find(
-			item => Number(item.value) === size && !item.disabled
-		)
-
-		const availableSize = availablePizzaSizes.find(item => !item.disabled)
-
-		if (!isAvailableSize && availableSize) {
-			setSize(Number(availableSize.value) as TPizzaSize)
+		if (currentItemId) {
+			console.log(currentItemId, type, size, Array.from(selectedIngredients))
+			onSubmit(currentItemId, Array.from(selectedIngredients))
 		}
-	}, [type])
+	}
 
 	return (
 		<div className={cn(styles.root, className)}>
@@ -104,7 +85,7 @@ export const ProductPizza = ({
 				<p className={styles.text}>{textDetails}</p>
 				<div className={styles.toggle}>
 					<ProductToggle
-						items={availablePizzaSizes}
+						items={availableSizes}
 						value={String(size)}
 						onClick={value => setSize(Number(value) as TPizzaSize)}
 					/>
@@ -118,8 +99,9 @@ export const ProductPizza = ({
 					{ingredientList}
 				</div>
 				<Button
+					loading={loading}
 					variant='default'
-					onClick={onAddCart}
+					onClick={handleClickAdd}
 					className={styles.btn}
 					size='default'
 				>

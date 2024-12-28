@@ -5,6 +5,8 @@ import { ArrowRight, ShoppingCart } from 'lucide-react'
 
 import { Button } from '@/components/ui'
 
+import { useCart } from '@/hooks'
+
 import { CartDrawer } from '../cart-drawer/CartDrawer'
 
 import styles from './CartButton.module.scss'
@@ -14,14 +16,19 @@ interface ICartButton {
 }
 
 export const CartButton = ({ className }: ICartButton) => {
+	const { totalAmount, loading, items } = useCart()
 	return (
 		<CartDrawer>
-			<Button variant='default' className={cn(styles.root, className)}>
-				<b>520 ₽</b>
+			<Button
+				loading={loading}
+				variant='default'
+				className={cn(styles.root, className)}
+			>
+				<b>{totalAmount} ₽</b>
 				<span className={styles.line}></span>
 				<div className={styles.text}>
 					<ShoppingCart width={16} className={styles.icon} strokeWidth={2} />
-					<b>3</b>
+					<b>{items.length}</b>
 				</div>
 				<ArrowRight width={16} className={styles.arrow} />
 			</Button>

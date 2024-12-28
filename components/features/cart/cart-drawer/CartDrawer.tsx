@@ -19,7 +19,8 @@ import { useCart } from '@/hooks'
 
 import { TPizzaSize, TPizzaType } from '@/constants/pizza'
 
-import { formatWordCart, getCartItems } from '@/lib'
+import { getCartItems } from '@/lib/cart'
+import { formatWordCart } from '@/lib/other'
 
 import { CartDrawerItem } from './cart-drawer-item/CartDrawerItem'
 
@@ -33,7 +34,7 @@ export const CartDrawer = ({
 	children,
 	className
 }: PropsWithChildren<ICartDrawer>) => {
-	const { items, onUpdateQuantity, totalAmount } = useCart()
+	const { items, onUpdateQuantity, removeCartItem, totalAmount } = useCart()
 
 	const list = items.map(item => (
 		<CartDrawerItem
@@ -52,6 +53,7 @@ export const CartDrawer = ({
 			name={item.name}
 			price={item.price}
 			quantity={item.quantity}
+			onClickRemove={() => removeCartItem(item.id)}
 			onUpdateQuantity={type => onUpdateQuantity(item.id, item.quantity, type)}
 		/>
 	))

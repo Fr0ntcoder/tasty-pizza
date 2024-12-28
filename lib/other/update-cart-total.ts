@@ -1,6 +1,6 @@
 import { prisma } from '@/prisma/prisma-client'
 
-import { calcCartItem } from '@/lib/calc-cart-item'
+import { calcCartItem } from '@/lib/cart/calc-cart-item'
 
 export const updateCartTotal = async (token: string) => {
 	const userCart = await prisma.cart.findFirst({

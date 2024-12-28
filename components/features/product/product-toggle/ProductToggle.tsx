@@ -2,13 +2,9 @@
 
 import cn from 'clsx'
 
-import styles from './ProductToggle.module.scss'
+import { TVariant } from '@/@types/product'
 
-type TVariant = {
-	name: string
-	value: string
-	disabled?: boolean
-}
+import styles from './ProductToggle.module.scss'
 
 interface IProductToggle {
 	items: readonly TVariant[]

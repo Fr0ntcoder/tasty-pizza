@@ -1,5 +1,4 @@
 export { calcCartItem } from './calc-cart-item'
-export { calcPizzaPrice } from './calc-pizza-price'
-export { formatWordCart } from './format-word-cart'
+export { findCreateCart } from './find-create-cart'
 export { getCartDetails } from './get-cart-details'
 export { getCartItems } from './get-cart-items'

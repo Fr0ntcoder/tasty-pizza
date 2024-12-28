@@ -52,7 +52,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 				ref={ref}
 				{...props}
 			>
-				{!loading ? children : <Loader2 className='w-5 h-5 animate-spin' />}
+				{!loading ? (
+					children
+				) : (
+					<Loader2 className={cn(styles.icon, 'animate-spin')} />
+				)}
 			</Comp>
 		)
 	}

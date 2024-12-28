@@ -13,6 +13,11 @@ export type TCartItemDTO = CartItem & {
 	ingredients: Ingredient[]
 }
 
-export type TCartDTO = {
+export interface ICartDTO extends Cart {
 	items: TCartItemDTO[]
-} & Cart
+}
+
+export interface ICreateCartItemValues {
+	productItemId: number
+	ingredients?: number[]
+}

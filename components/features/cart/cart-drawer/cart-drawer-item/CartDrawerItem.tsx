@@ -17,6 +17,7 @@ import styles from './CartDrawerItem.module.scss'
 interface ICartDrawerItem extends ICartItem {
 	className?: string
 	onUpdateQuantity?: (type: 'plus' | 'minus') => void
+	onClickRemove?: () => void
 }
 
 export const CartDrawerItem = ({
@@ -26,6 +27,7 @@ export const CartDrawerItem = ({
 	quantity,
 	details,
 	onUpdateQuantity,
+	onClickRemove,
 	className
 }: ICartDrawerItem) => {
 	return (
@@ -33,11 +35,16 @@ export const CartDrawerItem = ({
 			<CartItemImage src={imageUrl} />
 			<div className={styles.content}>
 				<CartItemInfo details={details} name={name} className={styles.info} />
+				<span className={styles.line}></span>
 				<div className={styles.block}>
 					<CartItemCount value={quantity} onClick={onUpdateQuantity} />
 					<span className={styles.price}>
 						<CartItemPrice value={price} />
-						<Trash2Icon size={18} className={styles.price__icon} />
+						<Trash2Icon
+							size={18}
+							className={styles.price__icon}
+							onClick={onClickRemove}
+						/>
 					</span>
 				</div>
 			</div>

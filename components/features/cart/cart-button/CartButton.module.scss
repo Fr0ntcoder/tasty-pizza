@@ -1,5 +1,7 @@
 .root {
 	position: relative;
+	width: 120px;
+	height: 40px;
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -29,4 +31,13 @@
 	transition: all 0.3s ease;
 	transform: translateX(-8px);
 	opacity: 0;
+}
+
+.line {
+	flex: none;
+	display: block;
+	width: 1px;
+	height: 20px;
+	margin: 0 5px;
+	background: #d8d8d8;
 }

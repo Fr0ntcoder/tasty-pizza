@@ -1,10 +1,11 @@
 import cn from 'clsx'
+import { Suspense } from 'react'
 
 import { Container, Title } from '@/components/ui'
 
 import { FilterMain } from '@/components/features/filter'
 import { ProductGroupCard } from '@/components/features/product'
-import { TopBar } from '@/components/features/top-bar/TopBar'
+import { TopBar } from '@/components/features/top-bar'
 
 import styles from './Home.module.scss'
 
@@ -35,7 +36,9 @@ export const Home = ({ className, categories }: IHome) => {
 			/>
 			<Container className={styles.container}>
 				<div className={styles.filters}>
-					<FilterMain />
+					<Suspense>
+						<FilterMain />
+					</Suspense>
 				</div>
 				<div className={styles.content}>{list}</div>
 			</Container>
