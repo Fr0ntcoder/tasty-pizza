@@ -7,12 +7,12 @@ import { useCategoryStore } from '@/store/category'
 
 import styles from './Navigation.module.scss'
 
-interface INavigation {
+interface INavigationProps {
 	items: Category[]
 	className?: string
 }
 
-export const Navigation = ({ items, className }: INavigation) => {
+export function Navigation({ items, className }: INavigationProps) {
 	const categoryActiveId = useCategoryStore(state => state.activeId)
 
 	const categoriesList = items.map((item, i) => (

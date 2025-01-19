@@ -4,7 +4,7 @@ import cn from 'clsx'
 import { useEffect, useRef } from 'react'
 import { useIntersection } from 'react-use'
 
-import { Title } from '@/components/ui'
+import { Title } from '@/components/ui/title'
 
 import { ProductCard } from '@/components/features/product'
 
@@ -12,7 +12,7 @@ import { useCategoryStore } from '@/store/category'
 
 import styles from './ProductGroupCard.module.scss'
 
-interface IProductGroupCard {
+interface IProductGroupCardProps {
 	title: string
 	items: any[]
 	lastClassName?: string
@@ -20,13 +20,13 @@ interface IProductGroupCard {
 	className?: string
 }
 
-export const ProductGroupCard = ({
+export function ProductGroupCard({
 	className,
 	items,
 	title,
 	lastClassName,
 	categoryId
-}: IProductGroupCard) => {
+}: IProductGroupCardProps) {
 	const setActiveCategoryId = useCategoryStore(state => state.setActiveId)
 	const intersectionRef = useRef(null)
 	const intersection = useIntersection(intersectionRef, {

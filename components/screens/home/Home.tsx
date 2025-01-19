@@ -1,7 +1,8 @@
 import cn from 'clsx'
 import { Suspense } from 'react'
 
-import { Container, Title } from '@/components/ui'
+import { Container } from '@/components/ui/container'
+import { Title } from '@/components/ui/title'
 
 import { FilterMain } from '@/components/features/filter'
 import { ProductGroupCard } from '@/components/features/product'
@@ -9,12 +10,12 @@ import { TopBar } from '@/components/features/top-bar'
 
 import styles from './Home.module.scss'
 
-interface IHome {
+interface IHomeProps {
 	categories: any[]
 	className?: string
 }
 
-export const Home = ({ className, categories }: IHome) => {
+export function Home({ className, categories }: IHomeProps) {
 	const list = categories.map(
 		item =>
 			item.products.length > 0 && (

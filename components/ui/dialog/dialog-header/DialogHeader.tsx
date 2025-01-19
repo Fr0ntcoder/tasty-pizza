@@ -3,9 +3,9 @@ import { HTMLAttributes } from 'react'
 
 import styles from './DialogHeader.module.scss'
 
-export const DialogHeader = ({
+export function DialogHeader({
 	className,
 	...props
-}: HTMLAttributes<HTMLDivElement>) => (
-	<div className={cn(styles.root, className)} {...props} />
-)
+}: HTMLAttributes<HTMLDivElement>) {
+	return <div className={cn(styles.root, className)} {...props} />
+}

@@ -14,13 +14,13 @@ import { ICartItem } from '@/@types/cart'
 
 import styles from './CartDrawerItem.module.scss'
 
-interface ICartDrawerItem extends ICartItem {
+interface ICartDrawerItemProps extends ICartItem {
 	className?: string
 	onUpdateQuantity?: (type: 'plus' | 'minus') => void
 	onClickRemove?: () => void
 }
 
-export const CartDrawerItem = ({
+export function CartDrawerItem({
 	imageUrl,
 	name,
 	price,
@@ -29,7 +29,7 @@ export const CartDrawerItem = ({
 	onUpdateQuantity,
 	onClickRemove,
 	className
-}: ICartDrawerItem) => {
+}: ICartDrawerItemProps) {
 	return (
 		<div className={cn(styles.root, className)}>
 			<CartItemImage src={imageUrl} />

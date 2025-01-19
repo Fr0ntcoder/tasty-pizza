@@ -2,16 +2,18 @@ import cn from 'clsx'
 
 import { ICartCount } from '@/@types/cart'
 
-import { CartCountIcon } from './cart-count-icon/CartCountIcon'
+import { CartCountIcon } from './cart-count-icon'
 
 import styles from './CartItemCount.module.scss'
 
-export const CartItemCount = ({
+type TCartItemCountProps = ICartCount
+
+export function CartItemCount({
 	className,
 	onClick,
 	value = 1,
 	size = 'sm'
-}: ICartCount) => {
+}: TCartItemCountProps) {
 	return (
 		<div className={cn(styles.root, className)}>
 			<CartCountIcon

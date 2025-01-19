@@ -6,14 +6,16 @@ import { IFilterCheckbox } from './types'
 
 import styles from './FilterCheckbox.module.scss'
 
-export const FilterCheckbox = ({
+type TFilterCheckboxProps = IFilterCheckbox
+
+export function FilterCheckbox({
 	text,
 	value,
 	endAdornment,
 	onCheckedChange,
 	checked,
 	name
-}: IFilterCheckbox) => {
+}: TFilterCheckboxProps) {
 	return (
 		<div className={styles.root}>
 			<Checkbox

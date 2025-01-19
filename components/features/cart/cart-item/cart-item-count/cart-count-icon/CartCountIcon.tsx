@@ -1,25 +1,25 @@
 import cn from 'clsx'
 import { Minus, Plus } from 'lucide-react'
 
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 
 import { ICartCount } from '@/@types/cart'
 
 import styles from './CartCountIcon.module.scss'
 
-interface ICartCountIcon {
+interface ICartCountIconProps {
 	size?: ICartCount['size']
 	disabled?: boolean
 	type?: 'plus' | 'minus'
 	onClick?: () => void
 }
 
-export const CartCountIcon = ({
+export function CartCountIcon({
 	size = 'sm',
 	disabled,
 	type,
 	onClick
-}: ICartCountIcon) => {
+}: ICartCountIconProps) {
 	return (
 		<Button
 			variant='outline'

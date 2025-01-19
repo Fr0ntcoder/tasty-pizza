@@ -1,10 +1,11 @@
 import cn from 'clsx'
 
-import { Button, Title } from '@/components/ui'
+import { Button } from '@/components/ui/button'
+import { Title } from '@/components/ui/title'
 
 import styles from './ProductBase.module.scss'
 
-interface IProductBase {
+interface IProductBaseProps {
 	imageUrl: string
 	name: string
 	price: number
@@ -13,14 +14,14 @@ interface IProductBase {
 	className?: string
 }
 
-export const ProductBase = ({
+export function ProductBase({
 	imageUrl,
 	name,
 	price,
 	onSubmit,
 	loading,
 	className
-}: IProductBase) => {
+}: IProductBaseProps) {
 	return (
 		<div className={cn(styles.root, className)}>
 			<div className={styles.image}>

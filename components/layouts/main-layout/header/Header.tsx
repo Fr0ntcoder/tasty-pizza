@@ -3,7 +3,8 @@ import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Button, Container } from '@/components/ui'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/ui/container'
 
 import { CartButton } from '@/components/features/cart'
 
@@ -15,7 +16,7 @@ interface IHeader {
 	className?: string
 }
 
-export const Header = ({ className }: IHeader) => {
+export function Header({ className }: IHeader) {
 	return (
 		<header className={cn(styles.root, className)}>
 			<Container className={styles.container}>

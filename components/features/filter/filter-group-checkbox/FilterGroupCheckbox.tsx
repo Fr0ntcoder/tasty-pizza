@@ -5,15 +5,14 @@ import { ChangeEvent, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
-import { Title } from '@/components/ui'
 import { Input } from '@/components/ui/form-elements'
+import { Title } from '@/components/ui/title'
 
-import { FilterCheckbox } from '../filter-checkbox/FilterCheckbox'
-import { IFilterCheckbox } from '../filter-checkbox/types'
+import { FilterCheckbox, type IFilterCheckbox } from '../filter-checkbox'
 
 import styles from './FilterGroupCheckbox.module.scss'
 
-interface IFilterGroupCheckbox {
+interface IFilterGroupCheckboxProps {
 	title: string
 	items: IFilterCheckbox[]
 	defaultItems?: IFilterCheckbox[]
@@ -27,7 +26,7 @@ interface IFilterGroupCheckbox {
 	name?: string
 }
 
-export const FilterGroupCheckbox = ({
+export function FilterGroupCheckbox({
 	title,
 	items,
 	defaultItems,
@@ -39,7 +38,7 @@ export const FilterGroupCheckbox = ({
 	loading,
 	name,
 	className
-}: IFilterGroupCheckbox) => {
+}: IFilterGroupCheckboxProps) {
 	const [showAll, setShowAll] = useState(false)
 	const [searchValue, setSearchValue] = useState('')
 

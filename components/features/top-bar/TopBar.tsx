@@ -4,21 +4,21 @@ import { Category } from '@prisma/client'
 import cn from 'clsx'
 import { useState } from 'react'
 
-import { Container } from '@/components/ui'
+import { Container } from '@/components/ui/container'
 
 import { CartButton } from '@/components/features/cart'
 
-import { Navigation } from './navigation/Navigation'
-import { SortPopup } from './sort-popup/SortPopup'
+import { Navigation } from './navigation'
+import { SortPopup } from './sort-popup'
 
 import styles from './TopBar.module.scss'
 
-interface ITopBar {
+interface ITopBarProps {
 	categories: Category[]
 	className?: string
 }
 
-export const TopBar = ({ categories, className }: ITopBar) => {
+export const TopBar = ({ categories, className }: ITopBarProps) => {
 	const [cartVisible, setCartVisible] = useState(false)
 
 	return (

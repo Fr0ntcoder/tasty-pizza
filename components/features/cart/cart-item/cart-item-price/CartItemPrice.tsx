@@ -2,11 +2,11 @@ import cn from 'clsx'
 
 import styles from './CartItemPrice.module.scss'
 
-interface ICartItemPrice {
+interface ICartItemPriceProps {
 	value: number
 	className?: string
 }
 
-export const CartItemPrice = ({ value, className }: ICartItemPrice) => {
+export function CartItemPrice({ value, className }: ICartItemPriceProps) {
 	return <h2 className={cn(styles.root, className)}>{value} ₽</h2>
 }

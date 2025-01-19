@@ -3,9 +3,9 @@ import { HTMLAttributes } from 'react'
 
 import styles from './DialogFooter.module.scss'
 
-export const DialogFooter = ({
+export function DialogFooter({
 	className,
 	...props
-}: HTMLAttributes<HTMLDivElement>) => (
-	<div className={cn(styles.root, className)} {...props} />
-)
+}: HTMLAttributes<HTMLDivElement>) {
+	return <div className={cn(styles.root, className)} {...props} />
+}

@@ -1,7 +1,8 @@
 'use client'
 
-import { RangeSlider, Title } from '@/components/ui'
 import { Input } from '@/components/ui/form-elements'
+import { RangeSlider } from '@/components/ui/range-slider'
+import { Title } from '@/components/ui/title'
 
 import { useFilters, useIngredients, useQueryFilters } from '@/hooks'
 
@@ -9,11 +10,11 @@ import { FilterGroupCheckbox } from './filter-group-checkbox/FilterGroupCheckbox
 
 import styles from './FilterMain.module.scss'
 
-interface IFilterMain {
+interface IFilterMainProps {
 	className?: string
 }
 
-export const FilterMain = ({ className }: IFilterMain) => {
+export function FilterMain({ className }: IFilterMainProps) {
 	const { ingredients, loading } = useIngredients()
 	const filters = useFilters()
 

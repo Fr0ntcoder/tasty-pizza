@@ -12,11 +12,11 @@ import { Api } from '@/services/api-clients'
 
 import styles from './HeaderSearch.module.scss'
 
-interface ISearchInput {
+interface ISearchInputProps {
 	className?: string
 }
 
-export const HeaderSearch = ({ className }: ISearchInput) => {
+export function HeaderSearch({ className }: ISearchInputProps) {
 	const [searchQuery, setSearchQuery] = useState('')
 	const [focused, setFocused] = useState(false)
 	const [products, setProducts] = useState<Product[]>([])

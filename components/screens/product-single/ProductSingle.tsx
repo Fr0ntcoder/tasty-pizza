@@ -1,18 +1,19 @@
 import { Product } from '@prisma/client'
 import { notFound } from 'next/navigation'
 
-import { Container, Title } from '@/components/ui'
+import { Container } from '@/components/ui/container'
+import { Title } from '@/components/ui/title'
 
 import { ProductImage, ProductToggle } from '@/components/features/product'
 
 import styles from './ProductSingle.module.scss'
 
-interface IProductSingle {
+interface IProductSingleProps {
 	product: Product | null
 	className?: string
 }
 
-export const ProductSingle = ({ className, product }: IProductSingle) => {
+export function ProductSingle({ className, product }: IProductSingleProps) {
 	if (!product) {
 		return notFound()
 	}

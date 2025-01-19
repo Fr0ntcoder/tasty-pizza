@@ -11,7 +11,7 @@ interface ITitle {
 	text: string
 }
 
-export const Title = ({ text, size = 'sm', className }: ITitle) => {
+export function Title({ text, size = 'sm', className }: ITitle) {
 	const mapTagBySize = {
 		xs: 'h5',
 		sm: 'h4',

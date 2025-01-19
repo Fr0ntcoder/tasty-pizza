@@ -1,1 +1,1 @@
-export { ProductSingle } from './ProductSingle'
+export * from './ProductSingle'

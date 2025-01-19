@@ -1,2 +1,2 @@
-export { formatWordCart } from './format-word-cart'
-export { updateCartTotal } from './update-cart-total'
+export * from './format-word-cart'
+export * from './update-cart-total'

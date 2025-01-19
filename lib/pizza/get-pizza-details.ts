@@ -1,6 +1,10 @@
 import { Ingredient, ProductItem } from '@prisma/client'
 
-import { TPizzaSize, TPizzaType, mapPizzaType } from '@/constants/pizza'
+import {
+	type TPizzaSize,
+	type TPizzaType,
+	mapPizzaType
+} from '@/constants/pizza'
 
 import { calcPizzaPrice } from '@/lib/pizza'
 

@@ -9,16 +9,16 @@ import { ProductBase, ProductPizza } from '@/components/features/product'
 
 import { useCart } from '@/hooks'
 
-import { IProductWithRelation } from '@/@types/product'
+import { type IProductWithRelation } from '@/@types/product'
 
 import styles from './ProductModal.module.scss'
 
-interface IProductModal {
+interface IProductModalProps {
 	product: IProductWithRelation | null
 	className?: string
 }
 
-export const ProductModal = ({ product, className }: IProductModal) => {
+export function ProductModal({ product, className }: IProductModalProps) {
 	if (!product) {
 		return notFound()
 	}

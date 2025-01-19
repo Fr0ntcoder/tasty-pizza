@@ -3,9 +3,9 @@ import { HTMLAttributes } from 'react'
 
 import styles from './SheetHeader.module.scss'
 
-export const SheetHeader = ({
+export function SheetHeader({
 	className,
 	...props
-}: HTMLAttributes<HTMLDivElement>) => (
-	<div className={cn(styles.root, className)} {...props} />
-)
+}: HTMLAttributes<HTMLDivElement>) {
+	return <div className={cn(styles.root, className)} {...props} />
+}

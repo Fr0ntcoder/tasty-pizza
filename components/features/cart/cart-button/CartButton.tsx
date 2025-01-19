@@ -3,7 +3,7 @@
 import cn from 'clsx'
 import { ArrowRight, ShoppingCart } from 'lucide-react'
 
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 
 import { useCart } from '@/hooks'
 
@@ -11,11 +11,11 @@ import { CartDrawer } from '../cart-drawer/CartDrawer'
 
 import styles from './CartButton.module.scss'
 
-interface ICartButton {
+interface ICartButtonProps {
 	className?: string
 }
 
-export const CartButton = ({ className }: ICartButton) => {
+export function CartButton({ className }: ICartButtonProps) {
 	const { totalAmount, loading, items } = useCart()
 	return (
 		<CartDrawer>

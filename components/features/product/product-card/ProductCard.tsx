@@ -3,11 +3,12 @@
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
 
-import { Button, Title } from '@/components/ui'
+import { Button } from '@/components/ui/button'
+import { Title } from '@/components/ui/title'
 
 import styles from './ProductCard.module.scss'
 
-interface IProductCard {
+interface IProductCardProps {
 	id: number
 	name: string
 	price: number
@@ -15,13 +16,13 @@ interface IProductCard {
 	className?: string
 }
 
-export const ProductCard = ({
+export function ProductCard({
 	id,
 	name,
 	price,
 	imageUrl,
 	className
-}: IProductCard) => {
+}: IProductCardProps) {
 	return (
 		<Link href={`/product/${id}`} className={styles.root}>
 			<div className={styles.top}>

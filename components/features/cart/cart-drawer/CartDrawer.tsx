@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
 
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 import {
 	Sheet,
 	SheetContent,
@@ -22,18 +22,18 @@ import { TPizzaSize, TPizzaType } from '@/constants/pizza'
 import { getCartItems } from '@/lib/cart'
 import { formatWordCart } from '@/lib/other'
 
-import { CartDrawerItem } from './cart-drawer-item/CartDrawerItem'
+import { CartDrawerItem } from './cart-drawer-item'
 
 import styles from './CartDrawer.module.scss'
 
-interface ICartDrawer {
+interface ICartDrawerProps {
 	className?: string
 }
 
-export const CartDrawer = ({
+export function CartDrawer({
 	children,
 	className
-}: PropsWithChildren<ICartDrawer>) => {
+}: PropsWithChildren<ICartDrawerProps>) {
 	const { items, onUpdateQuantity, removeCartItem, totalAmount } = useCart()
 
 	const list = items.map(item => (

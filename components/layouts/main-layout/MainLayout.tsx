@@ -4,11 +4,11 @@ import { Header } from './header/Header'
 
 import styles from './MainLayout.module.scss'
 
-interface IMainLayout {
+interface IMainLayoutProps {
 	className?: string
 }
 
-export const MainLayout = ({ children }: PropsWithChildren<IMainLayout>) => {
+export function MainLayout({ children }: PropsWithChildren<IMainLayoutProps>) {
 	return (
 		<div className={styles.root}>
 			<Header />

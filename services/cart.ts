@@ -1,5 +1,8 @@
 import { ApiRoutes } from '@/services/constants'
-import { ICartDTO, ICreateCartItemValues } from '@/services/dto/cart.dto'
+import {
+	type ICartDTO,
+	type ICreateCartItemValues
+} from '@/services/dto/cart.dto'
 import { axiosInstance } from '@/services/instance'
 
 export const getCart = async (): Promise<ICartDTO> => {

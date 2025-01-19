@@ -1,6 +1,6 @@
 import { Ingredient, ProductItem } from '@prisma/client'
 
-import { TPizzaSize, TPizzaType } from '@/constants/pizza'
+import { type TPizzaSize, type TPizzaType } from '@/constants/pizza'
 
 export const calcPizzaPrice = (
 	type: TPizzaType,

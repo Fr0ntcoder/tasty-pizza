@@ -2,11 +2,11 @@ import cn from 'clsx'
 import { CircleCheck } from 'lucide-react'
 import Image from 'next/image'
 
-import { Title } from '@/components/ui'
+import { Title } from '@/components/ui/title'
 
 import styles from './ProductIngredient.module.scss'
 
-interface IProductIngredient {
+interface IProductIngredientProps {
 	imageUrl: string
 	name: string
 	price: number
@@ -15,14 +15,14 @@ interface IProductIngredient {
 	className?: string
 }
 
-export const ProductIngredient = ({
+export function ProductIngredient({
 	imageUrl,
 	name,
 	price,
 	active,
 	onClick,
 	className
-}: IProductIngredient) => {
+}: IProductIngredientProps) {
 	return (
 		<div
 			className={cn(styles.root, { [styles.active]: active }, className)}

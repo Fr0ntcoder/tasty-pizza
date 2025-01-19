@@ -3,7 +3,8 @@
 import { Ingredient, ProductItem } from '@prisma/client'
 import cn from 'clsx'
 
-import { Button, Title } from '@/components/ui'
+import { Button } from '@/components/ui/button'
+import { Title } from '@/components/ui/title'
 
 import {
 	ProductImage,
@@ -19,7 +20,7 @@ import { getPizzaDetails } from '@/lib/pizza'
 
 import styles from './ProductPizza.module.scss'
 
-type TProductPizza = {
+type TProductPizzaProps = {
 	imageUrl: string
 	name: string
 	ingredients: Ingredient[]
@@ -29,7 +30,7 @@ type TProductPizza = {
 	className?: string
 }
 
-export const ProductPizza = ({
+export function ProductPizza({
 	imageUrl,
 	name,
 	ingredients,
@@ -37,7 +38,7 @@ export const ProductPizza = ({
 	onSubmit,
 	loading,
 	className
-}: TProductPizza) => {
+}: TProductPizzaProps) {
 	const {
 		type,
 		size,

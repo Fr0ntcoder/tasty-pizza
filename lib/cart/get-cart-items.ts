@@ -1,6 +1,6 @@
 import { TPizzaSize, TPizzaType, mapPizzaType } from '@/constants/pizza'
 
-import { TCartStateItem } from '@/lib/cart/get-cart-details'
+import { type TCartStateItem } from '@/lib/cart/get-cart-details'
 
 export const getCartItems = (
 	ingredients: TCartStateItem['ingredients'],

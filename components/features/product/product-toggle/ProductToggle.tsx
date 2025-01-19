@@ -2,23 +2,23 @@
 
 import cn from 'clsx'
 
-import { TVariant } from '@/@types/product'
+import { type TVariant } from '@/@types/product'
 
 import styles from './ProductToggle.module.scss'
 
-interface IProductToggle {
+interface IProductToggleProps {
 	items: readonly TVariant[]
 	onClick?: (value: TVariant['value']) => void
 	value?: TVariant['value']
 	className?: string
 }
 
-export const ProductToggle = ({
+export function ProductToggle({
 	items,
 	value,
 	onClick,
 	className
-}: IProductToggle) => {
+}: IProductToggleProps) {
 	const list = items.map(item => (
 		<button
 			key={item.name}

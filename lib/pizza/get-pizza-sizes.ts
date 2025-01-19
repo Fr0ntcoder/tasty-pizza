@@ -1,8 +1,8 @@
 import { ProductItem } from '@prisma/client'
 
-import { TPizzaType, pizzaSizes } from '@/constants/pizza'
+import { type TPizzaType, pizzaSizes } from '@/constants/pizza'
 
-import { TVariant } from '@/@types/product'
+import { type TVariant } from '@/@types/product'
 
 export const getPizzaSizes = (
 	type: TPizzaType,

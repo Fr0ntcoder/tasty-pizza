@@ -2,13 +2,17 @@ import cn from 'clsx'
 
 import styles from './ProductImage.module.scss'
 
-interface IProductImage {
+interface IProductImageProps {
 	className?: string
 	imageUrl: string
 	size: 20 | 30 | 40
 }
 
-export const ProductImage = ({ className, imageUrl, size }: IProductImage) => {
+export function ProductImage({
+	className,
+	imageUrl,
+	size
+}: IProductImageProps) {
 	return (
 		<div className={cn(styles.root, className)}>
 			<img

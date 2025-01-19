@@ -7,9 +7,9 @@ interface IContainer {
 	className?: string
 }
 
-export const Container = ({
+export function Container({
 	children,
 	className
-}: PropsWithChildren<IContainer>) => {
+}: PropsWithChildren<IContainer>) {
 	return <div className={cn(styles.root, className)}>{children}</div>
 }

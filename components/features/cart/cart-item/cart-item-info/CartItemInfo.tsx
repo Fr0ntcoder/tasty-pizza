@@ -1,16 +1,16 @@
 import cn from 'clsx'
 
-import { Title } from '@/components/ui'
+import { Title } from '@/components/ui/title'
 
 import styles from './CartItemInfo.module.scss'
 
-interface ICartItemInfo {
+interface ICartItemInfoProps {
 	name: string
 	details: string
 	className?: string
 }
 
-export const CartItemInfo = ({ className, name, details }: ICartItemInfo) => {
+export function CartItemInfo({ className, name, details }: ICartItemInfoProps) {
 	return (
 		<div className={cn(styles.root, className)}>
 			<Title text={name} size='sm' className={styles.title} />
