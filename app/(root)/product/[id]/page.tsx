@@ -2,7 +2,7 @@ import { Product } from '@prisma/client'
 
 import { prisma } from '@/prisma/prisma-client'
 
-import { ProductSingle } from '@/components/screens/product-single'
+import { ProductSingle } from '@/components/screens/ProductSingle'
 
 export default async function ProductPage({
 	params: { id }

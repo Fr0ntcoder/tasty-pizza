@@ -4,7 +4,7 @@ export interface IGetSearchParams {
 	sizes?: string
 	pizzaTypes?: string
 	ingredients?: string
-	priceForm?: string
+	priceFrom?: string
 	priceTo?: string
 }
 

@@ -1,12 +1,12 @@
 import cn from 'clsx'
 import { Suspense } from 'react'
 
-import { Container } from '@/components/ui/container'
-import { Title } from '@/components/ui/title'
+import { Container } from '@/components/ui/Container'
+import { Title } from '@/components/ui/Title'
 
-import { FilterMain } from '@/components/features/filter'
-import { ProductGroupCard } from '@/components/features/product'
-import { TopBar } from '@/components/features/top-bar'
+import { FilterMain } from '@/components/features/Filter'
+import { ProductGroupCard } from '@/components/features/Product'
+import { TopBar } from '@/components/features/TopBar'
 
 import styles from './Home.module.scss'
 

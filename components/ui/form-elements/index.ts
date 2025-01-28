@@ -1,7 +1,0 @@
-export * from './checkbox'
-export * from './input'
-export * from './input-group'
-export * from './input-otp'
-export * from './input-separator'
-export * from './input-slot'
-export * from './textarea'

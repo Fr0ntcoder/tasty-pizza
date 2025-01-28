@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 
-import { MainLayout } from '@/components/layouts/main-layout'
+import { MainLayout } from '@/components/layouts/MainLayout'
 
 export const metadata: Metadata = {
 	title: 'Tasty Pizza',

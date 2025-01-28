@@ -8,7 +8,7 @@ export const calcPizzaPrice = (
 	items: ProductItem[],
 	ingredients: Ingredient[],
 	selectedIngredients: Set<number>
-) => {
+): number => {
 	const pizzaPrice =
 		items.find(item => item.pizzaType === type && item.size === size)?.price ||
 		0
