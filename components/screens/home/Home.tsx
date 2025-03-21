@@ -12,10 +12,11 @@ import styles from './Home.module.scss'
 
 interface IHomeProps {
 	categories: any[]
+	navigation: any[]
 	className?: string
 }
 
-export function Home({ className, categories }: IHomeProps) {
+export function Home({ categories, navigation, className }: IHomeProps) {
 	const list = categories.map(
 		item =>
 			item.products.length > 0 && (
@@ -27,13 +28,14 @@ export function Home({ className, categories }: IHomeProps) {
 				/>
 			)
 	)
+
 	return (
-		<div className={cn(styles.root, className)}>
+		<div className={cn(styles.page, className)}>
 			<Container className={styles.root}>
 				<Title text='Все пиццы' size='lg' className={styles.title} />
 			</Container>
 			<TopBar
-				categories={categories.filter(item => item.products.length > 0)}
+				categories={navigation.filter(item => item.products.length > 0)}
 			/>
 			<Container className={styles.container}>
 				<div className={styles.filters}>

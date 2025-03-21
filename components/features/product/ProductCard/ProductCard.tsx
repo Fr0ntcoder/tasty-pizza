@@ -1,5 +1,6 @@
 'use client'
 
+import { Ingredient } from '@prisma/client'
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
 
@@ -13,6 +14,7 @@ interface IProductCardProps {
 	name: string
 	price: number
 	imageUrl: string
+	ingredients: Ingredient[]
 	className?: string
 }
 
@@ -21,8 +23,13 @@ export function ProductCard({
 	name,
 	price,
 	imageUrl,
+	ingredients,
 	className
 }: IProductCardProps) {
+	const ingredientsList = ingredients
+		.map(ingredient => ingredient.name)
+		.join(', ')
+
 	return (
 		<Link href={`/product/${id}`} className={styles.root}>
 			<div className={styles.top}>
@@ -31,10 +38,7 @@ export function ProductCard({
 				</picture>
 			</div>
 			<Title text={name} size='sm' className={styles.title} />
-			<p className={styles.text}>
-				Цыпленок,Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-				nam optio mollitia molestias
-			</p>
+			<p className={styles.text}>{ingredientsList}</p>
 			<div className={styles.bottom}>
 				<span className={styles.bottom__price}>
 					от <b>{price} ₽</b>

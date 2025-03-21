@@ -5,6 +5,7 @@ export interface ICartItem {
 	name: string
 	price: number
 	quantity: number
+	disabled?: boolean
 }
 
 export interface ICartCount {

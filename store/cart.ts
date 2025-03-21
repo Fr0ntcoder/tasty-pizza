@@ -16,6 +16,18 @@ export type TCartState = {
 	removeCartItem: (id: number) => Promise<void>
 }
 
+const updateStateCart = async (set: any, action: () => Promise<void>) => {
+	try {
+		set({ loading: true, error: false })
+		await action()
+	} catch (error) {
+		console.error(error)
+		set({ error: true })
+	} finally {
+		set({ loading: false })
+	}
+}
+
 export const useCartStore = create<TCartState>((set, get) => ({
 	items: [],
 	error: false,
@@ -23,55 +35,41 @@ export const useCartStore = create<TCartState>((set, get) => ({
 	totalAmount: 0,
 
 	fetchCartItems: async () => {
-		try {
-			set({ loading: true, error: false })
+		await updateStateCart(set, async () => {
 			const data = await Api.cart.getCart()
 			const cartDetails = getCartDetails(data)
 			set(cartDetails)
-		} catch (error) {
-			console.error(error)
-			set({ error: true })
-		} finally {
-			set({ loading: false })
-		}
+		})
 	},
 	removeCartItem: async (id: number) => {
-		try {
-			set({ loading: true, error: false })
+		await updateStateCart(set, async () => {
+			set(state => ({
+				items: state.items.map(item =>
+					item.id === id ? { ...item, disabled: true } : item
+				)
+			}))
 			const data = await Api.cart.removeCartItem(id)
 			const cartDetails = getCartDetails(data)
 			set(cartDetails)
-		} catch (error) {
-			console.error(error)
-			set({ error: true })
-		} finally {
-			set({ loading: false })
-		}
+			set(state => ({
+				items: state.items.map(item =>
+					item.id === id ? { ...item, disabled: false } : item
+				)
+			}))
+		})
 	},
 	updateItemQuantity: async (id: number, quantity: number) => {
-		try {
-			set({ loading: true, error: false })
+		await updateStateCart(set, async () => {
 			const data = await Api.cart.updateItemQuantity(id, quantity)
 			const cartDetails = getCartDetails(data)
 			set(cartDetails)
-		} catch (error) {
-			console.error(error)
-			set({ error: true })
-		} finally {
-			set({ loading: false })
-		}
+		})
 	},
 	addCartItem: async (values: ICreateCartItemValues) => {
-		try {
-			set({ loading: true, error: false })
+		await updateStateCart(set, async () => {
 			const data = await Api.cart.addCartItem(values)
 			const cartDetails = getCartDetails(data)
 			set(cartDetails)
-		} catch (error) {
-			console.error(error)
-			set({ error: true })
-		} finally {
-			set({ loading: false })
-		}
+		})
 	}
 }))

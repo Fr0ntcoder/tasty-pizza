@@ -1,5 +1,5 @@
-
 import { Nunito } from 'next/font/google'
+import Head from 'next/head'
 import { Toaster } from 'react-hot-toast'
 
 import '../styles/globals.scss'
@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html className={nunito.className} lang='ru'>
-			<head>
-				<link data-rh='true' rel='icon' href='/logo.png' />
-			</head>
+			<Head>
+				<link rel='icon' href='/logo.png' />
+			</Head>
 			<body>
 				{children}
 				<Toaster />

@@ -26,7 +26,7 @@ export const useQueryFilters = (filters: Filters) => {
 		filters.pizzaTypes,
 		filters.pizzaSizes,
 		filters.selectedIngredients,
-		filters.prices,
-		router
+		filters.prices
+		/* router */
 	])
 }

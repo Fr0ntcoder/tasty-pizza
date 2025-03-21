@@ -47,3 +47,29 @@
 		font-weight: bold;
 	}
 }
+
+.empty {
+	display: flex;
+	max-width: 250px;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	color: #fff;
+
+	&__text {
+		text-align: center;
+	}
+
+	&__back {
+		display: flex;
+		font-weight: 700;
+		align-items: center;
+		border-radius: 5px;
+		padding: 8px 15px;
+		background: var(--popover);
+
+		> svg {
+			margin-right: 10px;
+		}
+	}
+}

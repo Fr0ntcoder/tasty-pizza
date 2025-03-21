@@ -10,11 +10,13 @@ import { ProductCard } from '@/components/features/Product'
 
 import { useCategoryStore } from '@/store/category'
 
+import { IProductWithRelation } from '@/@types/product'
+
 import styles from './ProductGroupCard.module.scss'
 
 interface IProductGroupCardProps {
 	title: string
-	items: any[]
+	items: IProductWithRelation[]
 	lastClassName?: string
 	categoryId: number
 	className?: string
@@ -39,13 +41,14 @@ export function ProductGroupCard({
 		}
 	}, [categoryId, intersection?.isIntersecting])
 
-	const productsList = items.map(item => (
+	const productsList = items.map(product => (
 		<ProductCard
-			key={item.id}
-			id={item.id}
-			name={item.name}
-			price={item.items[0].price}
-			imageUrl={item.imageUrl}
+			key={product.id}
+			id={product.id}
+			name={product.name}
+			price={product.items[0].price}
+			imageUrl={product.imageUrl}
+			ingredients={product.ingredients}
 		/>
 	))
 	return (

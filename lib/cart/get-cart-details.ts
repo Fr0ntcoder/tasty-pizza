@@ -10,6 +10,7 @@ export type TCartStateItem = {
 	name: string
 	imageUrl: string
 	price: number
+	disabled?: boolean
 	pizzaSize?: number | null
 	pizzaType?: number | null
 	ingredients: Array<{ name: string; price: number }>
@@ -38,13 +39,14 @@ export const getCartDetails = (data: ICartDTO): ReturnProps => {
 		name: item.productItem.product.name,
 		imageUrl: item.productItem.product.imageUrl,
 		price: calcCartItem(item),
+		disabled: false,
 		pizzaSize: item.productItem.size,
 		pizzaType: item.productItem.pizzaType,
 		ingredients: item.ingredients.map(ing => ({
 			name: ing.name,
 			price: ing.price
 		}))
-	}))
+	})) as TCartStateItem[]
 
 	return {
 		items,

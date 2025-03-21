@@ -1,18 +1,13 @@
-import { prisma } from '@/prisma/prisma-client'
-
 import { Home } from '@/components/screens/Home'
 
-export default async function HomePage() {
-	const categories = await prisma.category.findMany({
-		include: {
-			products: {
-				include: {
-					ingredients: true,
-					items: true
-				}
-			}
-		}
-	})
+import { IGetSearchParams, findPizzas } from '@/lib/pizza/find-pizza'
 
-	return <Home categories={categories} />
+export default async function HomePage({
+	searchParams
+}: {
+	searchParams: IGetSearchParams
+}) {
+	const { categories, navList } = await findPizzas(searchParams)
+
+	return <Home categories={categories} navigation={navList} />
 }

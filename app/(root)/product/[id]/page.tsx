@@ -1,5 +1,3 @@
-import { Product } from '@prisma/client'
-
 import { prisma } from '@/prisma/prisma-client'
 
 import { ProductSingle } from '@/components/screens/ProductSingle'
@@ -9,8 +7,21 @@ export default async function ProductPage({
 }: {
 	params: { id: string }
 }) {
-	const product: Product | null = await prisma.product.findFirst({
-		where: { id: Number(id) }
+	const product = await prisma.product.findFirst({
+		where: { id: Number(id) },
+		include: {
+			ingredients: true,
+			category: {
+				include: {
+					products: {
+						include: {
+							items: true
+						}
+					}
+				}
+			},
+			items: true
+		}
 	})
 
 	return <ProductSingle product={product} />

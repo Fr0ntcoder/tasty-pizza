@@ -28,10 +28,15 @@ export function CartDrawerItem({
 	details,
 	onUpdateQuantity,
 	onClickRemove,
+	disabled,
 	className
 }: ICartDrawerItemProps) {
 	return (
-		<div className={cn(styles.root, className)}>
+		<div
+			className={cn(styles.root, className, {
+				[styles.disabled]: disabled
+			})}
+		>
 			<CartItemImage src={imageUrl} />
 			<div className={styles.content}>
 				<CartItemInfo details={details} name={name} className={styles.info} />
