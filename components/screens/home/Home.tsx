@@ -1,12 +1,11 @@
 import cn from 'clsx'
 import { Suspense } from 'react'
 
-import { Container } from '@/components/ui/Container'
-import { Title } from '@/components/ui/Title'
+import { Title } from '@/components/ui/title'
 
-import { FilterMain } from '@/components/features/Filter'
-import { ProductGroupCard } from '@/components/features/Product'
-import { TopBar } from '@/components/features/TopBar'
+import { FilterMain } from '@/components/shared/filter'
+import { ProductGroupCard } from '@/components/shared/product'
+import { TopBar } from '@/components/shared/top-bar'
 
 import styles from './Home.module.scss'
 
@@ -31,20 +30,18 @@ export function Home({ categories, navigation, className }: IHomeProps) {
 
 	return (
 		<div className={cn(styles.page, className)}>
-			<Container className={styles.root}>
-				<Title text='Все пиццы' size='lg' className={styles.title} />
-			</Container>
+			<Title text='Все пиццы' size='lg' className={styles.page__title} />
 			<TopBar
 				categories={navigation.filter(item => item.products.length > 0)}
 			/>
-			<Container className={styles.container}>
-				<div className={styles.filters}>
+			<div className={styles.page__wrap}>
+				<div className={styles.page__filters}>
 					<Suspense>
 						<FilterMain />
 					</Suspense>
 				</div>
-				<div className={styles.content}>{list}</div>
-			</Container>
+				<div className={styles.page__content}>{list}</div>
+			</div>
 		</div>
 	)
 }

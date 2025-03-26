@@ -11,7 +11,7 @@
 		"<THIRD_PARTY_MODULES>",
 		"^@/prisma/(.*)$",
 		"^@/components/ui(.*)$",
-		"^@/components/features(.*)$",
+		"^@/components/shared(.*)$",
 		"^@/components/layouts(.*)$",
 		"^@/components/screens(.*)$",
 		"^@/hooks",

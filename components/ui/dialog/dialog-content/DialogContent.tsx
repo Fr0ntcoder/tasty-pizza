@@ -1,0 +1,29 @@
+import * as DialogPrimitive from '@radix-ui/react-dialog'
+import cn from 'clsx'
+import { X } from 'lucide-react'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
+
+import { DialogPortal } from '../dialog-other/DialogOther'
+import { DialogOverlay } from '../dialog-overlay/DialogOverlay'
+
+import styles from './DialogContent.module.scss'
+
+export const DialogContent = forwardRef<
+	ElementRef<typeof DialogPrimitive.Content>,
+	ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
+>(({ className, children, ...props }, ref) => (
+	<DialogPortal>
+		<DialogOverlay />
+		<DialogPrimitive.Content
+			ref={ref}
+			className={cn(styles.content, className)}
+			{...props}
+		>
+			{children}
+			<DialogPrimitive.Close className={styles.content__close}>
+				<X className={styles.content__icon} />
+				<span className={styles.content__text}>Close</span>
+			</DialogPrimitive.Close>
+		</DialogPrimitive.Content>
+	</DialogPortal>
+))

@@ -1,23 +1,25 @@
-.xs {
-	font-size: 14px;
-}
+.size {
+	&--xs {
+		font-size: 14px;
+	}
 
-.sm {
-	font-size: 20px;
-}
+	&--sm {
+		font-size: 20px;
+	}
 
-.md {
-	font-size: 22px;
-}
+	&--md {
+		font-size: 22px;
+	}
 
-.lg {
-	font-size: 28px;
-}
+	&--lg {
+		font-size: 28px;
+	}
 
-.xl {
-	font-size: 40px;
-}
+	&--xl {
+		font-size: 40px;
+	}
 
-.xxl {
-	font-size: 48px;
+	&--xxl {
+		font-size: 48px;
+	}
 }

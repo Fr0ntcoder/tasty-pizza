@@ -1,0 +1,31 @@
+.bar {
+	display: flex;
+	position: sticky;
+	top: 0;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ffffff;
+	z-index: 2;
+
+	&__block {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__btn {
+		transition: all 0.2s ease;
+
+		&--notvisible {
+			width: 0;
+			padding: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&--visible {
+			visibility: visible;
+			margin-left: 20px;
+			opacity: 1;
+		}
+	}
+}

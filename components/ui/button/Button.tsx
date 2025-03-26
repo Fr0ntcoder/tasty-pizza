@@ -44,10 +44,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 			<Comp
 				disabled={disabled || loading}
 				className={cn(
-					styles.root,
+					styles.button,
 					className,
-					styles[`variant-${variant}`],
-					styles[`size-${size}`]
+					styles[`button__variant--${variant}`],
+					styles[`button__size--${size}`]
 				)}
 				ref={ref}
 				{...props}
@@ -55,7 +55,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 				{!loading ? (
 					children
 				) : (
-					<Loader2 className={cn(styles.icon, 'animate-spin')} />
+					<Loader2 className={cn(styles.button__icon, 'animate-spin')} />
 				)}
 			</Comp>
 		)

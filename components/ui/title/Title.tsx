@@ -1,4 +1,4 @@
-import { clsx } from 'clsx'
+import cn from 'clsx'
 import { createElement } from 'react'
 
 import styles from './Title.module.scss'
@@ -22,17 +22,17 @@ export function Title({ text, size = 'sm', className }: ITitle) {
 	} as const
 
 	const mapClassNameBySize = {
-		xs: styles.xs,
-		sm: styles.sm,
-		md: styles.md,
-		lg: styles.lg,
-		xl: styles.xl,
-		xxl: styles.xxl
+		xs: styles[`size--xs`],
+		sm: styles[`size--sm`],
+		md: styles[`size--md`],
+		lg: styles[`size--lg`],
+		xl: styles[`size--xl`],
+		xxl: styles[`size--xxl`]
 	} as const
 
 	return createElement(
 		mapTagBySize[size],
-		{ className: clsx(mapClassNameBySize[size], className) },
+		{ className: cn(mapClassNameBySize[size], className) },
 		text
 	)
 }

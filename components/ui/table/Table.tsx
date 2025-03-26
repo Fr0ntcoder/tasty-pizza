@@ -7,7 +7,7 @@ export const Table = forwardRef<
 	HTMLTableElement,
 	HTMLAttributes<HTMLTableElement>
 >(({ className, ...props }, ref) => (
-	<div className={styles.root}>
+	<div className={styles.wrap}>
 		<table ref={ref} className={cn(styles.table, className)} {...props} />
 	</div>
 ))

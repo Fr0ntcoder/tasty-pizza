@@ -1,0 +1,21 @@
+.checkbox {
+	&__title {
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&__input {
+		margin-bottom: 15px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	&__btn {
+		font-weight: 700;
+		background: transparent;
+		color: var(--primary);
+	}
+}

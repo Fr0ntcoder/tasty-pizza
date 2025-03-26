@@ -1,0 +1,9 @@
+.block {
+	padding: 20px;
+	border-radius: var(--radius-xl);
+	background: #fff;
+
+	&__top {
+		margin-bottom: 15px;
+	}
+}

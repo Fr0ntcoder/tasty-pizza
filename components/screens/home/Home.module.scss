@@ -1,29 +1,24 @@
 .page {
-	display: block;
-}
-.root {
-	position: relative;
-	margin-top: 20px;
-}
-
-.title {
-	font-weight: 900;
-	margin-bottom: 30px;
-}
-
-.container {
 	display: flex;
-	padding: 30px 0 15px 0;
-	gap: 60px;
-}
-
-.filters {
-	width: 250px;
-}
-
-.content {
-	display: flex;
-	flex: 1;
 	flex-direction: column;
 	gap: 30px;
+
+	&__title {
+		font-weight: 900;
+	}
+
+	&__filters {
+		width: 250px;
+	}
+
+	&__wrap {
+		display: flex;
+		gap: 80px;
+	}
+	&__content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 30px;
+	}
 }

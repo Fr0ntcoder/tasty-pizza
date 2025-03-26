@@ -1,2 +1,2 @@
-export * from './PopoverContent'
-export * from './PopoverOther'
+export * from './popover-content'
+export * from './popover-other'

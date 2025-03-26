@@ -1,0 +1,27 @@
+.header {
+	border-bottom: 1px solid var(--border);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		padding: 20px 0;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		line-height: 1px;
+		gap: 8px;
+	}
+
+	&__block {
+		display: flex;
+		gap: 15px;
+	}
+
+	&__search {
+		flex: 1;
+	}
+}

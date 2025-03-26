@@ -45,13 +45,13 @@ a {
 }
 
 .scrollbar::-webkit-scrollbar-track {
-	border-radius: 6px;
+	border-radius: var(--radius-low);
 	background: #fff;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
 	background: #dbdadd;
-	border-radius: 6px;
+	border-radius: var(--radius-low);
 }
 
 .scrollbar::-webkit-scrollbar-thumb:hover {
