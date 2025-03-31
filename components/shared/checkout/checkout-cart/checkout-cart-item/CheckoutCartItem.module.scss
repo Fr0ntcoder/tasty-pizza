@@ -1,0 +1,25 @@
+.item {
+	display: flex;
+	flex: 1 1;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	&__left {
+		display: flex;
+		max-width: 500px;
+		width: 100%;
+		gap: 10px;
+		align-items: center;
+	}
+
+	&__center {
+		flex: 1;
+	}
+
+	&__btn {
+		margin-left: 15px;
+		padding: 0;
+		background: none;
+		color: var(--text);
+	}
+}

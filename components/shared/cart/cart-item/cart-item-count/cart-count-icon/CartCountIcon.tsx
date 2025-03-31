@@ -7,19 +7,14 @@ import { ICartCount } from '@/@types/cart'
 
 import styles from './CartCountIcon.module.scss'
 
-interface ICartCountIconProps {
+interface Props {
 	size?: ICartCount['size']
 	disabled?: boolean
 	type?: 'plus' | 'minus'
 	onClick?: () => void
 }
 
-export function CartCountIcon({
-	size = 'sm',
-	disabled,
-	type,
-	onClick
-}: ICartCountIconProps) {
+export function CartCountIcon({ size = 'sm', disabled, type, onClick }: Props) {
 	return (
 		<Button
 			variant='outline'

@@ -3,15 +3,15 @@ import { createElement } from 'react'
 
 import styles from './Title.module.scss'
 
-type TTitleSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
+type TSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
-interface ITitle {
-	size?: TTitleSize
+interface Props {
+	size?: TSize
 	className?: string
 	text: string
 }
 
-export function Title({ text, size = 'sm', className }: ITitle) {
+export function Title({ text, size = 'sm', className }: Props) {
 	const mapTagBySize = {
 		xs: 'h5',
 		sm: 'h4',

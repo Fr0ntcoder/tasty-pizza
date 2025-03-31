@@ -6,13 +6,11 @@ import { Header } from './header'
 
 import styles from './CheckoutLayout.module.scss'
 
-interface ICheckoutLayoutProps {
+interface Props {
 	className?: string
 }
 
-export function CheckoutLayout({
-	children
-}: PropsWithChildren<ICheckoutLayoutProps>) {
+export function CheckoutLayout({ children }: PropsWithChildren<Props>) {
 	return (
 		<div className={styles.layout}>
 			<Header />

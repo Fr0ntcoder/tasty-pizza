@@ -10,12 +10,12 @@ import { ProductForm } from '../product-form'
 
 import styles from './ProductModal.module.scss'
 
-interface IProductModalProps {
+interface Props {
 	product: IProductWithRelation | null
 	className?: string
 }
 
-export function ProductModal({ product, className }: IProductModalProps) {
+export function ProductModal({ product, className }: Props) {
 	const router = useRouter()
 	return (
 		<Dialog open={Boolean(product)} onOpenChange={() => router.back()}>

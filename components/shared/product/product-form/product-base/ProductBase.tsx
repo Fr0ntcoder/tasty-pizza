@@ -5,7 +5,7 @@ import { Title } from '@/components/ui/title'
 
 import styles from './ProductBase.module.scss'
 
-interface IProductBaseProps {
+interface Props {
 	imageUrl: string
 	name: string
 	price: number
@@ -21,7 +21,7 @@ export function ProductBase({
 	onSubmit,
 	loading,
 	className
-}: IProductBaseProps) {
+}: Props) {
 	return (
 		<div className={cn(styles.product, className)}>
 			<div className={styles.product__img}>

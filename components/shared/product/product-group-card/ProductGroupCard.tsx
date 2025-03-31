@@ -14,7 +14,7 @@ import { ProductCard } from '../product-card'
 
 import styles from './ProductGroupCard.module.scss'
 
-interface IProductGroupCardProps {
+interface Props {
 	title: string
 	items: IProductWithRelation[]
 	lastClassName?: string
@@ -28,7 +28,7 @@ export function ProductGroupCard({
 	title,
 	lastClassName,
 	categoryId
-}: IProductGroupCardProps) {
+}: Props) {
 	const setActiveCategoryId = useCategoryStore(state => state.setActiveId)
 	const intersectionRef = useRef(null)
 	const intersection = useIntersection(intersectionRef, {

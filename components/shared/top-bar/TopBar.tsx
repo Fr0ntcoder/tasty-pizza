@@ -10,12 +10,12 @@ import { SortPopup } from '../sort-popup'
 
 import styles from './TopBar.module.scss'
 
-interface ITopBarProps {
+interface Props {
 	categories: Category[]
 	className?: string
 }
 
-export const TopBar = ({ categories, className }: ITopBarProps) => {
+export const TopBar = ({ categories, className }: Props) => {
 	const [cartVisible, setCartVisible] = useState(false)
 
 	return (

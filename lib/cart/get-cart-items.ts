@@ -4,8 +4,8 @@ import { type TCartStateItem } from '@/lib/cart/get-cart-details'
 
 export const getCartItems = (
 	ingredients: TCartStateItem['ingredients'],
-	pizzaType: TPizzaType,
-	pizzaSize: TPizzaSize
+	pizzaType?: TPizzaType,
+	pizzaSize?: TPizzaSize
 ): string => {
 	const details = []
 

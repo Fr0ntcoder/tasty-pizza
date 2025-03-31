@@ -6,7 +6,7 @@ import { Fragment, RefObject, forwardRef, useEffect, useState } from 'react'
 
 import styles from './RangeSlider.module.scss'
 
-interface ISlider {
+interface Props {
 	className?: string
 	min: number
 	max: number
@@ -27,7 +27,7 @@ export const RangeSlider = forwardRef(
 			value,
 			onValueChange,
 			...props
-		}: ISlider,
+		}: Props,
 		ref
 	) => {
 		const initialValue = Array.isArray(value) ? value : [min, max]

@@ -2,11 +2,11 @@ import cn from 'clsx'
 
 import styles from './CartItemImage.module.scss'
 
-interface ICartItemImageProps {
+interface Props {
 	src: string
 	className?: string
 }
 
-export function CartItemImage({ src, className }: ICartItemImageProps) {
+export function CartItemImage({ src, className }: Props) {
 	return <img className={cn(styles.img, className)} src={src} />
 }

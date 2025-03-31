@@ -6,19 +6,14 @@ import { IFilterCheckbox } from '@/components/shared/filter/filter-checkbox'
 
 import styles from './FilterSkeleton.module.scss'
 
-interface IFilterSkeletonProps {
+interface Props {
 	className?: string
 	title: string
 	limit?: number
 	items: IFilterCheckbox[]
 }
 
-export function FilterSkeleton({
-	items,
-	title,
-	limit,
-	className
-}: IFilterSkeletonProps) {
+export function FilterSkeleton({ items, title, limit, className }: Props) {
 	return (
 		<div className={styles.skeleton}>
 			<Title text={title} size='xs' className={styles.skeleton__title} />

@@ -1,5 +1,5 @@
 export interface ICartItem {
-	id: string
+	id: number
 	imageUrl: string
 	details: string
 	name: string

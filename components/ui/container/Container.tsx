@@ -3,13 +3,10 @@ import { PropsWithChildren } from 'react'
 
 import styles from './Container.module.scss'
 
-interface IContainerProps {
+interface Props {
 	className?: string
 }
 
-export function Container({
-	children,
-	className
-}: PropsWithChildren<IContainerProps>) {
+export function Container({ children, className }: PropsWithChildren<Props>) {
 	return <div className={cn(styles.container, className)}>{children}</div>
 }

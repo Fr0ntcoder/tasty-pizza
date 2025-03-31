@@ -2,17 +2,13 @@ import cn from 'clsx'
 
 import styles from './ProductPizzaImage.module.scss'
 
-interface IProductPizzaImageProps {
+interface Props {
 	className?: string
 	imageUrl: string
 	size: 20 | 30 | 40
 }
 
-export function ProductPizzaImage({
-	className,
-	imageUrl,
-	size
-}: IProductPizzaImageProps) {
+export function ProductPizzaImage({ className, imageUrl, size }: Props) {
 	return (
 		<div className={cn(styles.wrap, className)}>
 			<img

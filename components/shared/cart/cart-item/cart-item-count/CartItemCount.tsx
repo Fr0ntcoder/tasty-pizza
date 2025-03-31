@@ -6,14 +6,14 @@ import { CartCountIcon } from './cart-count-icon'
 
 import styles from './CartItemCount.module.scss'
 
-type TCartItemCountProps = ICartCount
+type Props = ICartCount
 
 export function CartItemCount({
 	className,
 	onClick,
 	value = 1,
 	size = 'sm'
-}: TCartItemCountProps) {
+}: Props) {
 	return (
 		<div className={cn(styles.count, className)}>
 			<CartCountIcon

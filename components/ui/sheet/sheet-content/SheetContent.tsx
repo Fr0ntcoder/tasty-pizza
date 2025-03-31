@@ -9,7 +9,7 @@ import styles from './SheetContent.module.scss'
 
 type TSheetSide = 'top' | 'bottom' | 'left' | 'right'
 
-interface ISheetContent {
+interface Props {
 	side: TSheetSide
 	className?: string
 	children?: ReactNode
@@ -17,7 +17,7 @@ interface ISheetContent {
 
 export const SheetContent = forwardRef<
 	ElementRef<typeof SheetPrimitive.Content>,
-	ISheetContent
+	Props
 >(({ side = 'right', className, children, ...props }, ref) => (
 	<SheetPortal>
 		<SheetOverlay />

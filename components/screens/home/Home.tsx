@@ -9,13 +9,13 @@ import { TopBar } from '@/components/shared/top-bar'
 
 import styles from './Home.module.scss'
 
-interface IHomeProps {
+interface Props {
 	categories: any[]
 	navigation: any[]
 	className?: string
 }
 
-export function Home({ categories, navigation, className }: IHomeProps) {
+export function Home({ categories, navigation, className }: Props) {
 	const list = categories.map(
 		item =>
 			item.products.length > 0 && (

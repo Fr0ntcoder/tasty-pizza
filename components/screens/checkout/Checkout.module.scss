@@ -5,7 +5,7 @@
 
 	&__wrap {
 		display: flex;
-		gap: 20px;
+		gap: 30px;
 	}
 
 	&__left {
@@ -16,23 +16,7 @@
 	}
 
 	&__right {
-		max-width: 450px;
+		max-width: 400px;
 		width: 100%;
 	}
-}
-
-.personal {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 15px;
-
-	&__input {
-		border-radius: var(--radius-mid);
-	}
-}
-
-.address {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
 }

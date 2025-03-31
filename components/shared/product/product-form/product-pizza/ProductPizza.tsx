@@ -18,7 +18,7 @@ import { ProductPizzaToggle } from './product-pizza-toggle'
 
 import styles from './ProductPizza.module.scss'
 
-type TProductPizzaProps = {
+type Props = {
 	imageUrl: string
 	name: string
 	ingredients: Ingredient[]
@@ -36,7 +36,7 @@ export function ProductPizza({
 	onSubmit,
 	loading,
 	className
-}: TProductPizzaProps) {
+}: Props) {
 	const {
 		type,
 		size,

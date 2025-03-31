@@ -6,7 +6,7 @@ import { Title } from '@/components/ui/title'
 
 import styles from './ProductPizzaIngredient.module.scss'
 
-interface IProductPizzaIngredientProps {
+interface Props {
 	imageUrl: string
 	name: string
 	price: number
@@ -22,7 +22,7 @@ export function ProductPizzaIngredient({
 	active,
 	onClick,
 	className
-}: IProductPizzaIngredientProps) {
+}: Props) {
 	return (
 		<div
 			className={cn(

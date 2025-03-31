@@ -1,0 +1,29 @@
+.total {
+	&__top {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 18px;
+	}
+
+	&__price {
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+
+	&__btn {
+		& > svg {
+			margin-left: 10px;
+		}
+	}
+}

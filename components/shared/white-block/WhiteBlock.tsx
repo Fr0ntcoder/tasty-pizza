@@ -5,7 +5,7 @@ import { Title } from '@/components/ui/title'
 
 import styles from './WhiteBlock.module.scss'
 
-interface IWhiteBlock {
+interface Props {
 	contentClassName?: string
 	title?: string
 	className?: string
@@ -18,7 +18,7 @@ export function WhiteBlock({
 	contentClassName,
 	endAdornment,
 	children
-}: PropsWithChildren<IWhiteBlock>) {
+}: PropsWithChildren<Props>) {
 	return (
 		<div className={cn(styles.block, className)}>
 			{title && (
@@ -27,7 +27,7 @@ export function WhiteBlock({
 					{endAdornment}
 				</div>
 			)}
-			<div className={styles.block__content}>{children}</div>
+			{children}
 		</div>
 	)
 }

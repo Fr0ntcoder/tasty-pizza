@@ -6,7 +6,7 @@ import { type TVariant } from '@/@types/product'
 
 import styles from './ProductPizzaToggle.module.scss'
 
-interface IProductPizzaToggleProps {
+interface Props {
 	items: readonly TVariant[]
 	onClick?: (value: TVariant['value']) => void
 	value?: TVariant['value']
@@ -18,7 +18,7 @@ export function ProductPizzaToggle({
 	value,
 	onClick,
 	className
-}: IProductPizzaToggleProps) {
+}: Props) {
 	const list = items.map(item => (
 		<button
 			key={item.name}

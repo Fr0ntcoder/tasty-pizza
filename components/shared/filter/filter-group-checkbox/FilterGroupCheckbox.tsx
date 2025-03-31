@@ -12,7 +12,7 @@ import { FilterSkeleton } from '../filter-skeleton'
 
 import styles from './FilterGroupCheckbox.module.scss'
 
-interface IFilterGroupCheckboxProps {
+interface Props {
 	title: string
 	items: IFilterCheckbox[]
 	defaultItems?: IFilterCheckbox[]
@@ -38,7 +38,7 @@ export function FilterGroupCheckbox({
 	loading,
 	name,
 	className
-}: IFilterGroupCheckboxProps) {
+}: Props) {
 	const [showAll, setShowAll] = useState(false)
 	const [searchValue, setSearchValue] = useState('')
 

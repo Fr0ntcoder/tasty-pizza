@@ -17,7 +17,7 @@ type ButtonVariants =
 
 type ButtonSize = 'default' | 'sm' | 'lg' | 'icon'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
 	variant: ButtonVariants
 	size?: ButtonSize
@@ -25,7 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	loading?: boolean
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, Props>(
 	(
 		{
 			className,

@@ -1,5 +1,7 @@
 .block {
-	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
 	border-radius: var(--radius-xl);
 	background: #fff;
 

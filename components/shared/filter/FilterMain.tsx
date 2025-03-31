@@ -10,11 +10,11 @@ import { FilterGroupCheckbox } from './filter-group-checkbox'
 
 import styles from './FilterMain.module.scss'
 
-interface IFilterMainProps {
+interface Props {
 	className?: string
 }
 
-export function FilterMain({ className }: IFilterMainProps) {
+export function FilterMain({ className }: Props) {
 	const { ingredients, loading } = useIngredients()
 	const filters = useFilters()
 

@@ -9,7 +9,7 @@ import { Title } from '@/components/ui/title'
 
 import styles from './ProductCard.module.scss'
 
-interface IProductCardProps {
+interface Props {
 	id: number
 	name: string
 	price: number
@@ -25,7 +25,7 @@ export function ProductCard({
 	imageUrl,
 	ingredients,
 	className
-}: IProductCardProps) {
+}: Props) {
 	const ingredientsList = ingredients
 		.map(ingredient => ingredient.name)
 		.join(', ')

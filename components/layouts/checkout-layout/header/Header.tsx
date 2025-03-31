@@ -10,11 +10,11 @@ import { Container } from '@/components/ui/container'
 
 import styles from './Header.module.scss'
 
-interface IHeaderProps {
+interface Props {
 	className?: string
 }
 
-export function Header({ className }: IHeaderProps) {
+export function Header({ className }: Props) {
 	return (
 		<header className={cn(styles.header, className)}>
 			<Container className={styles.header__container}>

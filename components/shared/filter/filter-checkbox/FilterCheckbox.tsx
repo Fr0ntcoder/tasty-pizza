@@ -6,7 +6,7 @@ import { IFilterCheckbox } from './types'
 
 import styles from './FilterCheckbox.module.scss'
 
-type TFilterCheckboxProps = IFilterCheckbox
+type Props = IFilterCheckbox
 
 export function FilterCheckbox({
 	text,
@@ -15,7 +15,7 @@ export function FilterCheckbox({
 	onCheckedChange,
 	checked,
 	name
-}: TFilterCheckboxProps) {
+}: Props) {
 	return (
 		<div className={styles.wrap}>
 			<Checkbox

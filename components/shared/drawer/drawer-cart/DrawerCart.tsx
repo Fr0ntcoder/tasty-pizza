@@ -25,34 +25,27 @@ import { TPizzaSize, TPizzaType } from '@/constants/pizza'
 import { getCartItems } from '@/lib/cart'
 import { formatWordCart } from '@/lib/other'
 
-import { CartDrawerItem } from './cart-drawer-item'
+import { DrawerCartItem } from './drawer-cart-item'
 
-import styles from './CartDrawer.module.scss'
+import styles from './DrawerCart.module.scss'
 
-interface ICartDrawerProps {
+interface Props {
 	className?: string
 }
 
-export function CartDrawer({
-	children,
-	className
-}: PropsWithChildren<ICartDrawerProps>) {
+export function DrawerCart({ children, className }: PropsWithChildren<Props>) {
 	const { items, onUpdateQuantity, removeCartItem, totalAmount } = useCart()
 
 	const list = items.map(item => (
-		<CartDrawerItem
+		<DrawerCartItem
 			key={item.id}
-			id={String(item.id)}
+			id={item.id}
 			imageUrl={item.imageUrl}
-			details={
-				item.pizzaSize && item.pizzaType
-					? getCartItems(
-							item.ingredients,
-							item.pizzaType as TPizzaType,
-							item.pizzaSize as TPizzaSize
-						)
-					: ''
-			}
+			details={getCartItems(
+				item.ingredients,
+				item.pizzaType as TPizzaType,
+				item.pizzaSize as TPizzaSize
+			)}
 			disabled={item.disabled}
 			name={item.name}
 			price={item.price}
@@ -100,7 +93,7 @@ export function CartDrawer({
 									<span className={styles.footer__text}>Итого</span>
 									<span className={styles.footer__price}>{totalAmount} ₽</span>
 								</div>
-								<Link href='/cart' className={styles.footer__link}>
+								<Link href='/checkout' className={styles.footer__link}>
 									<Button
 										type='submit'
 										className={styles.footer__btn}

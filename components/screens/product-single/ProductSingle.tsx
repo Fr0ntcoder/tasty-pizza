@@ -4,10 +4,10 @@ import { ProductForm } from '@/components/shared/product'
 
 import { IProductWithRelation } from '@/@types/product'
 
-interface IProductSingleProps {
+interface Props {
 	product: IProductWithRelation | null
 }
 
-export function ProductSingle({ product }: IProductSingleProps) {
+export function ProductSingle({ product }: Props) {
 	return <ProductForm product={product} />
 }

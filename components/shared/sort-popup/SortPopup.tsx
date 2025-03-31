@@ -5,11 +5,11 @@ import { ArrowUpDown } from 'lucide-react'
 
 import styles from './SortPopup.module.scss'
 
-interface ISortPopupProps {
+interface Props {
 	className?: string
 }
 
-export function SortPopup({ className }: ISortPopupProps) {
+export function SortPopup({ className }: Props) {
 	return (
 		<div className={cn(styles.popup, className)}>
 			<ArrowUpDown width={20} height={20} />

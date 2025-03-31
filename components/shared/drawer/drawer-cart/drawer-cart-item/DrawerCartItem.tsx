@@ -12,15 +12,15 @@ import {
 
 import { ICartItem } from '@/@types/cart'
 
-import styles from './CartDrawerItem.module.scss'
+import styles from './DrawerCartItem.module.scss'
 
-interface ICartDrawerItemProps extends ICartItem {
+interface Props extends ICartItem {
 	className?: string
 	onUpdateQuantity?: (type: 'plus' | 'minus') => void
 	onClickRemove?: () => void
 }
 
-export function CartDrawerItem({
+export function DrawerCartItem({
 	imageUrl,
 	name,
 	price,
@@ -30,7 +30,7 @@ export function CartDrawerItem({
 	onClickRemove,
 	disabled,
 	className
-}: ICartDrawerItemProps) {
+}: Props) {
 	return (
 		<div
 			className={cn(styles.item, className, {

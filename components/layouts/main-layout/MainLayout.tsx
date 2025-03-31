@@ -8,11 +8,11 @@ import { Header } from './header'
 
 import styles from './MainLayout.module.scss'
 
-interface IMainLayoutProps {
+interface Props {
 	className?: string
 }
 
-export function MainLayout({ children }: PropsWithChildren<IMainLayoutProps>) {
+export function MainLayout({ children }: PropsWithChildren<Props>) {
 	return (
 		<div className={styles.layout}>
 			<Header />

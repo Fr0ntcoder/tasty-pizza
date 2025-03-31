@@ -14,11 +14,11 @@ import { HeaderSearch } from './header-search'
 
 import styles from './Header.module.scss'
 
-interface IHeader {
+interface Props {
 	className?: string
 }
 
-export function Header({ className }: IHeader) {
+export function Header({ className }: Props) {
 	return (
 		<header className={cn(styles.header, className)}>
 			<Container className={styles.header__container}>

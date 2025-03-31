@@ -5,20 +5,20 @@ import { ArrowRight, ShoppingCart } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
-import { useCart } from '@/hooks'
+import { DrawerCart } from '@/components/shared/drawer'
 
-import { CartDrawer } from '../cart-drawer'
+import { useCart } from '@/hooks'
 
 import styles from './CartButton.module.scss'
 
-interface ICartButtonProps {
+interface Props {
 	className?: string
 }
 
-export function CartButton({ className }: ICartButtonProps) {
+export function CartButton({ className }: Props) {
 	const { totalAmount, loading, items } = useCart()
 	return (
-		<CartDrawer>
+		<DrawerCart>
 			<Button
 				loading={loading}
 				variant='default'
@@ -36,6 +36,6 @@ export function CartButton({ className }: ICartButtonProps) {
 				</div>
 				<ArrowRight width={16} className={styles.button__arrow} />
 			</Button>
-		</CartDrawer>
+		</DrawerCart>
 	)
 }
