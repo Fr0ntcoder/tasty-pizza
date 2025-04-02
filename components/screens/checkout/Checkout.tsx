@@ -3,6 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import cn from 'clsx'
 import { FormProvider, useForm } from 'react-hook-form'
+import { toast } from 'react-hot-toast'
 
 import { Title } from '@/components/ui/title'
 
@@ -15,10 +16,9 @@ import {
 
 import { useCart } from '@/hooks'
 
-import {
-	TCheckoutFormValues,
-	chechoutFormSchema
-} from '@/@types/schemes/checkout-form'
+import { TCheckoutFormValues, chechoutFormSchema } from '@/constants/schemes'
+
+import { createOrder } from '@/app/actions'
 
 import styles from './Checkout.module.scss'
 
@@ -41,8 +41,18 @@ export function Checkout({ className }: Props) {
 		}
 	})
 
-	const onSubmit = (data: TCheckoutFormValues) => {
+	const onSubmit = async (data: TCheckoutFormValues) => {
+		try {
+			const url = await createOrder(data)
+			toast.success('Заказ успешно оформлен')
+			if (url) {
+				location.href = url
+			}
+		} catch (error) {
+			toast.error('Не удалось сделать заказ')
+		}
 		console.log(data)
+		createOrder(data)
 	}
 	return (
 		<div className={cn(styles.checkout, className)}>

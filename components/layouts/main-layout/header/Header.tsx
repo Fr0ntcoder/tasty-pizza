@@ -4,6 +4,9 @@ import cn from 'clsx'
 import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+import toast from 'react-hot-toast'
 
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/ui/container'
@@ -19,6 +22,14 @@ interface Props {
 }
 
 export function Header({ className }: Props) {
+	const searchParams = useSearchParams()
+	useEffect(() => {
+		if (searchParams.has('paid')) {
+			setTimeout(() => {
+				toast.success('Заказ успешно оплачен!')
+			}, 500)
+		}
+	}, [])
 	return (
 		<header className={cn(styles.header, className)}>
 			<Container className={styles.header__container}>

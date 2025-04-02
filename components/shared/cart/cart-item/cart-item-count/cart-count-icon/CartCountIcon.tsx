@@ -17,6 +17,7 @@ interface Props {
 export function CartCountIcon({ size = 'sm', disabled, type, onClick }: Props) {
 	return (
 		<Button
+			type='button'
 			variant='outline'
 			disabled={disabled}
 			onClick={onClick}

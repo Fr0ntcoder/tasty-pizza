@@ -1,9 +1,10 @@
-import { CheckoutCartItem } from '@/components/shared/checkout/checkout-cart/checkout-cart-item'
 import { WhiteBlock } from '@/components/shared/white-block'
 
 import { TPizzaSize, TPizzaType } from '@/constants/pizza'
 
 import { TCartStateItem, getCartItems } from '@/lib/cart'
+
+import { CheckoutCartItem } from './checkout-cart-item'
 
 import styles from './CheckoutCart.module.scss'
 
@@ -26,6 +27,7 @@ export function CheckoutCart({
 }: Props) {
 	const cartItems = items.map(item => (
 		<CheckoutCartItem
+			key={item.id}
 			id={item.id}
 			imageUrl={item.imageUrl}
 			details={getCartItems(
@@ -44,7 +46,13 @@ export function CheckoutCart({
 	))
 	return (
 		<WhiteBlock title='1. Корзина' className={styles.cart}>
-			<div className={styles.cart__wrap}>{cartItems}</div>
+			<div className={styles.cart__wrap}>
+				{items.length != 0 ? (
+					cartItems
+				) : (
+					<div className={styles.cart__empty}>Корзина пуста</div>
+				)}
+			</div>
 		</WhiteBlock>
 	)
 }

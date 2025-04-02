@@ -1,22 +1,22 @@
 import cn from 'clsx'
-import { InputHTMLAttributes } from 'react'
+import { TextareaHTMLAttributes } from 'react'
 import { useFormContext } from 'react-hook-form'
 
-import { Input } from '@/components/ui/form-elements'
+import { Textarea } from '@/components/ui/form-elements'
 
 import { FormClearButton } from '../form-clear-button'
 import { FormTextError } from '../form-text-error'
 
-import styles from './FormInput.module.scss'
+import styles from './FormTextarea.module.scss'
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
+interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	name: string
 	label?: string
 	required?: boolean
 	className?: string
 }
 
-export function FormInput({
+export function FormTextarea({
 	name,
 	label,
 	required,
@@ -35,17 +35,22 @@ export function FormInput({
 	const onClear = () => {
 		setValue(name, '', { shouldValidate: true })
 	}
+
 	return (
-		<div className={cn(styles.input, className)}>
+		<div className={cn(styles.textarea, className)}>
 			{label && (
 				<p>
-					{label}{' '}
-					{required && <span className={styles.input__required}>*</span>}
+					{label}
+					{required && <span className={styles.textarea__required}>*</span>}
 				</p>
 			)}
-			<div className={styles.input__relative}>
-				<Input {...props} {...register(name)} className={styles.input__block} />
-				{value && <FormClearButton onClick={onClear} />}
+			<div className={styles.textarea__relative}>
+				<Textarea
+					{...props}
+					{...register(name)}
+					className={styles.textarea__block}
+				/>
+				{Boolean(value) && <FormClearButton onClick={onClear} />}
 			</div>
 			{errorText && <FormTextError text={errorText} />}
 		</div>

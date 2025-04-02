@@ -1,4 +1,4 @@
-import { FormInput } from '@/components/shared/forms/form-input'
+import { FormInput } from '@/components/shared/forms'
 import { WhiteBlock } from '@/components/shared/white-block'
 
 import styles from './CheckoutPersonal.module.scss'
