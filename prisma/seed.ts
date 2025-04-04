@@ -156,6 +156,58 @@ async function up() {
 			}
 		}
 	})
+
+	await prisma.story.createMany({
+		data: [
+			{
+				previewImageUrl: '/assets/stories/stories-1.webp'
+			},
+			{
+				previewImageUrl: '/assets/stories/stories-2.webp'
+			},
+			{
+				previewImageUrl: '/assets/stories/stories-3.webp'
+			},
+			{
+				previewImageUrl: '/assets/stories/stories-4.webp'
+			},
+			{
+				previewImageUrl: '/assets/stories/stories-5.webp'
+			},
+			{
+				previewImageUrl: '/assets/stories/stories-6.webp'
+			}
+		]
+	})
+
+	await prisma.storyItem.createMany({
+		data: [
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-1.webp'
+			},
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-2.webp'
+			},
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-3.webp'
+			},
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-4.webp'
+			},
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-5.webp'
+			},
+			{
+				storyId: 1,
+				sourceUrl: '/assets/stories/stories-slide-6.webp'
+			}
+		]
+	})
 }
 
 async function down() {

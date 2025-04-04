@@ -5,6 +5,7 @@ import { Title } from '@/components/ui'
 
 import { FilterMain } from '@/components/shared/filter'
 import { ProductGroupCard } from '@/components/shared/product'
+import { Stories } from '@/components/shared/stories'
 import { TopBar } from '@/components/shared/top-bar'
 
 import styles from './Home.module.scss'
@@ -34,6 +35,7 @@ export function Home({ categories, navigation, className }: Props) {
 			<TopBar
 				categories={navigation.filter(item => item.products.length > 0)}
 			/>
+			<Stories />
 			<div className={styles.page__wrap}>
 				<div className={styles.page__filters}>
 					<Suspense>
