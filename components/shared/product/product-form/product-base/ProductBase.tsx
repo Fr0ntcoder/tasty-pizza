@@ -1,7 +1,6 @@
 import cn from 'clsx'
 
-import { Button } from '@/components/ui/button'
-import { Title } from '@/components/ui/title'
+import { Button, Title } from '@/components/ui'
 
 import styles from './ProductBase.module.scss'
 

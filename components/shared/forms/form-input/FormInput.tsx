@@ -38,10 +38,9 @@ export function FormInput({
 	return (
 		<div className={cn(styles.input, className)}>
 			{label && (
-				<p>
-					{label}{' '}
-					{required && <span className={styles.input__required}>*</span>}
-				</p>
+				<div className={styles.input__required}>
+					{label} {required && <span>*</span>}
+				</div>
 			)}
 			<div className={styles.input__relative}>
 				<Input {...props} {...register(name)} className={styles.input__block} />

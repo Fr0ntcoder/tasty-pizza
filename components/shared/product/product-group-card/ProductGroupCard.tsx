@@ -4,7 +4,7 @@ import cn from 'clsx'
 import { useEffect, useRef } from 'react'
 import { useIntersection } from 'react-use'
 
-import { Title } from '@/components/ui/title'
+import { Title } from '@/components/ui'
 
 import { useCategoryStore } from '@/store/category'
 

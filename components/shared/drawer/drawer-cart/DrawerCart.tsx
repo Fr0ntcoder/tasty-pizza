@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
 
-import { Button } from '@/components/ui/button'
+import { Button, Title } from '@/components/ui'
 import {
 	Sheet,
 	SheetClose,
@@ -16,7 +16,6 @@ import {
 	SheetTitle,
 	SheetTrigger
 } from '@/components/ui/sheet'
-import { Title } from '@/components/ui/title'
 
 import { useCart } from '@/hooks'
 

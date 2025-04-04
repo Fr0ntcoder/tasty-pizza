@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { PropsWithChildren, ReactNode } from 'react'
 
-import { Title } from '@/components/ui/title'
+import { Title } from '@/components/ui'
 
 import styles from './WhiteBlock.module.scss'
 

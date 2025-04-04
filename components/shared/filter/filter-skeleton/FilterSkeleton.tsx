@@ -1,6 +1,6 @@
 import Skeleton from 'react-loading-skeleton'
 
-import { Title } from '@/components/ui/title'
+import { Title } from '@/components/ui'
 
 import { IFilterCheckbox } from '@/components/shared/filter/filter-checkbox'
 

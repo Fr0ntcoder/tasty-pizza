@@ -1,0 +1,17 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+	&__text {
+		margin: 0 0 15px;
+		color: var(--text);
+	}
+
+	&__input {
+		margin-bottom: 25px;
+	}
+}

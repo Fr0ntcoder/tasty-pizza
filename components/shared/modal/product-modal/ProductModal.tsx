@@ -4,9 +4,9 @@ import { useRouter } from 'next/navigation'
 
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 
-import { type IProductWithRelation } from '@/@types/product'
+import { ProductForm } from '@/components/shared/product'
 
-import { ProductForm } from '../product-form'
+import { type IProductWithRelation } from '@/@types/product'
 
 import styles from './ProductModal.module.scss'
 

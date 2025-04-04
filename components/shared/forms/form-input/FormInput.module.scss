@@ -2,7 +2,15 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	input {
+		width: 100%;
+	}
 	&__required {
+		margin-bottom: 5px;
+
+		span {
+			color: var(--primary);
+		}
 	}
 	&__relative {
 		display: flex;

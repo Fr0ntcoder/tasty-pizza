@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from 'react'
 
-import { Container } from '@/components/ui/container'
+import { Container } from '@/components/ui'
 
 import { Header } from './header'
 
@@ -15,7 +15,7 @@ interface Props {
 export function MainLayout({ children }: PropsWithChildren<Props>) {
 	return (
 		<div className={styles.layout}>
-			<Header />
+			<Header className={styles.header} />
 			<main className={styles.layout__main}>
 				<Container className={styles.layout__container}>{children}</Container>
 			</main>

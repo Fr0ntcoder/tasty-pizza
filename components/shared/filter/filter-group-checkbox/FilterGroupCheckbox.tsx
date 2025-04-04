@@ -4,8 +4,8 @@ import cn from 'clsx'
 import { ChangeEvent, useState } from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
 
+import { Title } from '@/components/ui'
 import { Input } from '@/components/ui/form-elements'
-import { Title } from '@/components/ui/title'
 
 import { FilterCheckbox, type IFilterCheckbox } from '../filter-checkbox'
 import { FilterSkeleton } from '../filter-skeleton'

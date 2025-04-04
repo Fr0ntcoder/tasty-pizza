@@ -1,12 +1,13 @@
 'use client'
 
 import cn from 'clsx'
-import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
-import { Button } from '@/components/ui/button'
-import { Container } from '@/components/ui/container'
+import { Container } from '@/components/ui'
+
+import { ProfileButton } from '@/components/shared/profile'
 
 import styles from './Header.module.scss'
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 export function Header({ className }: Props) {
+	const [isOpenModal, setIsOpenModal] = useState(false)
 	return (
 		<header className={cn(styles.header, className)}>
 			<Container className={styles.header__container}>
@@ -22,10 +24,7 @@ export function Header({ className }: Props) {
 					<Image src='/logo.png' width={70} height={70} alt='logo' />
 				</Link>
 				<div className={styles.header__block}>
-					<Button variant='outline' className={styles.header__btn}>
-						<User size={16} />
-						Войти
-					</Button>
+					<ProfileButton onSignIn={() => setIsOpenModal(true)} />
 				</div>
 			</Container>
 		</header>

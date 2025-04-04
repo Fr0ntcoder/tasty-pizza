@@ -5,7 +5,7 @@ import cn from 'clsx'
 import { FormProvider, useForm } from 'react-hook-form'
 import { toast } from 'react-hot-toast'
 
-import { Title } from '@/components/ui/title'
+import { Title } from '@/components/ui'
 
 import {
 	CheckoutAddress,

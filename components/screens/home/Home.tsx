@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import { Suspense } from 'react'
 
-import { Title } from '@/components/ui/title'
+import { Title } from '@/components/ui'
 
 import { FilterMain } from '@/components/shared/filter'
 import { ProductGroupCard } from '@/components/shared/product'

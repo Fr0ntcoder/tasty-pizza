@@ -4,8 +4,7 @@ import { Ingredient } from '@prisma/client'
 import { Plus } from 'lucide-react'
 import Link from 'next/link'
 
-import { Button } from '@/components/ui/button'
-import { Title } from '@/components/ui/title'
+import { Button, Title } from '@/components/ui'
 
 import styles from './ProductCard.module.scss'
 

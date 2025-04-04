@@ -1,17 +1,17 @@
 'use client'
 
 import cn from 'clsx'
-import { User } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
-import { Button } from '@/components/ui/button'
-import { Container } from '@/components/ui/container'
+import { Container } from '@/components/ui'
 
 import { CartButton } from '@/components/shared/cart'
+import { AuthModal } from '@/components/shared/modal'
+import { ProfileButton } from '@/components/shared/profile'
 
 import { HeaderSearch } from './header-search'
 
@@ -22,11 +22,18 @@ interface Props {
 }
 
 export function Header({ className }: Props) {
+	const [isOpenModal, setIsOpenModal] = useState(false)
 	const searchParams = useSearchParams()
 	useEffect(() => {
 		if (searchParams.has('paid')) {
 			setTimeout(() => {
 				toast.success('Заказ успешно оплачен!')
+			}, 500)
+		}
+
+		if (searchParams.has('verified')) {
+			setTimeout(() => {
+				toast.success('Почта успешно подтверждена!')
 			}, 500)
 		}
 	}, [])
@@ -40,10 +47,8 @@ export function Header({ className }: Props) {
 					<HeaderSearch />
 				</div>
 				<div className={styles.header__block}>
-					<Button variant='outline' className={styles.header__btn}>
-						<User size={16} />
-						Войти
-					</Button>
+					<AuthModal open={isOpenModal} onClose={() => setIsOpenModal(false)} />
+					<ProfileButton onSignIn={() => setIsOpenModal(true)} />
 					<CartButton />
 				</div>
 			</Container>

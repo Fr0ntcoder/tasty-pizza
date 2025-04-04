@@ -1,0 +1,10 @@
+.btn {
+	&__link {
+		button {
+			min-height: 40px;
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}

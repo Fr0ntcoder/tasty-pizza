@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 
-import { Container } from '@/components/ui/container'
+import { Container } from '@/components/ui'
 
 import { Header } from './header'
 

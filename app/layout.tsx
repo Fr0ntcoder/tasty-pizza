@@ -1,6 +1,7 @@
 import { Nunito } from 'next/font/google'
 import Head from 'next/head'
-import { Toaster } from 'react-hot-toast'
+
+import { Providers } from '@/provider'
 
 import '../styles/globals.scss'
 
@@ -21,8 +22,7 @@ export default function RootLayout({
 				<link rel='icon' href='/logo.png' />
 			</Head>
 			<body>
-				{children}
-				<Toaster />
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)

@@ -1,6 +1,6 @@
 import { ArrowRight, Package, Percent, Truck } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui'
 
 import { WhiteBlock } from '@/components/shared/white-block'
 

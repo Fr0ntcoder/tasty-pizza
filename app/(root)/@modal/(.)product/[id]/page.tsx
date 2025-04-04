@@ -1,6 +1,6 @@
 import { prisma } from '@/prisma/prisma-client'
 
-import { ProductModal } from '@/components/shared/product'
+import { ProductModal } from '@/components/shared/modal'
 
 export default async function ModalPage({
 	params: { id }
