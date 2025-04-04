@@ -1,0 +1,5 @@
+.body {
+	& > tr:last-child {
+		border: none;
+	}
+}

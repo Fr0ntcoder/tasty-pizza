@@ -1,0 +1,19 @@
+.textarea {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	&__required {
+	}
+	&__relative {
+		display: flex;
+		justify-content: space-between;
+		border-radius: var(--radius-mid);
+		border: 1px solid var(--input);
+	}
+
+	&__block {
+		width: 100%;
+		border: none;
+		box-shadow: none;
+	}
+}

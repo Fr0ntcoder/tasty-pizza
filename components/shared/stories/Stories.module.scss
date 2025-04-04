@@ -1,0 +1,45 @@
+.stories {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 15px;
+	}
+
+	&__skeleton {
+		height: 300px;
+		border-radius: var(--radius-xl);
+		background: var(--border);
+	}
+
+	&__item {
+		height: 300px;
+		border-radius: var(--radius-xl);
+		background-size: cover;
+		cursor: pointer;
+	}
+
+	&__overlay {
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 9999;
+	}
+
+	&__block {
+		position: relative;
+	}
+	&__btn {
+		position: absolute;
+		top: -25px;
+		right: -25px;
+		background: none;
+		color: #fff;
+		z-index: 555;
+	}
+}

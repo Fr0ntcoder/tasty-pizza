@@ -1,0 +1,30 @@
+.filter {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.checkbox {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.range {
+	position: relative;
+
+	&__title {
+		margin-bottom: 15px;
+	}
+	&__text {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		margin-bottom: 30px;
+	}
+}

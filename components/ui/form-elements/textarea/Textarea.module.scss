@@ -1,0 +1,23 @@
+.textarea {
+	display: flex;
+	min-height: 80px;
+	font-size: 14px;
+	border-radius: var(--radius-low);
+	border: 1px solid var(--input);
+	padding: 8px 15px;
+	resize: none;
+	color: var(--muted-foreground);
+
+	&::placeholder {
+		color: var(--muted-foreground);
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+}

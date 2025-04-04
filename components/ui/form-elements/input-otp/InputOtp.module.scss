@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	gap: 16px;
+}
+
+.otp {
+	&:disabled {
+		cursor: not-allowed;
+	}
+}

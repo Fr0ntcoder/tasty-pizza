@@ -1,0 +1,30 @@
+.toogle {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		transition: all 0.3s ease-in-out;
+	}
+	&__item {
+		display: flex;
+		font-size: 14px;
+		font-weight: 600;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		border-radius: var(--radius-xl);
+		background: #f9f6f6;
+
+		&--active {
+			background: #fff;
+			box-shadow:
+				0 4px 6px rgba(0, 0, 0, 0.1),
+				0 1px 3px rgba(0, 0, 0, 0.08);
+		}
+
+		&--disabled {
+			pointer-events: none;
+			color: var(--text);
+		}
+	}
+}

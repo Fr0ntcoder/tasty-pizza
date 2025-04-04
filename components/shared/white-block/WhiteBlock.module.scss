@@ -1,0 +1,11 @@
+.block {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: var(--radius-xl);
+	background: #fff;
+
+	&__top {
+		margin-bottom: 15px;
+	}
+}

@@ -1,0 +1,120 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	font-size: 14px;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	border-radius: var(--radius-xl);
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-duration: 200ms;
+	outline: none;
+
+	&:active {
+		transform: translateY(1px);
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow:
+			0 0 0 2px #4a5568,
+			0 0 0 4px var(--ring-offset-background);
+	}
+
+	&:disabled {
+		pointer-events: none;
+		opacity: 0.5;
+		background-color: #6b7280;
+	}
+
+	&__variant {
+		&--default {
+			background-color: var(--primary);
+			color: var(--primary-foreground);
+			transition: all 0.2s ease-in-out;
+		}
+
+		&--destructive {
+			background-color: var(--destructive);
+			color: var(--destructive-foreground);
+
+			&:hover {
+				background-color: rgba(var(--destructive), 0.9);
+			}
+		}
+
+		&--outline {
+			border: 1px solid var(--primary);
+			color: var(--primary);
+			background-color: transparent;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: var(--secondary);
+			}
+		}
+
+		&--secondary {
+			background-color: var(--secondary);
+			transition: background-color 0.2s;
+			color: var(--primary);
+
+			&:hover {
+				background-color: rgba(var(--secondary), 0.5);
+			}
+		}
+
+		&--ghost {
+			transition:
+				background-color 0.2s,
+				color 0.2s;
+			&:hover {
+				background-color: var(--secondary);
+				color: var(--secondary-foreground);
+			}
+		}
+
+		&--ghost {
+			text-decoration: none;
+			text-underline-offset: 4px;
+			color: var(--primary);
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__size {
+		&--default {
+			font-size: 14px;
+			padding: 8px 16px;
+		}
+
+		&--sm {
+			font-size: 16px;
+			padding: 10px;
+		}
+
+		&--lg {
+			font-size: 18px;
+			padding: 0 32px;
+			border-radius: var(--radius-mid);
+		}
+
+		&--icon {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

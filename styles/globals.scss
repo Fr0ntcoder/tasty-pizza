@@ -1,0 +1,71 @@
+@use './reset';
+@use './animation';
+@use './vars';
+
+html {
+	font-family: 'Nunito', sans-serif;
+	scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+body,
+html {
+	line-height: 1.6;
+	height: 100%;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.scrollbar::-webkit-scrollbar {
+	width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+	border-radius: var(--radius-low);
+	background: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	background: #dbdadd;
+	border-radius: var(--radius-low);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #dbdadd;
+}
+
+#nprogress .bar {
+	background: var(--primary) !important;
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 0 2px var(--primary) !important;
+}
+#nprogress .spinner-icon {
+	border-color: var(--primary) !important;
+}

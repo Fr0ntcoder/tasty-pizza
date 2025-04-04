@@ -1,0 +1,14 @@
+.popup {
+	display: inline-flex;
+	align-items: center;
+	height: 52px;
+	gap: 4px;
+	background-color: #f9fafb;
+	padding: 0 20px;
+	border-radius: var(--radius-xl);
+	cursor: pointer;
+
+	&__text {
+		color: var(--primary);
+	}
+}

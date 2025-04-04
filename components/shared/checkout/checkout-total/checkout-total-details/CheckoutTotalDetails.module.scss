@@ -1,0 +1,22 @@
+.details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	& > svg {
+		margin-right: 10px;
+		color: var(--input);
+	}
+
+	&__line {
+		width: 100%;
+		flex: 1;
+		height: 1px;
+		margin: auto 5px 10px 5px;
+		background: var(--input);
+	}
+
+	&__value {
+		font-weight: bold;
+	}
+}

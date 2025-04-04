@@ -1,0 +1,27 @@
+.product {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+
+	&__content {
+		padding: 30px;
+		background: #fbecec;
+	}
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		padding: 30px;
+		img {
+			max-width: 300px;
+		}
+	}
+	&__title {
+		margin-bottom: 5px;
+	}
+
+	&__btn {
+		display: flex;
+		width: 100%;
+	}
+}
